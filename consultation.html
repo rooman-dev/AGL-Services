@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Schedule your free consultation with AdsGeniusLab digital marketing experts">
+  <title>Free Consultation - AdsGeniusLab</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ============================================
+       NAVIGATION BAR
+       ============================================ -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-lightbulb"></i> AdsGeniusLab
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="consultation.html">Consultation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" style="min-height: 500px; padding: 100px 0;">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Free <span class="text-gradient">Consultation</span></h1>
+        <p>Let's discuss how we can transform your digital presence and drive growth for your business</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONSULTATION FORM SECTION
+       ============================================ -->
+  <section class="consultation">
+    <div class="container">
+      <h2>Schedule Your Consultation</h2>
+
+      <div class="consultation-container">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="consultation-form needs-validation" novalidate>
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+            <div class="invalid-feedback" style="color: #ffcccc;">
+              Please provide your full name.
+            </div>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required>
+            <div class="invalid-feedback" style="color: #ffcccc;">
+              Please provide a valid email address.
+            </div>
+          </div>
+
+          <!-- Phone Field -->
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="+1 (234) 567-890">
+          </div>
+
+          <!-- Company Field -->
+          <div class="form-group">
+            <label for="company" class="form-label">Company/Business Name</label>
+            <input type="text" class="form-control" id="company" name="company" placeholder="Your Company">
+          </div>
+
+          <!-- Service Interest Field -->
+          <div class="form-group">
+            <label for="service" class="form-label">Service of Interest</label>
+            <select class="form-select" id="service" name="service" required>
+              <option value="">-- Select a service --</option>
+              <option value="seo">SEO Optimization</option>
+              <option value="social">Social Media Marketing</option>
+              <option value="content">Content Strategy</option>
+              <option value="ppc">PPC Advertising</option>
+              <option value="brand">Brand Development</option>
+              <option value="analytics">Analytics & Reporting</option>
+              <option value="all">All Services</option>
+            </select>
+            <div class="invalid-feedback" style="color: #ffcccc;">
+              Please select a service.
+            </div>
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group">
+            <label for="message" class="form-label">Tell Us About Your Business & Goals</label>
+            <textarea class="form-control" id="message" name="message" placeholder="Describe your business, current challenges, and what you want to achieve..." required></textarea>
+            <div class="invalid-feedback" style="color: #ffcccc;">
+              Please share details about your business.
+            </div>
+          </div>
+
+          <!-- Preferred Contact Method -->
+          <div class="form-group">
+            <label class="form-label">Preferred Contact Method</label>
+            <div>
+              <div class="form-check" style="margin-bottom: 0.5rem;">
+                <input class="form-check-input" type="radio" name="contact_method" id="phone_call" value="phone_call" checked>
+                <label class="form-check-label" for="phone_call">Phone Call</label>
+              </div>
+              <div class="form-check" style="margin-bottom: 0.5rem;">
+                <input class="form-check-input" type="radio" name="contact_method" id="email_reply" value="email_reply">
+                <label class="form-check-label" for="email_reply">Email</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="contact_method" id="whatsapp" value="whatsapp">
+                <label class="form-check-label" for="whatsapp">WhatsApp</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+              <label class="form-check-label" for="terms">
+                I agree to the <a href="#" style="color: white; text-decoration: underline;">Privacy Policy</a> and <a href="#" style="color: white; text-decoration: underline;">Terms of Service</a>
+              </label>
+              <div class="invalid-feedback" style="color: #ffcccc;">
+                You must agree to the terms.
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-primary-custom" style="width: 100%; padding: 15px; font-size: 1.1rem; background: white; color: #0056D2 !important; border: none; font-weight: 700;">
+            <i class="fas fa-paper-plane"></i> Send Consultation Request
+          </button>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+          <p style="margin-bottom: 1rem; font-size: 0.95rem;">Or reach out directly:</p>
+          <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="tel:+923181292628" class="btn-secondary-custom">
+              <i class="fas fa-phone"></i> Call Us
+            </a>
+            <a href="https://wa.me/923181292628" target="_blank" class="btn-secondary-custom">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="mailto:adsgeniuslab@gmail.com" class="btn-secondary-custom">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHY CHOOSE US SECTION
+       ============================================ -->
+  <section style="background-color: var(--light-gray); padding: 100px 0;">
+    <div class="container">
+      <div class="section-title">
+        <h2>What You'll Get From Your Consultation</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+            <div style="font-size: 2.5rem; color: #0056D2; margin-bottom: 1rem;">
+              <i class="fas fa-binoculars"></i>
+            </div>
+            <h4 style="color: #0046A5; margin-bottom: 1rem;">In-Depth Analysis</h4>
+            <p>We'll analyze your current digital presence and identify growth opportunities specific to your business.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+            <div style="font-size: 2.5rem; color: #0056D2; margin-bottom: 1rem;">
+              <i class="fas fa-map"></i>
+            </div>
+            <h4 style="color: #0046A5; margin-bottom: 1rem;">Custom Strategy</h4>
+            <p>Receive a personalized marketing strategy tailored to your goals, budget, and target audience.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+            <div style="font-size: 2.5rem; color: #0056D2; margin-bottom: 1rem;">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h4 style="color: #0046A5; margin-bottom: 1rem;">Partnership Proposal</h4>
+            <p>Get a clear proposal outlining services, timelines, investment, and expected outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4><i class="fas fa-lightbulb"></i> AdsGeniusLab</h4>
+          <p>Transforming businesses through innovative digital marketing solutions worldwide.</p>
+          <div class="social-links">
+            <a href="https://whatsapp.com" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="consultation.html">Consultation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#seo">SEO Optimization</a></li>
+            <li><a href="services.html#social">Social Media Marketing</a></li>
+            <li><a href="services.html#content">Content Strategy</a></li>
+            <li><a href="services.html#ppc">PPC Advertising</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);">adsgeniuslab@gmail.com</a>
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);">+92 318 1292628</a>
+          </p>
+          <p>
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);">WhatsApp Us</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 AdsGeniusLab. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: linear-gradient(135deg, #0056D2, #007BFF); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 1.2rem; z-index: 999; box-shadow: 0 5px 20px rgba(0, 86, 210, 0.3); transition: all 0.3s ease;">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
