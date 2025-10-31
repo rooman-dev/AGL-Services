@@ -41,11 +41,16 @@ function initializeFormValidation() {
 
   forms.forEach(form => {
     form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
       if (!this.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
+        this.classList.add('was-validated');
+        return false;
       }
+
       this.classList.add('was-validated');
+      handleFormSubmit(this);
     });
   });
 
@@ -63,6 +68,89 @@ function initializeFormValidation() {
       validateField(this);
     });
   });
+}
+
+/* ============================================
+   Handle Form Submission
+   ============================================ */
+async function handleFormSubmit(form) {
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton.innerHTML;
+  
+  // Disable button and show loading state
+  submitButton.disabled = true;
+  submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+  try {
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      showSuccessMessage(form);
+      form.reset();
+      form.classList.remove('was-validated');
+    } else {
+      throw new Error('Form submission failed');
+    }
+  } catch (error) {
+    showErrorMessage(form);
+  } finally {
+    // Re-enable button
+    submitButton.disabled = false;
+    submitButton.innerHTML = originalButtonText;
+  }
+}
+
+/* ============================================
+   Show Success Message
+   ============================================ */
+function showSuccessMessage(form) {
+  const messageDiv = document.createElement('div');
+  messageDiv.className = 'alert alert-success';
+  messageDiv.style.cssText = 'margin-top: 1.5rem; padding: 1.5rem; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 8px; color: #155724; font-weight: 600;';
+  messageDiv.innerHTML = `
+    <i class="fas fa-check-circle"></i> 
+    <strong>Success!</strong> Your consultation request has been sent. We'll contact you within 24 hours.
+  `;
+  
+  form.insertAdjacentElement('afterend', messageDiv);
+  
+  // Scroll to message
+  messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  
+  // Remove message after 5 seconds
+  setTimeout(() => {
+    messageDiv.remove();
+  }, 5000);
+}
+
+/* ============================================
+   Show Error Message
+   ============================================ */
+function showErrorMessage(form) {
+  const messageDiv = document.createElement('div');
+  messageDiv.className = 'alert alert-danger';
+  messageDiv.style.cssText = 'margin-top: 1.5rem; padding: 1.5rem; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 8px; color: #721c24; font-weight: 600;';
+  messageDiv.innerHTML = `
+    <i class="fas fa-exclamation-triangle"></i> 
+    <strong>Oops!</strong> Something went wrong. Please try again or contact us directly at <a href="mailto:adsgeniuslab@gmail.com" style="color: #721c24; text-decoration: underline;">adsgeniuslab@gmail.com</a>
+  `;
+  
+  form.insertAdjacentElement('afterend', messageDiv);
+  
+  // Scroll to message
+  messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  
+  // Remove message after 5 seconds
+  setTimeout(() => {
+    messageDiv.remove();
+  }, 5000);
 }
 
 function validateField(field) {

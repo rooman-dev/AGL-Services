@@ -820,6 +820,47 @@ footer {
 }
 
 /* ============================================
+   Form Validation Styles
+   ============================================ */
+.form-check-input {
+  border: 2px solid var(--border-color);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.form-check-label {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.valid-feedback {
+  color: #28a745;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid,
+textarea.is-invalid {
+  border-color: #dc3545;
+}
+
+.form-control.is-valid,
+.form-select.is-valid,
+textarea.is-valid {
+  border-color: #28a745;
+}
+
+/* ============================================
    Scroll to Top Button
    ============================================ */
 #scrollToTopBtn:hover {

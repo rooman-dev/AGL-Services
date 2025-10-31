@@ -70,12 +70,12 @@
       <h2>Schedule Your Consultation</h2>
 
       <div class="consultation-container">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="consultation-form needs-validation" novalidate>
+        <form id="consultationForm" action="https://formspree.io/f/xrboynle" method="POST" class="consultation-form needs-validation" novalidate>
           <!-- Name Field -->
           <div class="form-group">
             <label for="name" class="form-label">Full Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
-            <div class="invalid-feedback" style="color: #ffcccc;">
+            <div class="invalid-feedback">
               Please provide your full name.
             </div>
           </div>
@@ -84,7 +84,7 @@
           <div class="form-group">
             <label for="email" class="form-label">Email Address</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required>
-            <div class="invalid-feedback" style="color: #ffcccc;">
+            <div class="invalid-feedback">
               Please provide a valid email address.
             </div>
           </div>
@@ -114,7 +114,7 @@
               <option value="analytics">Analytics & Reporting</option>
               <option value="all">All Services</option>
             </select>
-            <div class="invalid-feedback" style="color: #ffcccc;">
+            <div class="invalid-feedback">
               Please select a service.
             </div>
           </div>
@@ -123,7 +123,7 @@
           <div class="form-group">
             <label for="message" class="form-label">Tell Us About Your Business & Goals</label>
             <textarea class="form-control" id="message" name="message" placeholder="Describe your business, current challenges, and what you want to achieve..." required></textarea>
-            <div class="invalid-feedback" style="color: #ffcccc;">
+            <div class="invalid-feedback">
               Please share details about your business.
             </div>
           </div>
@@ -151,23 +151,23 @@
           <div class="form-group" style="margin-bottom: 2rem;">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
-              <label class="form-check-label" for="terms">
-                I agree to the <a href="#" style="color: white; text-decoration: underline;">Privacy Policy</a> and <a href="#" style="color: white; text-decoration: underline;">Terms of Service</a>
+              <label class="form-check-label" for="terms" style="color: var(--text-dark);">
+                I agree to the <a href="#" style="color: var(--primary-blue); text-decoration: underline;">Privacy Policy</a> and <a href="#" style="color: var(--primary-blue); text-decoration: underline;">Terms of Service</a>
               </label>
-              <div class="invalid-feedback" style="color: #ffcccc;">
+              <div class="invalid-feedback" style="color: #dc3545;">
                 You must agree to the terms.
               </div>
             </div>
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" class="btn-primary-custom" style="width: 100%; padding: 15px; font-size: 1.1rem; background: white; color: #0056D2 !important; border: none; font-weight: 700;">
+          <button type="submit" class="btn-primary-custom" style="width: 100%; padding: 16px; font-size: 1.1rem;">
             <i class="fas fa-paper-plane"></i> Send Consultation Request
           </button>
         </form>
 
-        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
-          <p style="margin-bottom: 1rem; font-size: 0.95rem;">Or reach out directly:</p>
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+          <p style="margin-bottom: 1rem; font-size: 0.95rem; color: var(--text-gray);">Or reach out directly:</p>
           <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
             <a href="tel:+923181292628" class="btn-secondary-custom">
               <i class="fas fa-phone"></i> Call Us
