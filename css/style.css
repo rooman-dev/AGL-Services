@@ -151,17 +151,16 @@ a:hover {
 }
 
 .navbar-brand {
-  font-size: 2.2rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: bolder;
   background: linear-gradient(135deg, #0056D2 0%, #007BFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  letter-spacing: 3px;
   transition: all 0.3s ease;
   font-style: normal;
-  opacity: 0.9;
+  font-family: 'Manrope', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .navbar-brand:hover {
