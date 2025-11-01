@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeFormValidation();
   initializeSmoothScroll();
   observeAnimations();
+  initializeTypingAnimation();
 });
 
 /* ============================================
@@ -196,6 +197,15 @@ function initializeSmoothScroll() {
 }
 
 /* ============================================
+   Typing Animation for Headings
+   ============================================ */
+function initializeTypingAnimation() {
+  // Animation handled by Intersection Observer - see startTyping()
+  // This function is kept for backward compatibility but is now disabled
+  // to prevent conflicts with the observer-based animation
+}
+
+/* ============================================
    Intersection Observer for Animations
    ============================================ */
 function observeAnimations() {
@@ -208,14 +218,72 @@ function observeAnimations() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fade-in');
+        
+        // Trigger typing animation if element has typing-text class
+        if (entry.target.classList.contains('typing-trigger')) {
+          const typingTexts = entry.target.querySelectorAll('.typing-text');
+          typingTexts.forEach((el, index) => {
+            // Reset the element first to clear any stale content
+            const dataText = el.getAttribute('data-text');
+            if (dataText && el.textContent !== '') {
+              el.textContent = '';
+            }
+            setTimeout(() => {
+              startTyping(el);
+            }, index * 200);
+          });
+        }
+        
         observer.unobserve(entry.target);
       }
     });
   }, options);
 
   // Observe service cards and other elements
-  const elements = document.querySelectorAll('.service-card, .contact-card, .about-content');
+  const elements = document.querySelectorAll('.service-card, .contact-card, .about-content, .typing-trigger');
   elements.forEach(el => observer.observe(el));
+}
+
+function startTyping(element) {
+  // Get the text from data-text attribute first, then fall back to current content
+  let text = element.getAttribute('data-text');
+  
+  // If no data-text, don't clear and animate - just keep original text
+  if (!text) {
+    return;
+  }
+  
+  // Build the full HTML structure first to preserve layout
+  element.style.opacity = '1';
+  element.style.display = 'block';
+  element.style.whiteSpace = 'normal';
+  element.style.wordWrap = 'break-word';
+  element.style.maxWidth = '100%';
+  element.style.borderRight = '3px solid var(--accent-blue)';
+  element.style.paddingRight = '5px';
+  element.style.visibility = 'visible';
+  
+  // Create a container for the text that will be gradually revealed
+  element.innerHTML = '';
+  let charIndex = 0;
+  
+  const typingInterval = setInterval(() => {
+    if (charIndex < text.length) {
+      // Append one character at a time, preserving spaces and structure
+      element.textContent = text.substring(0, charIndex + 1);
+      charIndex++;
+    } else {
+      clearInterval(typingInterval);
+      // Add blinking cursor effect after typing completes
+      let cursorVisible = true;
+      setInterval(() => {
+        cursorVisible = !cursorVisible;
+        element.style.borderRight = cursorVisible 
+          ? '3px solid var(--accent-blue)' 
+          : '3px solid transparent';
+      }, 500);
+    }
+  }, 20);
 }
 
 /* ============================================

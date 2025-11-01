@@ -129,27 +129,30 @@ AGL-Services/
 
 ---
 
-## 🎨 Design Features
+## 🎨 Design System (v2.0 - Modern Update)
 
-### Color Scheme
-- **Primary Blue:** #0056D2
-- **Dark Blue:** #003D99  
-- **Light Blue:** #3B82F6
-- **Text Dark:** #1E293B
-- **Light Background:** #F8FAFC
+### Color Palette
+- **Primary Dark:** #0A1628 - Deep navy for headlines
+- **Accent Blue:** #2563EB - Vibrant blue for CTAs
+- **Text Primary:** #111827 - High contrast body text
+- **Text Secondary:** #6B7280 - Descriptive text
+- **Light Background:** #F9FAFB - Clean sections
+- **White:** #FFFFFF - Card backgrounds
 
 ### Typography
-- **Headings:** Space Grotesk (700-900 weight)
-- **Body:** Inter (400-600 weight)
+- **Headings:** Manrope (700-800 weight) - Modern geometric sans
+- **Body:** Inter (400-600 weight) - Highly readable UI font
+- **Tight letter-spacing** on headlines (-0.02em to -0.03em)
 - Fully responsive font sizing
 
-### Components
-- Modern gradient backgrounds
-- Card-based layouts
-- Smooth hover effects
-- Animated elements
-- Professional shadows
-- Clean, minimal design
+### Design Principles
+- ✨ **Clean & Professional** - Sharp borders (12px radius), subtle shadows
+- ✨ **Modern Aesthetic** - Bold typography, ample white space
+- ✨ **Data-Driven** - Numbers and results prominently displayed
+- ✨ **Accessible** - WCAG AA compliant color contrasts
+- ✨ **Restrained Animations** - Subtle, professional interactions
+
+👉 **[See Complete Design System](DESIGN_SYSTEM.md)**
 
 ---
 
