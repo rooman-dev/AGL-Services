@@ -13,8 +13,10 @@
   /* Primary Colors - Dark Navy Theme */
   --primary-dark: #0A1628;
   --primary-navy: #1A2942;
+  --primary-blue: #2563EB;
   --accent-blue: #2563EB;
   --accent-light: #60A5FA;
+  --light-blue: #60A5FA;
   
   /* Neutral Colors */
   --white: #FFFFFF;
@@ -23,10 +25,14 @@
   --darker-bg: #050F1A;
   --card-bg: #1A2942;
   --border-dark: #334155;
+  --border-color: #334155;
+  --light-bg: #0F172A;
   
   /* Text Colors - Light for dark background */
   --text-white: #FFFFFF;
   --text-light: #E2E8F0;
+  --text-dark: #1F2937;
+  --text-primary: #FFFFFF;
   --text-gray: #94A3B8;
   --text-muted: #64748B;
   
@@ -135,7 +141,7 @@ a:hover {
    Navbar Styling
    ============================================ */
 .navbar {
-  background: var(--primary-dark);
+  background: var(--primary-dark) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   padding: 1.2rem 0;
   position: sticky;
@@ -151,10 +157,9 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-family: 'Lato', sans-serif;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   letter-spacing: 3px;
   transition: all 0.3s ease;
-  text-transform: uppercase;
   font-style: normal;
   opacity: 0.9;
 }
@@ -613,37 +618,57 @@ textarea {
 }
 
 .consultation-form .form-label {
-  color: var(--text-dark);
+  color: var(--text-light) !important;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: 0.3px;
+  display: block;
+  margin-bottom: 0.75rem;
 }
 
 .consultation-form .form-control,
 .consultation-form .form-select,
 .consultation-form textarea {
-  background-color: var(--white);
-  border: 2px solid var(--border-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  background-color: #1A2942 !important;
+  border: 2px solid #334155 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  padding: 12px 16px;
+  padding: 12px 16px !important;
   transition: all 0.3s ease;
-  color: var(--text-dark);
+  color: #E2E8F0 !important;
 }
 
 .consultation-form .form-control::placeholder,
 .consultation-form textarea::placeholder {
-  color: var(--text-light);
+  color: #94A3B8 !important;
 }
 
 .consultation-form .form-control:focus,
 .consultation-form .form-select:focus,
 .consultation-form textarea:focus {
-  background-color: var(--white);
-  box-shadow: 0 0 0 3px rgba(0, 86, 210, 0.1);
-  border-color: var(--primary-blue);
+  background-color: #1F3A52 !important;
+  color: #E2E8F0 !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2) !important;
+  border-color: #2563EB !important;
+}
+
+.consultation-form .form-check-label {
+  color: #E2E8F0 !important;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.consultation-form .form-check-input {
+  border: 2px solid #334155 !important;
+  background-color: #1A2942 !important;
+  cursor: pointer;
+}
+
+.consultation-form .form-check-input:checked {
+  background-color: #2563EB !important;
+  border-color: #2563EB !important;
 }
 
 /* ============================================
@@ -854,8 +879,18 @@ footer {
   overflow: hidden;
   border-right: 3px solid var(--accent-blue);
   white-space: nowrap;
+  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   display: inline-block;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes typing {
@@ -864,6 +899,15 @@ footer {
   }
   to {
     width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accent-blue);
   }
 }
 
@@ -879,19 +923,10 @@ footer {
 /* Fade in animation for subtitles and other elements */
 .fade-in-up {
   opacity: 0;
+  -webkit-animation: fadeInUp 1s ease-out forwards;
   animation: fadeInUp 1s ease-out forwards;
+  -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ============================================
@@ -1085,6 +1120,19 @@ textarea.is-valid {
 /* ============================================
    Animations
    ============================================ */
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1096,6 +1144,19 @@ textarea.is-valid {
   }
 }
 
+@-webkit-keyframes slideInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -1104,35 +1165,22 @@ textarea.is-valid {
   to {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fade-in {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.slide-in-left {
-  animation: slideInLeft 0.8s ease-out;
-}
-
-.slide-in-right {
-  animation: slideInRight 0.8s ease-out;
-}
-
 /* ============================================
    Advanced Animations
    ============================================ */
+@-webkit-keyframes scaleIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 @keyframes scaleIn {
   from {
     opacity: 0;
@@ -1141,6 +1189,19 @@ textarea.is-valid {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@-webkit-keyframes rotateIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotate(-10deg) scale(0.8);
+    transform: rotate(-10deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
   }
 }
 
@@ -1155,6 +1216,19 @@ textarea.is-valid {
   }
 }
 
+@-webkit-keyframes slideUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -1162,6 +1236,19 @@ textarea.is-valid {
   }
   to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -1177,6 +1264,17 @@ textarea.is-valid {
   }
 }
 
+@-webkit-keyframes pulse {
+  0%, 100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(26, 58, 107, 0.7);
+    box-shadow: 0 0 0 0 rgba(26, 58, 107, 0.7);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px rgba(26, 58, 107, 0);
+    box-shadow: 0 0 0 10px rgba(26, 58, 107, 0);
+  }
+}
+
 @keyframes pulse {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(26, 58, 107, 0.7);
@@ -1186,12 +1284,34 @@ textarea.is-valid {
   }
 }
 
+@-webkit-keyframes glow {
+  0%, 100% {
+    -webkit-box-shadow: 0 8px 30px rgba(26, 58, 107, 0.2);
+    box-shadow: 0 8px 30px rgba(26, 58, 107, 0.2);
+  }
+  50% {
+    -webkit-box-shadow: 0 8px 50px rgba(26, 58, 107, 0.4);
+    box-shadow: 0 8px 50px rgba(26, 58, 107, 0.4);
+  }
+}
+
 @keyframes glow {
   0%, 100% {
     box-shadow: 0 8px 30px rgba(26, 58, 107, 0.2);
   }
   50% {
     box-shadow: 0 8px 50px rgba(26, 58, 107, 0.4);
+  }
+}
+
+@-webkit-keyframes float {
+  0%, 100% {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    -webkit-transform: translateY(-20px) scale(1.05);
+    transform: translateY(-20px) scale(1.05);
   }
 }
 
@@ -1226,18 +1346,22 @@ textarea.is-valid {
 }
 
 .scale-in {
+  -webkit-animation: scaleIn 0.7s ease-out;
   animation: scaleIn 0.7s ease-out;
 }
 
 .rotate-in {
+  -webkit-animation: rotateIn 0.8s ease-out;
   animation: rotateIn 0.8s ease-out;
 }
 
 .slide-up {
+  -webkit-animation: slideUp 0.8s ease-out;
   animation: slideUp 0.8s ease-out;
 }
 
 .fade-in-down {
+  -webkit-animation: fadeInDown 0.8s ease-out;
   animation: fadeInDown 0.8s ease-out;
 }
 
@@ -1245,18 +1369,20 @@ textarea.is-valid {
    Feature Card Styles
    ============================================ */
 .feature-card {
-  background: var(--card-bg);
+  background: #FFFFFF;
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E7EB;
+  -webkit-animation: fadeInUp 0.8s ease-out backwards;
   animation: fadeInUp 0.8s ease-out backwards;
 }
 
 .feature-card:hover {
+  -webkit-transform: translateY(-4px);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
   border-color: var(--accent-blue);
 }
 
@@ -1269,24 +1395,41 @@ textarea.is-valid {
 }
 
 .feature-card:hover .feature-card-icon {
+  -webkit-transform: scale(1.05);
   transform: scale(1.05);
   color: var(--accent-light);
 }
 
 .feature-card h4 {
-  color: var(--text-white);
+  color: #000000 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
   font-weight: 700;
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
   font-family: 'Manrope', sans-serif;
   letter-spacing: -0.02em;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
 }
 
 .feature-card p {
-  color: var(--text-light);
+  color: #333333 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
   font-size: 0.95rem;
   line-height: 1.6;
   font-weight: 400;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
 }
 
 /* ============================================
@@ -1832,13 +1975,18 @@ a, .btn-primary-custom, .btn-secondary-custom, .btn-outline-custom {
   width: 100%;
   height: 2px;
   background: var(--white);
+  -webkit-transform: scaleX(0);
   transform: scaleX(0);
+  -webkit-transform-origin: right;
   transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
 }
 
 .btn-primary-custom:hover::after,
 .btn-outline-custom:hover::after {
+  -webkit-transform: scaleX(1);
   transform: scaleX(1);
+  -webkit-transform-origin: left;
   transform-origin: left;
 }
