@@ -27,17 +27,47 @@
        NAVIGATION BAR
        ============================================ -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        Ads Genius Lab
+    <div class="container d-flex align-items-center">
+      <!-- Logo on Left -->
+      <a class="navbar-brand me-auto" href="index.html">
+        adsGeniuslab.
       </a>
+
+      <!-- Language Toggle in Header (not in menu) -->
+      <div class="language-toggle-container me-3 d-none d-lg-block">
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
+      <!-- Mobile Language Toggle -->
+      <div class="language-toggle-container me-3 d-lg-none">
+        <span class="language-label">EN | AR</span>
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <!-- Navigation Pages -->
+        <ul class="navbar-nav ms-4">
     
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
@@ -45,7 +75,7 @@
             <a class="nav-link" href="services.html">What We Do</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
+            <a class="nav-link active" href="blog.html">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="consultation.html">Consultation</a>
@@ -64,8 +94,8 @@
   <section class="hero typing-trigger" style="min-height: 30px; padding: 50px 0;">
     <div class="container">
       <div class="hero-content">
-        <h1 class="typing-text" data-text="Blog Posts & Industry Insights">Blog Posts & Industry Insights</h1>
-        <p class="fade-in-up" style="animation-delay: 1s;">Stay updated with the latest trends, strategies, and insights from the digital marketing world.</p>
+        <h1 class="typing-text" data-text="Blog Posts & Industry Insights" data-i18n="blog_hero_title">Blog Posts & Industry Insights</h1>
+        <p class="fade-in-up" style="animation-delay: 1s;" data-i18n="blog_hero_subtitle">Stay updated with the latest trends, strategies, and insights from the digital marketing world.</p>
       </div>
     </div>
   </section>
@@ -84,12 +114,12 @@
             </div>
             <div style="padding: 2rem;">
               <div style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 0.5rem;">
-                <i class="fas fa-calendar"></i> November 1, 2024
+                <i class="fas fa-calendar"></i> <span data-i18n="blog_date_1">November 1, 2024</span>
               </div>
-              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;">10 SEO Strategies to Boost Your Rankings in 2024</h4>
-              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;">Discover proven SEO techniques that will help your website rank higher in search results and drive organic traffic.</p>
+              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;" data-i18n="blog_title_1">10 SEO Strategies to Boost Your Rankings in 2024</h4>
+              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="blog_desc_1">Discover proven SEO techniques that will help your website rank higher in search results and drive organic traffic.</p>
               <a href="#" style="color: var(--accent-light); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-                Read More <i class="fas fa-arrow-right"></i>
+                <span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -103,12 +133,12 @@
             </div>
             <div style="padding: 2rem;">
               <div style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 0.5rem;">
-                <i class="fas fa-calendar"></i> October 28, 2024
+                <i class="fas fa-calendar"></i> <span data-i18n="blog_date_2">October 28, 2024</span>
               </div>
-              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;">Mastering Social Media Marketing in 2024</h4>
-              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;">Learn how to create engaging content and build a loyal community on social media platforms.</p>
+              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;" data-i18n="blog_title_2">Mastering Social Media Marketing in 2024</h4>
+              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="blog_desc_2">Learn how to create engaging content and build a loyal community on social media platforms.</p>
               <a href="#" style="color: var(--accent-light); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-                Read More <i class="fas fa-arrow-right"></i>
+                <span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -122,12 +152,12 @@
             </div>
             <div style="padding: 2rem;">
               <div style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 0.5rem;">
-                <i class="fas fa-calendar"></i> October 25, 2024
+                <i class="fas fa-calendar"></i> <span data-i18n="blog_date_3">October 25, 2024</span>
               </div>
-              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;">The Complete Guide to Conversion Rate Optimization</h4>
-              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;">Maximize your conversion rates with data-driven strategies and best practices for your website.</p>
+              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;" data-i18n="blog_title_3">The Complete Guide to Conversion Rate Optimization</h4>
+              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="blog_desc_3">Maximize your conversion rates with data-driven strategies and best practices for your website.</p>
               <a href="#" style="color: var(--accent-light); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-                Read More <i class="fas fa-arrow-right"></i>
+                <span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -141,12 +171,12 @@
             </div>
             <div style="padding: 2rem;">
               <div style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 0.5rem;">
-                <i class="fas fa-calendar"></i> October 20, 2024
+                <i class="fas fa-calendar"></i> <span data-i18n="blog_date_4">October 20, 2024</span>
               </div>
-              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;">AI and Machine Learning in Digital Marketing</h4>
-              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;">Explore how AI-powered tools are transforming digital marketing strategies and customer experiences.</p>
+              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;" data-i18n="blog_title_4">AI and Machine Learning in Digital Marketing</h4>
+              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="blog_desc_4">Explore how AI-powered tools are transforming digital marketing strategies and customer experiences.</p>
               <a href="#" style="color: var(--accent-light); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-                Read More <i class="fas fa-arrow-right"></i>
+                <span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -160,12 +190,12 @@
             </div>
             <div style="padding: 2rem;">
               <div style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 0.5rem;">
-                <i class="fas fa-calendar"></i> October 15, 2024
+                <i class="fas fa-calendar"></i> <span data-i18n="blog_date_5">October 15, 2024</span>
               </div>
-              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;">Video Marketing: The Future of Digital Advertising</h4>
-              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;">Discover why video content is crucial for modern marketing and how to create compelling videos.</p>
+              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;" data-i18n="blog_title_5">Video Marketing: The Future of Digital Advertising</h4>
+              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="blog_desc_5">Discover why video content is crucial for modern marketing and how to create compelling videos.</p>
               <a href="#" style="color: var(--accent-light); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-                Read More <i class="fas fa-arrow-right"></i>
+                <span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -179,12 +209,12 @@
             </div>
             <div style="padding: 2rem;">
               <div style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 0.5rem;">
-                <i class="fas fa-calendar"></i> October 10, 2024
+                <i class="fas fa-calendar"></i> <span data-i18n="blog_date_6">October 10, 2024</span>
               </div>
-              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;">Mobile-First Marketing Strategies</h4>
-              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;">Optimize your marketing for mobile users and capture the growing mobile audience effectively.</p>
+              <h4 style="color: var(--text-white); margin-bottom: 1rem; font-weight: 700;" data-i18n="blog_title_6">Mobile-First Marketing Strategies</h4>
+              <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="blog_desc_6">Optimize your marketing for mobile users and capture the growing mobile audience effectively.</p>
               <a href="#" style="color: var(--accent-light); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-                Read More <i class="fas fa-arrow-right"></i>
+                <span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -194,11 +224,11 @@
       <!-- Pagination -->
       <nav style="margin-top: 3rem; display: flex; justify-content: center;">
         <ul style="display: flex; gap: 1rem; list-style: none; padding: 0;">
-          <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'">Previous</a></li>
+          <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'" data-i18n="btn_previous">Previous</a></li>
           <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: linear-gradient(135deg, #0056D2 0%, #007BFF 100%); color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">1</a></li>
           <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'">2</a></li>
           <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'">3</a></li>
-          <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'">Next</a></li>
+          <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'" data-i18n="btn_next">Next</a></li>
         </ul>
       </nav>
     </div>
@@ -209,11 +239,11 @@
        ============================================ -->
   <section class="typing-trigger" style="background: linear-gradient(135deg, #1A2942 0%, #0A1628 100%); padding: 80px 0; text-align: center;">
     <div class="container">
-      <h2 style="color: var(--text-white); font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 800;">Subscribe to Our Newsletter</h2>
-      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; color: var(--text-light);">Get the latest digital marketing insights and industry tips delivered directly to your inbox.</p>
+      <h2 style="color: var(--text-white); font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 800;" data-i18n="newsletter_title">Subscribe to Our Newsletter</h2>
+      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; color: var(--text-light);" data-i18n="newsletter_desc">Get the latest digital marketing insights and industry tips delivered directly to your inbox.</p>
       <form style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
         <input type="email" placeholder="Enter your email" style="flex: 1; min-width: 250px; padding: 1rem; border: 2px solid var(--accent-blue); border-radius: 8px; background: transparent; color: var(--text-white); font-size: 1rem;" required>
-        <button type="submit" class="btn-primary-custom" style="padding: 1rem 2rem; border: none; cursor: pointer;">Subscribe</button>
+        <button type="submit" class="btn-primary-custom" style="padding: 1rem 2rem; border: none; cursor: pointer;" data-i18n="btn_subscribe">Subscribe</button>
       </form>
     </div>
   </section>
@@ -225,8 +255,8 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4>AdsGeniusLab</h4>
-          <p>Transforming businesses through innovative digital marketing solutions worldwide.</p>
+          <h4><i class="fas fa-lightbulb"></i> <span data-i18n="footer_company_name">AdsGeniusLab</span></h4>
+          <p data-i18n="footer_company_desc">Transforming businesses through innovative digital marketing solutions worldwide.</p>
           <div class="social-links">
             <a href="https://whatsapp.com" target="_blank" title="WhatsApp">
               <i class="fab fa-whatsapp"></i>
@@ -237,47 +267,52 @@
             <a href="https://linkedin.com" target="_blank" title="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://twitter.com" target="_blank" title="Twitter">
-              <i class="fab fa-twitter"></i>
+            <a href="https://instagram.com" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
             </a>
           </div>
         </div>
 
         <div class="footer-section">
-          <h5>Quick Links</h5>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">What We Do</a></li>
-            <li><a href="blog.html">Blog</a></li>
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="footer_home">Home</a></li>
+            <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+            <li><a href="services.html" data-i18n="footer_services">What We Do</a></li>
+            <li><a href="consultation.html" data-i18n="footer_consultation">Consultation</a></li>
+            <li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h5>What We Do</h5>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="services.html">SEO Services</a></li>
-            <li><a href="services.html">Social Media Marketing</a></li>
-            <li><a href="services.html">Content Marketing</a></li>
-            <li><a href="services.html">PPC Advertising</a></li>
+          <h4 data-i18n="footer_what_we_do">What We Do</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#seo" data-i18n="footer_seo">SEO Optimization</a></li>
+            <li><a href="services.html#social" data-i18n="footer_social">Social Media Marketing</a></li>
+            <li><a href="services.html#content" data-i18n="footer_content">Content Strategy</a></li>
+            <li><a href="services.html#ppc" data-i18n="footer_ppc">PPC Advertising</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h5>Contact</h5>
-          <p>Email: <a href="mailto:adsgeniuslab@gmail.com">adsgeniuslab@gmail.com</a></p>
-          <p>Phone: <a href="tel:+923181292628">+92 318 1292628</a></p>
-          <p>WhatsApp: <a href="https://wa.me/923181292628">+92 318 1292628</a></p>
+          <h4 data-i18n="footer_contact_info">Contact Info</h4>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);" data-i18n="footer_email">adsgeniuslab@gmail.com</a>
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);" data-i18n="footer_phone">+92 318 1292628</a>
+          </p>
+          <p>
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);" data-i18n="footer_whatsapp">WhatsApp Us</a>
+          </p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 AdsGeniusLab. All rights reserved.</p>
-        <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-          <a href="#" style="color: var(--text-gray); text-decoration: none; font-size: 0.9rem;">Privacy Policy</a>
-          <a href="#" style="color: var(--text-gray); text-decoration: none; font-size: 0.9rem;">Terms of Service</a>
-          <a href="#" style="color: var(--text-gray); text-decoration: none; font-size: 0.9rem;">Cookie Policy</a>
-        </div>
+        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
       </div>
     </div>
   </footer>
@@ -318,6 +353,219 @@
         this.style.boxShadow = 'var(--shadow-lg)';
       });
     });
+
+    // Language Switching
+    const pageTranslations = {
+      en: {
+        // Navigation
+        'nav_home': 'Home',
+        'nav_about': 'About',
+        'nav_services': 'What We Do',
+        'nav_blog': 'Blog',
+        'nav_consultation': 'Consultation',
+        'nav_contact': 'Contact',
+        
+        // Hero Section
+        'blog_hero_title': 'Blog Posts & Industry Insights',
+        'blog_hero_subtitle': 'Stay updated with the latest trends, strategies, and insights from the digital marketing world.',
+        
+        // Blog Posts
+        'blog_date_1': 'November 1, 2024',
+        'blog_title_1': '10 SEO Strategies to Boost Your Rankings in 2024',
+        'blog_desc_1': 'Discover proven SEO techniques that will help your website rank higher in search results and drive organic traffic.',
+        
+        'blog_date_2': 'October 28, 2024',
+        'blog_title_2': 'Mastering Social Media Marketing in 2024',
+        'blog_desc_2': 'Learn how to create engaging content and build a loyal community on social media platforms.',
+        
+        'blog_date_3': 'October 25, 2024',
+        'blog_title_3': 'The Complete Guide to Conversion Rate Optimization',
+        'blog_desc_3': 'Maximize your conversion rates with data-driven strategies and best practices for your website.',
+        
+        'blog_date_4': 'October 20, 2024',
+        'blog_title_4': 'AI and Machine Learning in Digital Marketing',
+        'blog_desc_4': 'Explore how AI-powered tools are transforming digital marketing strategies and customer experiences.',
+        
+        'blog_date_5': 'October 15, 2024',
+        'blog_title_5': 'Video Marketing: The Future of Digital Advertising',
+        'blog_desc_5': 'Discover why video content is crucial for modern marketing and how to create compelling videos.',
+        
+        'blog_date_6': 'October 10, 2024',
+        'blog_title_6': 'Mobile-First Marketing Strategies',
+        'blog_desc_6': 'Optimize your marketing for mobile users and capture the growing mobile audience effectively.',
+        
+        // Pagination
+        'btn_read_more': 'Read More',
+        'btn_previous': 'Previous',
+        'btn_next': 'Next',
+        
+        // Newsletter
+        'newsletter_title': 'Subscribe to Our Newsletter',
+        'newsletter_desc': 'Get the latest digital marketing insights and industry tips delivered directly to your inbox.',
+        'btn_subscribe': 'Subscribe',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
+        'footer_quick_links': 'Quick Links',
+        'footer_what_we_do': 'What We Do',
+        'footer_contact_info': 'Contact Info',
+        'footer_home': 'Home',
+        'footer_about': 'About Us',
+        'footer_services': 'What We Do',
+        'footer_consultation': 'Consultation',
+        'footer_contact': 'Contact',
+        'footer_seo': 'SEO Optimization',
+        'footer_social': 'Social Media Marketing',
+        'footer_content': 'Content Strategy',
+        'footer_ppc': 'PPC Advertising',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'WhatsApp Us',
+        'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
+        'footer_privacy': 'Privacy Policy',
+        'footer_terms': 'Terms of Service'
+      },
+      ar: {
+        // Navigation
+        'nav_home': 'الرئيسية',
+        'nav_about': 'عننا',
+        'nav_services': 'ما نفعله',
+        'nav_blog': 'المدونة',
+        'nav_consultation': 'استشارة',
+        'nav_contact': 'تواصل معنا',
+        
+        // Hero Section
+        'blog_hero_title': 'مقالات المدونة والرؤى الصناعية',
+        'blog_hero_subtitle': 'ابق مطلعاً على أحدث الاتجاهات والاستراتيجيات والرؤى من عالم التسويق الرقمي.',
+        
+        // Blog Posts
+        'blog_date_1': '1 نوفمبر 2024',
+        'blog_title_1': '10 استراتيجيات SEO لتحسين تصنيفاتك في 2024',
+        'blog_desc_1': 'اكتشف تقنيات SEO المثبتة التي ستساعد موقع الويب الخاص بك على تحسين ترتيبه في نتائج البحث وزيادة حركة المرور العضوية.',
+        
+        'blog_date_2': '28 أكتوبر 2024',
+        'blog_title_2': 'إتقان التسويق عبر وسائل التواصل الاجتماعي في 2024',
+        'blog_desc_2': 'تعلم كيفية إنشاء محتوى جذاب وبناء مجتمع مخلص على منصات التواصل الاجتماعي.',
+        
+        'blog_date_3': '25 أكتوبر 2024',
+        'blog_title_3': 'الدليل الكامل لتحسين معدل التحويل',
+        'blog_desc_3': 'زيادة معدلات التحويل الخاصة بك باستخدام استراتيجيات مدفوعة بالبيانات وأفضل الممارسات لموقع الويب الخاص بك.',
+        
+        'blog_date_4': '20 أكتوبر 2024',
+        'blog_title_4': 'الذكاء الاصطناعي والتعلم الآلي في التسويق الرقمي',
+        'blog_desc_4': 'استكشف كيفية تحويل أدوات مدعومة بالذكاء الاصطناعي لاستراتيجيات التسويق الرقمي وتجارب العملاء.',
+        
+        'blog_date_5': '15 أكتوبر 2024',
+        'blog_title_5': 'تسويق الفيديو: مستقبل الإعلانات الرقمية',
+        'blog_desc_5': 'اكتشف لماذا يعتبر محتوى الفيديو ضروياً للتسويق الحديث وكيفية إنشاء مقاطع فيديو جذابة.',
+        
+        'blog_date_6': '10 أكتوبر 2024',
+        'blog_title_6': 'استراتيجيات التسويق الموجهة للهاتف المحمول',
+        'blog_desc_6': 'حسّن تسويقك لمستخدمي الهاتف المحمول والتقط جمهور الهاتف المحمول المتنامي بفعالية.',
+        
+        // Pagination
+        'btn_read_more': 'اقرأ المزيد',
+        'btn_previous': 'السابق',
+        'btn_next': 'التالي',
+        
+        // Newsletter
+        'newsletter_title': 'اشترك في رسالتنا الإخبارية',
+        'newsletter_desc': 'احصل على أحدث رؤى التسويق الرقمي وتلميحات الصناعة مباشرة في صندوق الوارد الخاص بك.',
+        'btn_subscribe': 'اشترك',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
+        'footer_quick_links': 'الروابط السريعة',
+        'footer_what_we_do': 'ما نفعله',
+        'footer_contact_info': 'معلومات التواصل',
+        'footer_home': 'الرئيسية',
+        'footer_about': 'عننا',
+        'footer_services': 'ما نفعله',
+        'footer_consultation': 'استشارة',
+        'footer_contact': 'تواصل معنا',
+        'footer_seo': 'تحسين محركات البحث',
+        'footer_social': 'التسويق عبر وسائل التواصل الاجتماعي',
+        'footer_content': 'استراتيجية المحتوى',
+        'footer_ppc': 'إعلانات الدفع مقابل النقر',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
+        'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
+        'footer_privacy': 'سياسة الخصوصية',
+        'footer_terms': 'شروط الخدمة'
+      }
+    };
+
+    let currentLanguage = localStorage.getItem('siteLanguage') || 'en';
+
+    function initLanguage() {
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      const isChecked = currentLanguage === 'ar';
+      
+      if (desktopToggle) {
+        desktopToggle.checked = isChecked;
+      }
+      if (mobileToggle) {
+        mobileToggle.checked = isChecked;
+      }
+      applyLanguage(currentLanguage);
+    }
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+      localStorage.setItem('siteLanguage', currentLanguage);
+      
+      // Sync both language toggle checkboxes
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      
+      const isChecked = currentLanguage === 'ar';
+      if (desktopToggle) desktopToggle.checked = isChecked;
+      if (mobileToggle) mobileToggle.checked = isChecked;
+      
+      applyLanguage(currentLanguage);
+    }
+
+    function applyLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+      updateAllText(lang);
+      updateNavigation(lang);
+    }
+
+    function updateAllText(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (pageTranslations[lang][key]) {
+          if (element.tagName === 'INPUT' && element.type === 'submit') {
+            element.value = pageTranslations[lang][key];
+          } else {
+            element.textContent = pageTranslations[lang][key];
+          }
+        }
+      });
+    }
+
+    function updateNavigation(lang) {
+      const navItems = document.querySelectorAll('.navbar-nav .nav-item:not(.language-toggle-container) .nav-link');
+      const keys = ['nav_home', 'nav_about', 'nav_services', 'nav_blog', 'nav_consultation', 'nav_contact'];
+      navItems.forEach((link, i) => { if (keys[i] && pageTranslations[lang][keys[i]]) link.textContent = pageTranslations[lang][keys[i]]; });
+    }
+
+    document.addEventListener('DOMContentLoaded', initLanguage);
+    window.addEventListener('pageshow', () => {
+      const saved = localStorage.getItem('siteLanguage') || 'en';
+      if (saved !== currentLanguage) { currentLanguage = saved; initLanguage(); }
+    });
   </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn animate" title="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>

@@ -23,17 +23,46 @@
        NAVIGATION BAR
        ============================================ -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        Ads Genius Lab
+    <div class="container d-flex align-items-center">
+      <!-- Logo on Left -->
+      <a class="navbar-brand me-auto" href="index.html">
+        adsGeniuslab.
       </a>
+
+      <!-- Language Toggle in Header (not in menu) -->
+      <div class="language-toggle-container me-3 d-none d-lg-block">
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
+      <!-- Mobile Language Toggle -->
+      <div class="language-toggle-container me-3 d-lg-none">
+        <span class="language-label">EN | AR</span>
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-   
+        <!-- Navigation Pages -->
+        <ul class="navbar-nav ms-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link active" href="about.html">About</a>
           </li>
@@ -60,8 +89,8 @@
   <section class="hero typing-trigger" style="min-height: 30px; padding: 50px 0;">
     <div class="container">
       <div class="hero-content">
-        <h1><span class="typing-text" data-text="About AdsGeniusLab">About AdsGeniusLab</span></h1>
-        <p class="fade-in-up">Pioneering digital marketing excellence since 2015</p>
+        <h1><span class="typing-text" data-text="About AdsGeniusLab" data-i18n="hero_title">About AdsGeniusLab</span></h1>
+        <p class="fade-in-up" data-i18n="hero_subtitle">Pioneering digital marketing excellence since 2015</p>
       </div>
     </div>
   </section>
@@ -74,16 +103,16 @@
       <div class="about-content">
         <div class="about-image">
 <div>
-  <img src="images/whoweare.jpg" alt="image" height="100%" width="100%">
+  <img src="images/whoweare.jpg" alt="AdsGeniusLab team members - Our experienced digital marketing professionals" height="100%" width="100%">
 </div>
         </div>
         <div class="about-text">
-          <h3>Who We Are</h3>
-          <p>AdsGeniusLab is a leading digital marketing agency dedicated to transforming businesses through innovative, data-driven strategies. With over a decade of experience, we've helped more than 500 companies achieve their digital goals.</p>
-          <p>Our team of seasoned marketing professionals, creative designers, and technical experts work collaboratively to deliver exceptional results that exceed expectations.</p>
-          <p>We believe that every business deserves access to world-class digital marketing expertise, and we're committed to making that a reality for our clients worldwide.</p>
+          <h3 data-i18n="who_title">Who We Are</h3>
+          <p data-i18n="who_text_1">AdsGeniusLab is a leading digital marketing agency dedicated to transforming businesses through innovative, data-driven strategies. With over a decade of experience, we've helped more than 500 companies achieve their digital goals.</p>
+          <p data-i18n="who_text_2">Our team of seasoned marketing professionals, creative designers, and technical experts work collaboratively to deliver exceptional results that exceed expectations.</p>
+          <p data-i18n="who_text_3">We believe that every business deserves access to world-class digital marketing expertise, and we're committed to making that a reality for our clients worldwide.</p>
           <div style="margin-top: 2rem;">
-            <a href="consultation.html" class="btn-primary-custom">
+            <a href="consultation.html" class="btn-primary-custom" data-i18n="btn_schedule">
               <i class="fas fa-calendar-check"></i> Schedule Consultation
             </a>
           </div>
@@ -98,30 +127,24 @@
   <section class="typing-trigger" style="background: var(--dark-bg); padding: 100px 0;">
     <div class="container">
       <div class="section-title">
-        <h2 class="typing-text" data-text="Our Mission & Vision">Our Mission & Vision</h2>
+        <h2 class="typing-text" data-text="Our Mission & Vision" data-i18n="mission_vision_title">Our Mission & Vision</h2>
         <div class="title-underline"></div>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6">
-          <div style="background: linear-gradient(135deg, rgba(0, 86, 210, 0.1), rgba(0, 123, 255, 0.1)); border-left: 5px solid #0056D2; padding: 2.5rem; border-radius: 10px;">
-            <h3 style="color: #0046A5; font-size: 1.8rem; margin-bottom: 1rem;">
-              <i class="fas fa-bullseye"></i> Our Mission
-            </h3>
-            <p style="font-size: 1.1rem; line-height: 1.9;">To empower businesses of all sizes by delivering innovative, results-driven digital marketing solutions that maximize their online presence and drive sustainable growth in an ever-evolving digital landscape.</p>
+          <div style="background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.1)); border-left: 5px solid #0056D2; padding: 2.5rem; border-radius: 10px;">
+            <p style="font-size: 1.1rem; line-height: 1.9;" data-i18n="mission_text">To empower businesses of all sizes by delivering innovative, results-driven digital marketing solutions that maximize their online presence and drive sustainable growth in an ever-evolving digital landscape.</p>
           </div>
         </div>
 
         <div class="col-md-6">
-          <div style="background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(30, 136, 229, 0.1)); border-left: 5px solid #007BFF; padding: 2.5rem; border-radius: 10px;">
-            <h3 style="color: #0046A5; font-size: 1.8rem; margin-bottom: 1rem;">
-              <i class="fas fa-star"></i> Our Vision
-            </h3>
-            <p style="font-size: 1.1rem; line-height: 1.9;">To be the globally recognized leader in digital marketing excellence, known for our innovation, integrity, and ability to transform businesses through cutting-edge strategies and unwavering commitment to client success.</p>
+          <div style="background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.1)); border-left: 5px solid #0056D2; padding: 2.5rem; border-radius: 10px;">
+            <p style="font-size: 1.1rem; line-height: 1.9;" data-i18n="vision_text">To be the globally recognized leader in digital marketing excellence, known for our innovation, integrity, and ability to transform businesses through cutting-edge strategies and commitment to client success.</p>
           </div>
         </div>
       </div>
-    </div>
+    
   </section>
 
   <!-- ============================================
@@ -130,7 +153,7 @@
   <section style="padding: 100px 0; background: var(--dark-bg);">
     <div class="container">
       <div class="section-title">
-        <h2>Our Core Values</h2>
+        <h2 data-i18n="values_title">Our Core Values</h2>
         <div class="title-underline"></div>
       </div>
 
@@ -140,8 +163,8 @@
             <div class="service-icon" style="font-size: 2.5rem;">
               <i class="fas fa-lightbulb" style="color: #000000;"></i>
             </div>
-            <h4 style="color: #0046A5;">Innovation</h4>
-            <p>Constantly pushing boundaries and embracing new technologies to deliver cutting-edge solutions.</p>
+            <h4 style="color: #0046A5;" data-i18n="innovation">Innovation</h4>
+            <p data-i18n="innovation_desc">Constantly pushing boundaries and new technologies to deliver cutting-edge solutions.</p>
           </div>
         </div>
 
@@ -150,8 +173,8 @@
             <div class="service-icon" style="font-size: 2.5rem;">
               <i class="fas fa-handshake" style="color: #000000;"></i>
             </div>
-            <h4 style="color: #0046A5;">Integrity</h4>
-            <p>Building trust through transparency, honesty, and ethical practices in all our business dealings.</p>
+            <h4 style="color: #0046A5;" data-i18n="integrity">Integrity</h4>
+            <p data-i18n="integrity_desc">Building trust through transparency, honesty, and ethical practices in all our business dealings.</p>
           </div>
         </div>
 
@@ -160,8 +183,8 @@
             <div class="service-icon" style="font-size: 2.5rem;">
               <i class="fas fa-chart-line" style="color: #000000;"></i>
             </div>
-            <h4 style="color: #0046A5;">Excellence</h4>
-            <p>Striving for perfection in every project, delivering results that exceed client expectations consistently.</p>
+            <h4 style="color: #0046A5;" data-i18n="excellence">Excellence</h4>
+            <p data-i18n="excellence_desc">Striving for perfection in every project, delivering results that exceed client expectations consistently.</p>
           </div>
         </div>
 
@@ -170,8 +193,8 @@
             <div class="service-icon" style="font-size: 2.5rem;">
               <i class="fas fa-users" style="color: #000000;"></i>
             </div>
-            <h4 style="color: #0046A5;">Collaboration</h4>
-            <p>Working together with clients and team members to achieve shared goals and mutual success.</p>
+            <h4 style="color: #0046A5;" data-i18n="collaboration">Collaboration</h4>
+            <p data-i18n="collaboration_desc">Working together with clients and team members to achieve shared goals and mutual success.</p>
           </div>
         </div>
       </div>
@@ -184,9 +207,9 @@
   <section style="background: var(--dark-bg); padding: 100px 0;">
     <div class="container">
       <div class="section-title" style="text-align: center;">
-        <h2 style="color: var(--text-light); font-size: 3rem; margin-bottom: 1rem; font-weight: 900;">Meet Our Expert Team</h2>
+        <h2 style="color: var(--text-light); font-size: 3rem; margin-bottom: 1rem; font-weight: 900;" data-i18n="team_title">Meet Our Expert Team</h2>
         <div class="title-underline" style="background: var(--accent-blue); height: 4px; width: 100px; margin: 0 auto 1.5rem;"></div>
-        <p style="font-size: 1.1rem; margin-top: 1rem; color: var(--text-light);">Talented professionals dedicated to your digital success</p>
+        <p style="font-size: 1.1rem; margin-top: 1rem; color: var(--text-light);" data-i18n="team_subtitle">Talented professionals dedicated to your digital success</p>
       </div>
 
       <div class="row g-4">
@@ -196,9 +219,9 @@
               <i class="fas fa-user-circle" style="font-size: 5rem; color: white;"></i>
             </div>
             <div style="padding: 1.5rem;">
-              <h4 style="color: var(--text-light); margin-bottom: 0.5rem;">Rooman Ahmed</h4>
-              <p style="font-size: 0.95rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem;">Founder & CEO</p>
-              <p style="font-size: 0.9rem; color: var(--text-gray);">Strategic visionary with 12+ years in digital marketing</p>
+              <h4 style="color: var(--text-light); margin-bottom: 0.5rem;" data-i18n="rooman_name">Rooman Ahmed</h4>
+              <p style="font-size: 0.95rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem;" data-i18n="rooman_role">Founder & CEO</p>
+              <p style="font-size: 0.9rem; color: var(--text-gray);" data-i18n="rooman_bio">Strategic visionary with 12+ years in digital marketing and technology</p>
             </div>
           </div>
         </div>
@@ -209,9 +232,9 @@
               <i class="fas fa-user-circle" style="font-size: 5rem; color: white;"></i>
             </div>
             <div style="padding: 1.5rem;">
-              <h4 style="color: var(--text-light); margin-bottom: 0.5rem;">Michael Chen</h4>
-              <p style="font-size: 0.95rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem;">Chief Marketing Officer</p>
-              <p style="font-size: 0.9rem; color: var(--text-gray);">Expert in SEO, SEM, and data analytics</p>
+              <h4 style="color: var(--text-light); margin-bottom: 0.5rem;" data-i18n="michael_name">Michael Chen</h4>
+              <p style="font-size: 0.95rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem;" data-i18n="michael_role">Chief Marketing Officer</p>
+              <p style="font-size: 0.9rem; color: var(--text-gray);" data-i18n="michael_bio">Expert in SEO, SEM, and data analytics</p>
             </div>
           </div>
         </div>
@@ -222,9 +245,9 @@
               <i class="fas fa-user-circle" style="font-size: 5rem; color: white;"></i>
             </div>
             <div style="padding: 1.5rem;">
-              <h4 style="color: var(--text-light); margin-bottom: 0.5rem;">Emma Rodriguez</h4>
-              <p style="font-size: 0.95rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem;">Creative Director</p>
-              <p style="font-size: 0.9rem; color: var(--text-gray);">Passionate about brand design and creative campaigns</p>
+              <h4 style="color: var(--text-light); margin-bottom: 0.5rem;" data-i18n="emma_name">Emma Rodriguez</h4>
+              <p style="font-size: 0.95rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem;" data-i18n="emma_role">Creative Director</p>
+              <p style="font-size: 0.9rem; color: var(--text-gray);" data-i18n="emma_bio">Passionate about brand design and creative campaigns</p>
             </div>
           </div>
         </div>
@@ -235,9 +258,9 @@
               <i class="fas fa-user-circle" style="font-size: 5rem; color: white;"></i>
             </div>
             <div style="padding: 1.5rem;">
-              <h4 style="color: var(--text-light); margin-bottom: 0.5rem;">David Kim</h4>
-              <p style="font-size: 0.95rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem;">Lead Developer</p>
-              <p style="font-size: 0.9rem; color: var(--text-gray);">Technical expert in web development and integration</p>
+              <h4 style="color: var(--text-light); margin-bottom: 0.5rem;" data-i18n="david_name">David Kim</h4>
+              <p style="font-size: 0.95rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem;" data-i18n="david_role">Lead Developer</p>
+              <p style="font-size: 0.9rem; color: var(--text-gray);" data-i18n="david_bio">Technical expert in web development and integration</p>
             </div>
           </div>
         </div>
@@ -250,8 +273,8 @@
        ============================================ -->
   <section style="background: linear-gradient(135deg, #1A2942 0%, #0A1628 100%); color: white; padding: 80px 0; text-align: center;">
     <div class="container">
-      <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">Let's Work Together</h2>
-      <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;">Ready to partner with AdsGeniusLab? Let's create something amazing for your business.</p>
+      <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;" data-i18n="cta_title">Let's Work Together</h2>
+      <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;" data-i18n="cta_text">Ready to partner with AdsGeniusLab? Let's create something amazing for your business.</p>
       <a href="consultation.html" class="btn-primary-custom">
         <i class="fas fa-phone"></i> Schedule Your Consultation
       </a>
@@ -265,8 +288,8 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4><i class="fas fa-lightbulb"></i> AdsGeniusLab</h4>
-          <p>Transforming businesses through innovative digital marketing solutions worldwide.</p>
+          <h4><i class="fas fa-lightbulb"></i> <span data-i18n="footer_company_name">AdsGeniusLab</span></h4>
+          <p data-i18n="footer_company_desc">Transforming businesses through innovative digital marketing solutions worldwide.</p>
           <div class="social-links">
             <a href="https://whatsapp.com" target="_blank" title="WhatsApp">
               <i class="fab fa-whatsapp"></i>
@@ -284,45 +307,45 @@
         </div>
 
         <div class="footer-section">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">What We Do</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="footer_home">Home</a></li>
+            <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+            <li><a href="services.html" data-i18n="footer_services">What We Do</a></li>
+            <li><a href="consultation.html" data-i18n="footer_consultation">Consultation</a></li>
+            <li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>What We Do</h4>
+          <h4 data-i18n="footer_what_we_do">What We Do</h4>
           <ul class="footer-links">
-            <li><a href="services.html#seo">SEO Optimization</a></li>
-            <li><a href="services.html#social">Social Media Marketing</a></li>
-            <li><a href="services.html#content">Content Strategy</a></li>
-            <li><a href="services.html#ppc">PPC Advertising</a></li>
+            <li><a href="services.html#seo" data-i18n="footer_seo">SEO Optimization</a></li>
+            <li><a href="services.html#social" data-i18n="footer_social">Social Media Marketing</a></li>
+            <li><a href="services.html#content" data-i18n="footer_content">Content Strategy</a></li>
+            <li><a href="services.html#ppc" data-i18n="footer_ppc">PPC Advertising</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>Contact Info</h4>
+          <h4 data-i18n="footer_contact_info">Contact Info</h4>
           <p>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);">adsgeniuslab@gmail.com</a>
+            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);" data-i18n="footer_email">adsgeniuslab@gmail.com</a>
           </p>
           <p>
             <i class="fas fa-phone"></i>
-            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);">+92 318 1292628</a>
+            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);" data-i18n="footer_phone">+92 318 1292628</a>
           </p>
           <p>
             <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);">WhatsApp Us</a>
+            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);" data-i18n="footer_whatsapp">WhatsApp Us</a>
           </p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 AdsGeniusLab. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);">Terms of Service</a></p>
+        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
       </div>
     </div>
   </footer>
@@ -337,5 +360,255 @@
 
   <!-- Custom JS -->
   <script src="js/script.js?v=20251101"></script>
+
+  <!-- Language Switching Script -->
+  <script>
+    // Comprehensive translations for entire page
+    const pageTranslations = {
+      en: {
+        // Navigation
+        'nav_home': 'Home',
+        'nav_about': 'About',
+        'nav_services': 'What We Do',
+        'nav_blog': 'Blog',
+        'nav_consultation': 'Consultation',
+        'nav_contact': 'Contact',
+        
+        // Hero Section
+        'hero_title': 'About AdsGeniusLab',
+        'hero_subtitle': 'Pioneering digital marketing excellence since 2015',
+        
+        // Who We Are Section
+        'who_title': 'Who We Are',
+        'who_text_1': 'AdsGeniusLab is a leading digital marketing agency dedicated to transforming businesses through innovative, data-driven strategies. With over a decade of experience, we\'ve helped more than 500 companies achieve their digital goals.',
+        'who_text_2': 'Our team of seasoned marketing professionals, creative designers, and technical experts work collaboratively to deliver exceptional results that exceed expectations.',
+        'who_text_3': 'We believe that every business deserves access to world-class digital marketing expertise, and we\'re committed to making that a reality for our clients worldwide.',
+        'btn_schedule': 'Schedule Consultation',
+        
+        // Mission & Vision
+        'mission_vision_title': 'Our Mission & Vision',
+        'mission_text': 'To empower businesses of all sizes by delivering innovative, results-driven digital marketing solutions that maximize their online presence and drive sustainable growth in an ever-evolving digital landscape.',
+        'vision_text': 'To be the globally recognized leader in digital marketing excellence, known for our innovation, integrity, and ability to transform businesses through cutting-edge strategies and commitment to client success.',
+        
+        // Core Values
+        'values_title': 'Our Core Values',
+        'innovation': 'Innovation',
+        'innovation_desc': 'Constantly pushing boundaries and new technologies to deliver cutting-edge solutions.',
+        'integrity': 'Integrity',
+        'integrity_desc': 'Building trust through transparency, honesty, and ethical practices in all our business dealings.',
+        'excellence': 'Excellence',
+        'excellence_desc': 'Striving for perfection in every project, delivering results that exceed client expectations consistently.',
+        'collaboration': 'Collaboration',
+        'collaboration_desc': 'Working together with clients and team members to achieve shared goals and mutual success.',
+        
+        // Team Section
+        'team_title': 'Meet Our Expert Team',
+        'team_subtitle': 'Talented professionals dedicated to your digital success',
+        'rooman_name': 'Rooman Ahmed',
+        'rooman_role': 'Founder & CEO',
+        'rooman_bio': 'Strategic visionary with 12+ years in digital marketing',
+        'michael_name': 'Michael Chen',
+        'michael_role': 'Chief Marketing Officer',
+        'michael_bio': 'Expert in SEO, SEM, and data analytics',
+        'emma_name': 'Emma Rodriguez',
+        'emma_role': 'Creative Director',
+        'emma_bio': 'Passionate about brand design and creative campaigns',
+        'david_name': 'David Kim',
+        'david_role': 'Lead Developer',
+        'david_bio': 'Technical expert in web development and integration',
+        
+        // CTA
+        'cta_title': 'Let\'s Work Together',
+        'cta_text': 'Ready to partner with AdsGeniusLab? Let\'s create something amazing for your business.',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
+        'footer_quick_links': 'Quick Links',
+        'footer_what_we_do': 'What We Do',
+        'footer_contact_info': 'Contact Info',
+        'footer_home': 'Home',
+        'footer_about': 'About Us',
+        'footer_services': 'What We Do',
+        'footer_consultation': 'Consultation',
+        'footer_contact': 'Contact',
+        'footer_seo': 'SEO Optimization',
+        'footer_social': 'Social Media Marketing',
+        'footer_content': 'Content Strategy',
+        'footer_ppc': 'PPC Advertising',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'WhatsApp Us',
+        'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
+        'footer_privacy': 'Privacy Policy',
+        'footer_terms': 'Terms of Service'
+      },
+      ar: {
+        // Navigation
+        'nav_home': 'الرئيسية',
+        'nav_about': 'عننا',
+        'nav_services': 'ما نفعله',
+        'nav_blog': 'المدونة',
+        'nav_consultation': 'استشارة',
+        'nav_contact': 'تواصل معنا',
+        
+        // Hero Section
+        'hero_title': 'عن AdsGeniusLab',
+        'hero_subtitle': 'رائدة التميز في التسويق الرقمي منذ 2015',
+        
+        // Who We Are Section
+        'who_title': 'من نحن',
+        'who_text_1': 'AdsGeniusLab هي وكالة تسويق رقمي رائدة مكرسة لتحويل الأعمال من خلال استراتيجيات مبتكرة قائمة على البيانات. مع أكثر من عقد من الخبرة، ساعدنا أكثر من 500 شركة في تحقيق أهدافها الرقمية.',
+        'who_text_2': 'يعمل فريقنا من محترفي التسويق الموثرين والمصممين الإبداعيين والخبراء التقنيين معاً بشكل تعاوني لتقديم نتائج استثنائية تتجاوز التوقعات.',
+        'who_text_3': 'نحن نؤمن بأن كل عمل يستحق الوصول إلى خبرة تسويق رقمي عالمية المستوى، ونحن ملتزمون بجعل ذلك حقيقة لعملائنا في جميع أنحاء العالم.',
+        'btn_schedule': 'احجز استشارة',
+        
+        // Mission & Vision
+        'mission_vision_title': 'مهمتنا ورؤيتنا',
+        'mission_text': 'تمكين الشركات من جميع الأحجام من خلال تقديم حلول تسويق رقمي مبتكرة وموجهة للنتائج تعظم وجودهم الرقمي وتحقق نموًا مستدامًا في المشهد الرقمي المتطور باستمرار.',
+        'vision_text': 'أن نكون الزعيم المعترف به عالميًا في التميز في التسويق الرقمي، معروفين بابتكارنا والتزامنا بتحويل الأعمال من خلال استراتيجيات متطورة وتفاني عملائنا.',
+        
+        // Core Values
+        'values_title': 'قيمنا الأساسية',
+        'innovation': 'الابتكار',
+        'innovation_desc': 'نحن نثير الحدود باستمرار ونستخدم التقنيات الجديدة لتقديم حلول متطورة.',
+        'integrity': 'النزاهة',
+        'integrity_desc': 'بناء الثقة من خلال الشفافية والصدق والممارسات الأخلاقية في جميع تعاملات أعمالنا.',
+        'excellence': 'التميز',
+        'excellence_desc': 'السعي للكمال في كل مشروع، وتقديم نتائج تتجاوز توقعات العملاء باستمرار.',
+        'collaboration': 'التعاون',
+        'collaboration_desc': 'العمل معاً مع العملاء وأعضاء الفريق لتحقيق الأهداف المشتركة والنجاح المتبادل.',
+        
+        // Team Section
+        'team_title': 'قابل فريقنا الخبير',
+        'team_subtitle': 'محترفون موهوبون مكرسون لنجاحك الرقمي',
+        'rooman_name': 'رومان أحمد',
+        'rooman_role': 'المؤسس والرئيس التنفيذي',
+        'rooman_bio': 'رائد استراتيجي بخبرة 12+ سنة في التسويق الرقمي',
+        'michael_name': 'مايكل تشن',
+        'michael_role': 'مسؤول التسويق الأول',
+        'michael_bio': 'خبير في تحسين محركات البحث والتسويق بالدفع لكل نقرة وتحليل البيانات',
+        'emma_name': 'إيما رودريغيز',
+        'emma_role': 'المديرة الإبداعية',
+        'emma_bio': 'شغوفة بتصميم العلامات التجارية والحملات الإبداعية',
+        'david_name': 'ديفيد كيم',
+        'david_role': 'مطور رئيسي',
+        'david_bio': 'خبير تقني في تطوير الويب والتكامل',
+        
+        // CTA
+        'cta_title': 'دعنا نعمل معاً',
+        'cta_text': 'هل أنت مستعد للشراكة مع AdsGeniusLab؟ دعنا ننشئ شيئًا مذهلاً لعملك.',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
+        'footer_quick_links': 'الروابط السريعة',
+        'footer_what_we_do': 'ما نفعله',
+        'footer_contact_info': 'معلومات التواصل',
+        'footer_home': 'الرئيسية',
+        'footer_about': 'عننا',
+        'footer_services': 'ما نفعله',
+        'footer_consultation': 'استشارة',
+        'footer_contact': 'تواصل معنا',
+        'footer_seo': 'تحسين محركات البحث',
+        'footer_social': 'التسويق عبر وسائل التواصل الاجتماعي',
+        'footer_content': 'استراتيجية المحتوى',
+        'footer_ppc': 'إعلانات الدفع مقابل النقر',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
+        'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
+        'footer_privacy': 'سياسة الخصوصية',
+        'footer_terms': 'شروط الخدمة'
+      }
+    };
+
+    let currentLanguage = localStorage.getItem('siteLanguage') || 'en';
+
+    function initLanguage() {
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      const isChecked = currentLanguage === 'ar';
+      
+      if (desktopToggle) {
+        desktopToggle.checked = isChecked;
+      }
+      if (mobileToggle) {
+        mobileToggle.checked = isChecked;
+      }
+      applyLanguage(currentLanguage);
+    }
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+      localStorage.setItem('siteLanguage', currentLanguage);
+      
+      // Sync both language toggle checkboxes
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      
+      const isChecked = currentLanguage === 'ar';
+      if (desktopToggle) desktopToggle.checked = isChecked;
+      if (mobileToggle) mobileToggle.checked = isChecked;
+      
+      applyLanguage(currentLanguage);
+    }
+
+    function applyLanguage(lang) {
+      // Update page direction
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+
+      // Update all translatable elements
+      updateAllText(lang);
+      
+      // Update navigation links
+      updateNavigation(lang);
+    }
+
+    function updateAllText(lang) {
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (pageTranslations[lang][key]) {
+          if (element.tagName === 'INPUT' && element.type === 'submit') {
+            element.value = pageTranslations[lang][key];
+          } else if (element.classList.contains('typing-text')) {
+            // For typing text elements, update both the text and the data-text attribute
+            element.textContent = pageTranslations[lang][key];
+            element.setAttribute('data-text', pageTranslations[lang][key]);
+          } else {
+            element.textContent = pageTranslations[lang][key];
+          }
+        }
+      });
+    }
+
+    function updateNavigation(lang) {
+      const navItems = document.querySelectorAll('.navbar-nav .nav-item:not(.language-toggle-container) .nav-link');
+      const translationKeys = ['nav_home', 'nav_about', 'nav_services', 'nav_blog', 'nav_consultation', 'nav_contact'];
+
+      navItems.forEach((link, index) => {
+        if (translationKeys[index] && pageTranslations[lang][translationKeys[index]]) {
+          link.textContent = pageTranslations[lang][translationKeys[index]];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initLanguage);
+    window.addEventListener('pageshow', () => {
+      const savedLang = localStorage.getItem('siteLanguage') || 'en';
+      if (savedLang !== currentLanguage) {
+        currentLanguage = savedLang;
+        initLanguage();
+      }
+    });
+  </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn animate" title="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>

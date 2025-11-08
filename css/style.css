@@ -52,6 +52,14 @@
 }
 
 /* ============================================
+   Page Fade-In Animation - Removed
+   ============================================ */
+
+body {
+  /* Animation removed for smooth instant rendering */
+}
+
+/* ============================================
    Global Styles
    ============================================ */
 * {
@@ -143,29 +151,57 @@ a:hover {
 .navbar {
   background: var(--primary-dark) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  padding: 1.2rem 0;
+  padding: 0.8rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid var(--border-dark);
 }
 
+.navbar .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .navbar-brand {
-  font-size: 2rem;
-  font-weight: bolder;
-  background: linear-gradient(135deg, #0056D2 0%, #007BFF 100%);
+  font-size: 1.6rem;
+  font-weight: 300; /* thin */
+  background: linear-gradient(90deg, #0b63ff 0%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  transition: all 0.3s ease;
+  letter-spacing: 0px; /* subtle spacing */
+  transition: all 0.25s ease;
   font-style: normal;
-  font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: -0.02em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1;
+  display: inline-flex; /* keep it compact */
+  align-items: center;
+  height: 100%;
+  gap: 0.15rem; /* reduced gap */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .navbar-brand:hover {
-  transform: scale(1.05);
+  transform: none;
   color: #333333 !important;
+}
+
+.navbar-nav {
+  margin-right: 4rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-link {
@@ -177,6 +213,9 @@ a:hover {
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-link::after {
@@ -207,6 +246,7 @@ a:hover {
 .navbar-toggler {
   border: 2px solid var(--text-light);
   font-size: 1.5rem;
+  order: 10;
 }
 
 .navbar-toggler:focus {
@@ -216,6 +256,173 @@ a:hover {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(30, 41, 59, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ============================================
+   Dropdown Menu Styling
+   ============================================ */
+.dropdown-menu {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-dark) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 8px !important;
+  min-width: 200px;
+}
+
+.dropdown-item {
+  color: var(--text-light) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+}
+
+.dropdown-item:hover {
+  background: var(--accent-blue) !important;
+  color: var(--white) !important;
+}
+
+.dropdown-item.active {
+  background: var(--accent-blue) !important;
+  color: var(--white) !important;
+}
+
+.nav-link.dropdown-toggle::after {
+  border-top: 0.3em solid currentColor !important;
+}
+
+/* ============================================
+   Language Toggle Switch
+   ============================================ */
+.language-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: 1px solid var(--border-dark);
+  height: 100%;
+  flex-shrink: 0;
+}
+
+
+
+.language-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 70px;
+  height: 36px;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-dark);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.language-toggle input {
+  display: none;
+}
+
+.language-toggle input:checked + .toggle-slider {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-light));
+  border-color: var(--accent-blue);
+}
+
+.language-toggle input:checked + .toggle-slider::before {
+  left: 38px;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-dark);
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  border: 2px solid var(--border-dark);
+  overflow: hidden;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  transition: transform 0.3s ease, left 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.toggle-label-text {
+  position: absolute;
+  font-size: 0.7rem;
+  font-weight: 800;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.toggle-label-en {
+  left: 6px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.toggle-label-ar {
+  right: 6px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.language-toggle input:checked + .toggle-slider .toggle-label-en {
+  opacity: 0.3;
+}
+
+.language-toggle input:checked + .toggle-slider .toggle-label-ar {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .language-toggle-container {
+    margin-left: 0;
+    padding-left: 0;
+    gap: 0.6rem;
+    border-left: none;
+  }
+
+
+
+  .language-toggle {
+    width: 55px;
+    height: 30px;
+  }
+
+  .toggle-slider::before {
+    height: 22px;
+    width: 22px;
+    left: 3px;
+  }
+
+  .language-toggle input:checked + .toggle-slider::before {
+    left: 28px;
+  }
+
+  .toggle-label-text {
+    display: none;
+  }
 }
 
 /* ============================================
@@ -313,9 +520,8 @@ a:hover {
 }
 
 .btn-primary-custom:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
   background: #1D4ED8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
   color: var(--white) !important;
 }
 
@@ -362,7 +568,6 @@ a:hover {
 .btn-outline-custom:hover {
   background: var(--accent-blue);
   color: var(--white) !important;
-  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
@@ -510,7 +715,6 @@ section {
 
 .service-card:hover .service-icon {
   background: var(--accent-light);
-  transform: scale(1.05);
 }
 
 .service-card h3 {
@@ -1143,195 +1347,9 @@ textarea.is-valid {
   }
 }
 
-@-webkit-keyframes slideInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(-30px);
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
 /* ============================================
    Advanced Animations
    ============================================ */
-@-webkit-keyframes scaleIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@-webkit-keyframes rotateIn {
-  from {
-    opacity: 0;
-    -webkit-transform: rotate(-10deg) scale(0.8);
-    transform: rotate(-10deg) scale(0.8);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: rotate(0) scale(1);
-    transform: rotate(0) scale(1);
-  }
-}
-
-@keyframes rotateIn {
-  from {
-    opacity: 0;
-    transform: rotate(-10deg) scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(0) scale(1);
-  }
-}
-
-@-webkit-keyframes slideUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes pulse {
-  0%, 100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(26, 58, 107, 0.7);
-    box-shadow: 0 0 0 0 rgba(26, 58, 107, 0.7);
-  }
-  50% {
-    -webkit-box-shadow: 0 0 0 10px rgba(26, 58, 107, 0);
-    box-shadow: 0 0 0 10px rgba(26, 58, 107, 0);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(26, 58, 107, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(26, 58, 107, 0);
-  }
-}
-
-@-webkit-keyframes glow {
-  0%, 100% {
-    -webkit-box-shadow: 0 8px 30px rgba(26, 58, 107, 0.2);
-    box-shadow: 0 8px 30px rgba(26, 58, 107, 0.2);
-  }
-  50% {
-    -webkit-box-shadow: 0 8px 50px rgba(26, 58, 107, 0.4);
-    box-shadow: 0 8px 50px rgba(26, 58, 107, 0.4);
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 8px 30px rgba(26, 58, 107, 0.2);
-  }
-  50% {
-    box-shadow: 0 8px 50px rgba(26, 58, 107, 0.4);
-  }
-}
-
-@-webkit-keyframes float {
-  0%, 100% {
-    -webkit-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    -webkit-transform: translateY(-20px) scale(1.05);
-    transform: translateY(-20px) scale(1.05);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.05);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%, 0% 0%, 100% 100%;
@@ -1342,26 +1360,6 @@ textarea.is-valid {
   100% {
     background-position: 0% 50%, 0% 0%, 100% 100%;
   }
-}
-
-.scale-in {
-  -webkit-animation: scaleIn 0.7s ease-out;
-  animation: scaleIn 0.7s ease-out;
-}
-
-.rotate-in {
-  -webkit-animation: rotateIn 0.8s ease-out;
-  animation: rotateIn 0.8s ease-out;
-}
-
-.slide-up {
-  -webkit-animation: slideUp 0.8s ease-out;
-  animation: slideUp 0.8s ease-out;
-}
-
-.fade-in-down {
-  -webkit-animation: fadeInDown 0.8s ease-out;
-  animation: fadeInDown 0.8s ease-out;
 }
 
 /* ============================================
@@ -1700,9 +1698,7 @@ textarea.is-valid {
     margin-bottom: 2rem;
   }
 
-  .navbar-brand {
-    font-size: 1.3rem;
-  }
+ 
 
   .service-card {
     padding: 1.5rem;
@@ -1765,69 +1761,6 @@ textarea.is-valid {
 }
 
 /* ============================================
-   Advanced Global Animations
-   ============================================ */
-@keyframes textReveal {
-  from {
-    opacity: 0;
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    opacity: 1;
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes slideInFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes glowPulse {
-  0%, 100% {
-    box-shadow: 0 8px 30px rgba(26, 58, 107, 0.15);
-  }
-  50% {
-    box-shadow: 0 12px 45px rgba(26, 58, 107, 0.35);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
-}
-
-/* ============================================
    Animation Utility Classes
    ============================================ */
 .animate-on-scroll {
@@ -1835,43 +1768,17 @@ textarea.is-valid {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.text-reveal {
-  animation: textReveal 1s ease-out;
-}
-
-.bounce-animation {
-  animation: bounce 2s ease-in-out infinite;
-}
-
-.glow-pulse-animation {
-  animation: glowPulse 2s ease-in-out infinite;
-}
-
-.slide-left-animation {
-  animation: slideInFromLeft 0.8s ease-out;
-}
-
-.slide-right-animation {
-  animation: slideInFromRight 0.8s ease-out;
-}
-
 /* ============================================
    Enhanced Navigation Animations
    ============================================ */
 .navbar {
-  animation: fadeInDown 0.6s ease-out;
-}
-
-.navbar-brand {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 900;
-  font-size: 1.7rem;
-  letter-spacing: -0.5px;
   transition: all 0.3s ease;
 }
 
+
+
 .navbar-brand:hover {
-  transform: scale(1.05);
+  color: var(--accent-blue) !important;
 }
 
 
@@ -1988,4 +1895,75 @@ a, .btn-primary-custom, .btn-secondary-custom, .btn-outline-custom {
   transform: scaleX(1);
   -webkit-transform-origin: left;
   transform-origin: left;
+}
+
+/* ============================================
+   Floating WhatsApp Button
+   ============================================ */
+.whatsapp-floating-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25D366 0%, #20BA5A 100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.whatsapp-floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-floating-btn:active {
+  transform: scale(0.95);
+}
+
+/* Pulse animation for WhatsApp button */
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+}
+
+.whatsapp-floating-btn.animate {
+  animation: whatsappPulse 2s ease-in-out infinite;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .whatsapp-floating-btn {
+    bottom: 20px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-floating-btn {
+    bottom: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
 }

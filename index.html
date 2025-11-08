@@ -24,17 +24,45 @@
        NAVIGATION BAR
        ============================================ -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        Ads Genius Lab
+    <div class="container d-flex align-items-center">
+      <!-- Logo on Left -->
+      <a class="navbar-brand me-auto" href="index.html">
+        adsGeniuslab.
       </a>
+
+      <!-- Language Toggle in Header (not in menu) -->
+      <div class="language-toggle-container me-3 d-none d-lg-block">
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
+      <!-- Mobile Language Toggle -->
+      <div class="language-toggle-container me-3 d-lg-none">
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          
+        <!-- Navigation Pages -->
+        <ul class="navbar-nav ms-4">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
@@ -61,15 +89,15 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="subheading fade-in-up">Growth Marketing for Clear-Cut Impact</div>
+        <div class="subheading fade-in-up" data-i18n="hero_subheading">Growth Marketing for Clear-Cut Impact</div>
         <h1 class="fade-in-up" data-text="We deliver growth through Traffic Generation, Conversion Rate, and Lifetime Value Optimization">We deliver growth through <span class="highlight">Traffic Generation</span>, Conversion Rate, and <span class="highlight">Lifetime Value</span> Optimization</h1>
-        <p class="fade-in-up" style="animation-delay: 1s;">Data-driven strategies, AI-powered optimization, and deep technical expertise to generate direct, measurable growth for ambitious businesses.</p>
+        <p class="fade-in-up" style="animation-delay: 1s;" data-i18n="hero_description">Data-driven strategies, AI-powered optimization, and deep technical expertise to generate direct, measurable growth for ambitious businesses.</p>
         <div style="display: flex; flex-direction: row; gap: 2rem; margin-top: 3rem; flex-wrap: wrap;">
           <a href="consultation.html" class="btn-primary-custom fade-in-up" style="animation-delay: 1.5s; display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; border-radius: 15px; text-decoration: none; min-height: auto; flex: 0 0 auto; font-size: 0.95rem;">
-            <span>Let's Talk Growth</span>
+            <span data-i18n="btn_talk_growth">Let's Talk Growth</span>
           </a>
           <a href="services.html" class="btn-secondary-custom fade-in-up" style="animation-delay: 1.8s; display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; border-radius: 15px; text-decoration: none; min-height: auto; flex: 0 0 auto; font-size: 0.95rem;">
-            <span>What We Do</span>
+            <span data-i18n="btn_what_we_do">What We Do</span>
           </a>
         </div>
       </div>
@@ -87,8 +115,8 @@
             <div class="feature-card-icon">
               <i class="fas fa-chart-line"></i>
             </div>
-            <h4>Strategic Growth</h4>
-            <p>Data-driven strategies designed to maximize your ROI and market presence.</p>
+            <h4 data-i18n="feature_growth">Strategic Growth</h4>
+            <p data-i18n="feature_growth_desc">Data-driven strategies designed to maximize your ROI and market presence.</p>
           </div>
         </div>
         <div class="col-md-4">
@@ -96,8 +124,8 @@
             <div class="feature-card-icon">
               <i class="fas fa-users"></i>
             </div>
-            <h4>Expert Team</h4>
-            <p>Dedicated professionals with years of experience in digital marketing excellence.</p>
+            <h4 data-i18n="feature_team">Expert Team</h4>
+            <p data-i18n="feature_team_desc">Dedicated professionals with years of experience in digital marketing excellence.</p>
           </div>
         </div>
         <div class="col-md-4">
@@ -105,8 +133,8 @@
             <div class="feature-card-icon">
               <i class="fas fa-award"></i>
             </div>
-            <h4>Proven Results</h4>
-            <p>Delivering measurable results and continuous optimization for sustained success.</p>
+            <h4 data-i18n="feature_results">Proven Results</h4>
+            <p data-i18n="feature_results_desc">Delivering measurable results and continuous optimization for sustained success.</p>
           </div>
         </div>
       </div>
@@ -124,25 +152,25 @@
         <div class="col-md-3 col-6">
           <div class="stat-item">
             <h2>500+</h2>
-            <p>Successful Campaigns</p>
+            <p data-i18n="stat_campaigns">Successful Campaigns</p>
           </div>
         </div>
         <div class="col-md-3 col-6">
           <div class="stat-item">
             <h2>98%</h2>
-            <p>Client Satisfaction</p>
+            <p data-i18n="stat_satisfaction">Client Satisfaction</p>
           </div>
         </div>
         <div class="col-md-3 col-6">
           <div class="stat-item">
             <h2>10+</h2>
-            <p>Years Experience</p>
+            <p data-i18n="stat_experience">Years Experience</p>
           </div>
         </div>
         <div class="col-md-3 col-6">
           <div class="stat-item">
             <h2>50+</h2>
-            <p>Industries Served</p>
+            <p data-i18n="stat_industries">Industries Served</p>
           </div>
         </div>
       </div>
@@ -154,17 +182,17 @@
        ============================================ -->
   <section class="typing-trigger" style="background: linear-gradient(135deg, #1A2942 0%, #0A1628 100%); padding: 50px 0; text-align: center;">
     <div class="container">
-      <h2 class="typing-text" data-text="Ready to Elevate Your Brand?" style="color: var(--text-white); font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 800;">Ready to Elevate Your Brand?</h2>
-      <p class="fade-in-up" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; color: var(--text-light);">Join hundreds of successful businesses that have transformed their digital presence with AdsGeniusLab.</p>
+      <h2 class="typing-text" data-text="Ready to Elevate Your Brand?" data-i18n="cta_ready" style="color: var(--text-white); font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 800;">Ready to Elevate Your Brand?</h2>
+      <p class="fade-in-up" data-i18n="cta_description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; color: var(--text-light);">Join hundreds of successful businesses that have transformed their digital presence with AdsGeniusLab.</p>
       <a href="consultation.html" class="btn-primary-custom fade-in-up" style="animation-delay: 0.5s;">
-        <i class="fas fa-phone"></i> Schedule Your Free Consultation
+        <i class="fas fa-phone"></i> <span data-i18n="btn_consultation">Schedule Your Free Consultation</span>
       </a>
     </div>
 <br>
       <div class="container">
-      <h2 class="typing-text" data-text="Trusted by Leading Brands" style="color: var(--text-light); font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 800;">Trusted by Leading Brands</h2>
+      <h2 class="typing-text" data-text="Trusted by Leading Brands" data-i18n="trusted_heading" style="color: var(--text-light); font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 800;">Trusted by Leading Brands</h2>
       <div class="title-underline" style="background: linear-gradient(135deg, #0046A5 0%, #007BFF 100%); height: 4px; width: 100px; margin: 0 auto 1.5rem;"></div>
-      <p class="fade-in-up" style="margin-top: 1rem; color: var(--text-light); font-size: 1.1rem;">We work with innovative companies across multiple industries</p>
+      <p class="fade-in-up" data-i18n="trusted_description" style="margin-top: 1rem; color: var(--text-light); font-size: 1.1rem;">We work with innovative companies across multiple industries</p>
     </div>
   </section>
 
@@ -179,7 +207,7 @@
 
 
 
-        <p style="text-align: center; color: var(--text-gray); font-size: 1rem; margin-top: 2rem;">
+        <p style="text-align: center; color: var(--text-gray); font-size: 1rem; margin-top: 2rem;" data-i18n="industries_text">
           <strong style="color: #0056D2;">50+ companies</strong> across 15+ industries have achieved their growth goals with AdsGeniusLab
         </p>
       </div>
@@ -193,8 +221,8 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4><i class="fas fa-lightbulb"></i> AdsGeniusLab</h4>
-          <p>Transforming businesses through innovative digital marketing solutions worldwide.</p>
+          <h4><i class="fas fa-lightbulb"></i> <span data-i18n="footer_company_name">AdsGeniusLab</span></h4>
+          <p data-i18n="footer_company_desc">Transforming businesses through innovative digital marketing solutions worldwide.</p>
           <div class="social-links">
             <a href="https://whatsapp.com" target="_blank" title="WhatsApp">
               <i class="fab fa-whatsapp"></i>
@@ -212,45 +240,45 @@
         </div>
 
         <div class="footer-section">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">What We Do</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="footer_home">Home</a></li>
+            <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+            <li><a href="services.html" data-i18n="footer_services">What We Do</a></li>
+            <li><a href="consultation.html" data-i18n="footer_consultation">Consultation</a></li>
+            <li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>What We Do</h4>
+          <h4 data-i18n="footer_what_we_do">What We Do</h4>
           <ul class="footer-links">
-            <li><a href="services.html#seo">SEO Optimization</a></li>
-            <li><a href="services.html#social">Social Media Marketing</a></li>
-            <li><a href="services.html#content">Content Strategy</a></li>
-            <li><a href="services.html#ppc">PPC Advertising</a></li>
+            <li><a href="services.html#seo" data-i18n="footer_seo">SEO Optimization</a></li>
+            <li><a href="services.html#social" data-i18n="footer_social">Social Media Marketing</a></li>
+            <li><a href="services.html#content" data-i18n="footer_content">Content Strategy</a></li>
+            <li><a href="services.html#ppc" data-i18n="footer_ppc">PPC Advertising</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>Contact Info</h4>
+          <h4 data-i18n="footer_contact_info">Contact Info</h4>
           <p>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);">adsgeniuslab@gmail.com</a>
+            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);" data-i18n="footer_email">adsgeniuslab@gmail.com</a>
           </p>
           <p>
             <i class="fas fa-phone"></i>
-            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);">+92 318 1292628</a>
+            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);" data-i18n="footer_phone">+92 318 1292628</a>
           </p>
           <p>
             <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);">WhatsApp Us</a>
+            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);" data-i18n="footer_whatsapp">WhatsApp Us</a>
           </p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 AdsGeniusLab. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);">Terms of Service</a></p>
+        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
       </div>
     </div>
   </footer>
@@ -265,5 +293,245 @@
 
   <!-- Custom JS -->
   <script src="js/script.js?v=20251101"></script>
+
+  <!-- Language Switching Script -->
+  <script>
+    // Comprehensive translations for entire page
+    const pageTranslations = {
+      en: {
+        // Navigation
+        'nav_home': 'Home',
+        'nav_about': 'About',
+        'nav_services': 'What We Do',
+        'nav_blog': 'Blog',
+        'nav_consultation': 'Consultation',
+        'nav_contact': 'Contact',
+        
+        // Hero Section
+        'hero_subheading': 'Growth Marketing for Clear-Cut Impact',
+        'hero_title_part1': 'We deliver growth through',
+        'hero_title_part2': 'Traffic Generation',
+        'hero_title_part3': ', Conversion Rate, and',
+        'hero_title_part4': 'Lifetime Value',
+        'hero_title_part5': 'Optimization',
+        'hero_description': 'Data-driven strategies, AI-powered optimization, and deep technical expertise to generate direct, measurable growth for ambitious businesses.',
+        'btn_talk_growth': "Let's Talk Growth",
+        'btn_what_we_do': 'What We Do',
+        
+        // Feature Cards
+        'feature_growth': 'Strategic Growth',
+        'feature_growth_desc': 'Data-driven strategies designed to maximize your ROI and market presence.',
+        'feature_team': 'Expert Team',
+        'feature_team_desc': 'Dedicated professionals with years of experience in digital marketing excellence.',
+        'feature_results': 'Proven Results',
+        'feature_results_desc': 'Delivering measurable results and continuous optimization for sustained success.',
+        
+        // CTA
+        'cta_ready': 'Ready to Elevate Your Brand?',
+        'cta_description': 'Join hundreds of successful businesses that have transformed their digital presence with AdsGeniusLab.',
+        'btn_consultation': 'Schedule Your Free Consultation',
+        
+        // Trusted Section
+        'trusted_heading': 'Trusted by Leading Brands',
+        'trusted_description': 'We work with innovative companies across multiple industries',
+        
+        // Stats Section
+        'stat_campaigns': 'Successful Campaigns',
+        'stat_satisfaction': 'Client Satisfaction',
+        'stat_experience': 'Years Experience',
+        'stat_industries': 'Industries Served',
+        
+        // Industries Text
+        'industries_text': '50+ companies across 15+ industries have achieved their growth goals with AdsGeniusLab',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
+        'footer_quick_links': 'Quick Links',
+        'footer_what_we_do': 'What We Do',
+        'footer_contact_info': 'Contact Info',
+        'footer_home': 'Home',
+        'footer_about': 'About Us',
+        'footer_services': 'What We Do',
+        'footer_consultation': 'Consultation',
+        'footer_contact': 'Contact',
+        'footer_seo': 'SEO Optimization',
+        'footer_social': 'Social Media Marketing',
+        'footer_content': 'Content Strategy',
+        'footer_ppc': 'PPC Advertising',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'WhatsApp Us',
+        'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
+        'footer_privacy': 'Privacy Policy',
+        'footer_terms': 'Terms of Service'
+      },
+      ar: {
+        // Navigation
+        'nav_home': 'الرئيسية',
+        'nav_about': 'عننا',
+        'nav_services': 'ما نفعله',
+        'nav_blog': 'المدونة',
+        'nav_consultation': 'استشارة',
+        'nav_contact': 'تواصل معنا',
+        
+        // Hero Section
+        'hero_subheading': 'تسويق النمو للتأثير الواضح',
+        'hero_title_part1': 'نحن نقدم النمو من خلال',
+        'hero_title_part2': 'توليد حركة المرور',
+        'hero_title_part3': '، معدل التحويل، و',
+        'hero_title_part4': 'قيمة العمر',
+        'hero_title_part5': 'التحسين',
+        'hero_description': 'استراتيجيات مدفوعة بالبيانات، وتحسين مدعوم بالذكاء الاصطناعي، وخبرة تقنية عميقة لتوليد نمو مباشر وقابل للقياس للشركات الطموحة.',
+        'btn_talk_growth': 'دعونا نتحدث عن النمو',
+        'btn_what_we_do': 'ما نفعله',
+        
+        // Feature Cards
+        'feature_growth': 'النمو الاستراتيجي',
+        'feature_growth_desc': 'استراتيجيات مدفوعة بالبيانات مصممة لتعظيم عائد الاستثمار وحضورك في السوق.',
+        'feature_team': 'فريق خبير',
+        'feature_team_desc': 'محترفون مكرسون مع سنوات من الخبرة في التميز في التسويق الرقمي.',
+        'feature_results': 'نتائج مثبتة',
+        'feature_results_desc': 'تقديم نتائج قابلة للقياس والتحسين المستمر لتحقيق النجاح المستدام.',
+        
+        // CTA
+        'cta_ready': 'هل أنت مستعد لرفع مستوى علامتك التجارية؟',
+        'cta_description': 'انضم إلى مئات الشركات الناجحة التي حولت حضورها الرقمي مع AdsGeniusLab.',
+        'btn_consultation': 'احجز استشارتك المجانية',
+        
+        // Trusted Section
+        'trusted_heading': 'موثوق به من قبل العلامات التجارية الرائدة',
+        'trusted_description': 'نعمل مع شركات مبتكرة عبر صناعات متعددة',
+        
+        // Stats Section
+        'stat_campaigns': 'حملات ناجحة',
+        'stat_satisfaction': 'رضا العملاء',
+        'stat_experience': 'سنوات الخبرة',
+        'stat_industries': 'الصناعات المخدومة',
+        
+        // Industries Text
+        'industries_text': 'حققت أكثر من 50 شركة عبر 15+ صناعة أهدافها في النمو مع AdsGeniusLab',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
+        'footer_quick_links': 'الروابط السريعة',
+        'footer_what_we_do': 'ما نفعله',
+        'footer_contact_info': 'معلومات التواصل',
+        'footer_home': 'الرئيسية',
+        'footer_about': 'عننا',
+        'footer_services': 'ما نفعله',
+        'footer_consultation': 'استشارة',
+        'footer_contact': 'تواصل معنا',
+        'footer_seo': 'تحسين محركات البحث',
+        'footer_social': 'التسويق عبر وسائل التواصل الاجتماعي',
+        'footer_content': 'استراتيجية المحتوى',
+        'footer_ppc': 'إعلانات الدفع مقابل النقر',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
+        'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
+        'footer_privacy': 'سياسة الخصوصية',
+        'footer_terms': 'شروط الخدمة'
+      }
+    };
+
+    let currentLanguage = localStorage.getItem('siteLanguage') || 'en';
+
+    function initLanguage() {
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      const isChecked = currentLanguage === 'ar';
+      
+      if (desktopToggle) {
+        desktopToggle.checked = isChecked;
+      }
+      if (mobileToggle) {
+        mobileToggle.checked = isChecked;
+      }
+      applyLanguage(currentLanguage);
+    }
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+      localStorage.setItem('siteLanguage', currentLanguage);
+      
+      // Sync both language toggle checkboxes
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      
+      const isChecked = currentLanguage === 'ar';
+      if (desktopToggle) desktopToggle.checked = isChecked;
+      if (mobileToggle) mobileToggle.checked = isChecked;
+      
+      applyLanguage(currentLanguage);
+    }
+
+    function applyLanguage(lang) {
+      // Update page direction
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+
+      // Update all translatable elements
+      updateAllText(lang);
+      
+      // Update navigation links
+      updateNavigation(lang);
+    }
+
+    function updateAllText(lang) {
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (pageTranslations[lang][key]) {
+          if (element.tagName === 'INPUT' && element.type === 'submit') {
+            element.value = pageTranslations[lang][key];
+          } else {
+            element.textContent = pageTranslations[lang][key];
+            // For typing-text elements, also update the data-text attribute
+            if (element.classList.contains('typing-text')) {
+              element.setAttribute('data-text', pageTranslations[lang][key]);
+            }
+          }
+        }
+      });
+      
+      // Update hero h1 heading with special handling for highlighted spans
+      const heroH1 = document.querySelector('.hero h1');
+      if (heroH1) {
+        if (lang === 'ar') {
+          heroH1.innerHTML = 'نحن نقدم النمو من خلال <span class="highlight">توليد حركة المرور</span>، معدل التحويل، و<span class="highlight">قيمة العمر</span> التحسين';
+        } else {
+          heroH1.innerHTML = 'We deliver growth through <span class="highlight">Traffic Generation</span>, Conversion Rate, and <span class="highlight">Lifetime Value</span> Optimization';
+        }
+      }
+    }
+
+    function updateNavigation(lang) {
+      const navItems = document.querySelectorAll('.navbar-nav .nav-item:not(.language-toggle-container) .nav-link');
+      const translationKeys = ['nav_home', 'nav_about', 'nav_services', 'nav_blog', 'nav_consultation', 'nav_contact'];
+
+      navItems.forEach((link, index) => {
+        if (translationKeys[index] && pageTranslations[lang][translationKeys[index]]) {
+          link.textContent = pageTranslations[lang][translationKeys[index]];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initLanguage);
+    window.addEventListener('pageshow', () => {
+      const savedLang = localStorage.getItem('siteLanguage') || 'en';
+      if (savedLang !== currentLanguage) {
+        currentLanguage = savedLang;
+        initLanguage();
+      }
+    });
+  </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn animate" title="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>

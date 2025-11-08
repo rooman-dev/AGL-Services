@@ -23,17 +23,46 @@
        NAVIGATION BAR
        ============================================ -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        Ads Genius Lab
+    <div class="container d-flex align-items-center">
+      <!-- Logo on Left -->
+      <a class="navbar-brand me-auto" href="index.html">
+        adsGeniuslab.
       </a>
+
+      <!-- Language Toggle in Header (not in menu) -->
+      <div class="language-toggle-container me-3 d-none d-lg-block">
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
+      <!-- Mobile Language Toggle -->
+      <div class="language-toggle-container me-3 d-lg-none">
+        <span class="language-label">EN | AR</span>
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-     
+        <!-- Navigation Pages -->
+        <ul class="navbar-nav ms-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
@@ -60,8 +89,8 @@
   <section class="hero typing-trigger" style="min-height: 30px; padding: 50px 0;">
     <div class="container">
       <div class="hero-content">
-        <h1><span class="typing-text" data-text="Get In Touch">Get In Touch</span></h1>
-        <p class="fade-in-up">We're here to help and answer any questions you might have</p>
+        <h1><span class="typing-text" data-text="Get In Touch" data-i18n="hero_title">Get In Touch</span></h1>
+        <p class="fade-in-up" data-i18n="hero_subtitle">We're here to help and answer any questions you might have</p>
       </div>
     </div>
   </section>
@@ -73,7 +102,7 @@
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cdefs%3E%3ClinearGradient id=\"g5\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"%3E%3Cstop offset=\"0%\" style=\"stop-color:rgba(45,90,159,0.03)\" /%3E%3Cstop offset=\"100%\" style=\"stop-color:rgba(13,31,60,0.03)\" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\"40\" height=\"40\" fill=\"url(%23g5)\"%3E%3C/rect%3E%3Cpath d=\"M0 20 Q10 10, 20 20 T40 20\" fill=\"none\" stroke=\"rgba(45,90,159,0.08)\" stroke-width=\"0.5\"%3E%3C/path%3E%3C/svg%3E'); background-size: 100px 100px; opacity: 0.4; pointer-events: none; z-index: 0; animation: float 20s ease-in-out infinite;"></div>
     <div class="container typing-trigger" style="position: relative; z-index: 1;">
       <div class="section-title">
-        <h2 class="typing-text" data-text="How to Reach Us">How to Reach Us</h2>
+        <h2 class="typing-text" data-text="How to Reach Us" data-i18n="reach_title">How to Reach Us</h2>
         <div class="title-underline"></div>
       </div>
 
@@ -83,12 +112,12 @@
           <div class="contact-icon">
             <i class="fas fa-envelope"></i>
           </div>
-          <h3>Email</h3>
-          <p>Got a question? Send us an email anytime.</p>
+          <h3 data-i18n="contact_email_title">Email</h3>
+          <p data-i18n="contact_email_desc">Got a question? Send us an email anytime.</p>
           <a href="mailto:adsgeniuslab@gmail.com">
             <strong>adsgeniuslab@gmail.com</strong>
           </a>
-          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Response time: 24 hours</p>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;" data-i18n="contact_email_time">Response time: 24 hours</p>
         </div>
 
         <!-- Phone -->
@@ -96,12 +125,12 @@
           <div class="contact-icon">
             <i class="fas fa-phone"></i>
           </div>
-          <h3>Phone</h3>
-          <p>Call us during business hours. We're ready to help!</p>
+          <h3 data-i18n="contact_phone_title">Phone</h3>
+          <p data-i18n="contact_phone_desc">Call us during business hours. We're ready to help!</p>
           <a href="tel:+923181292628">
             <strong>+92 318 1292628</strong>
           </a>
-          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Mon - Fri: 9 AM - 6 PM EST</p>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;" data-i18n="contact_phone_hours">Mon - Fri: 9 AM - 6 PM EST</p>
         </div>
 
         <!-- WhatsApp -->
@@ -109,12 +138,12 @@
           <div class="contact-icon">
             <i class="fab fa-whatsapp"></i>
           </div>
-          <h3>WhatsApp</h3>
-          <p>Message us on WhatsApp for quick support.</p>
+          <h3 data-i18n="contact_whatsapp_title">WhatsApp</h3>
+          <p data-i18n="contact_whatsapp_desc">Message us on WhatsApp for quick support.</p>
           <a href="https://wa.me/923181292628" target="_blank">
             <strong>+92 318 1292628</strong>
           </a>
-          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Instant messaging available</p>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;" data-i18n="contact_whatsapp_available">Instant messaging available</p>
         </div>
 
         <!-- Office -->
@@ -122,12 +151,12 @@
           <div class="contact-icon">
             <i class="fas fa-map-marker-alt"></i>
           </div>
-          <h3>Office Location</h3>
-          <p>Visit our office for in-person consultations.</p>
+          <h3 data-i18n="contact_office_title">Office Location</h3>
+          <p data-i18n="contact_office_desc">Visit our office for in-person consultations.</p>
           <a href="#">
-            <strong>123 Marketing Street<br>Digital City, DC 10001<br>United States</strong>
+            <strong data-i18n="contact_office_address">123 Marketing Street<br>Digital City, DC 10001<br>United States</strong>
           </a>
-          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">By appointment</p>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;" data-i18n="contact_office_appointment">By appointment</p>
         </div>
       </div>
     </div>
@@ -142,14 +171,14 @@
       <div class="row g-4">
         <div class="col-lg-6">
           <div style="margin-bottom: 2rem;">
-            <h2 style="color: #FFFFFF; font-size: 2.2rem; margin-bottom: 1.5rem;">Send Us a Message</h2>
-            <p style="font-size: 1.05rem; color: rgba(255,255,255,0.9); line-height: 1.8;">Have a specific question or project in mind? Fill out the form below and we'll get back to you promptly with a response.</p>
+            <h2 style="color: #FFFFFF; font-size: 2.2rem; margin-bottom: 1.5rem;" data-i18n="form_title">Send Us a Message</h2>
+            <p style="font-size: 1.05rem; color: rgba(255,255,255,0.9); line-height: 1.8;" data-i18n="form_desc">Have a specific question or project in mind? Fill out the form below and we'll get back to you promptly with a response.</p>
           </div>
 
           <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="needs-validation" novalidate style="background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
             <!-- Name -->
             <div class="form-group">
-              <label for="contact_name" class="form-label" style="color: #FFFFFF; font-weight: 600;">Name</label>
+              <label for="contact_name" class="form-label" style="color: #FFFFFF; font-weight: 600;" data-i18n="form_name_label">Name</label>
               <input type="text" class="form-control" id="contact_name" name="name" placeholder="Your Name" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;" required>
               <div class="invalid-feedback">
                 Please provide your name.
@@ -158,7 +187,7 @@
 
             <!-- Email -->
             <div class="form-group">
-              <label for="contact_email" class="form-label" style="color: #FFFFFF; font-weight: 600;">Email</label>
+              <label for="contact_email" class="form-label" style="color: #FFFFFF; font-weight: 600;" data-i18n="form_email_label">Email</label>
               <input type="email" class="form-control" id="contact_email" name="email" placeholder="your@email.com" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;" required>
               <div class="invalid-feedback">
                 Please provide a valid email.
@@ -167,7 +196,7 @@
 
             <!-- Subject -->
             <div class="form-group">
-              <label for="contact_subject" class="form-label" style="color: #FFFFFF; font-weight: 600;">Subject</label>
+              <label for="contact_subject" class="form-label" style="color: #FFFFFF; font-weight: 600;" data-i18n="form_subject_label">Subject</label>
               <input type="text" class="form-control" id="contact_subject" name="subject" placeholder="What is this about?" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;" required>
               <div class="invalid-feedback">
                 Please provide a subject.
@@ -176,7 +205,7 @@
 
             <!-- Message -->
             <div class="form-group">
-              <label for="contact_message" class="form-label" style="color: #FFFFFF; font-weight: 600;">Message</label>
+              <label for="contact_message" class="form-label" style="color: #FFFFFF; font-weight: 600;" data-i18n="form_message_label">Message</label>
               <textarea class="form-control" id="contact_message" name="message" rows="5" placeholder="Your message here..." style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white;" required></textarea>
               <div class="invalid-feedback">
                 Please provide a message.
@@ -184,7 +213,7 @@
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn-primary-custom" style="width: 100%; margin-top: 1rem;">
+            <button type="submit" class="btn-primary-custom" style="width: 100%; margin-top: 1rem;" data-i18n="form_submit">
               <i class="fas fa-paper-plane"></i> Send Message
             </button>
           </form>
@@ -193,7 +222,7 @@
         <!-- Right Column - Additional Info -->
         <div class="col-lg-6">
           <div style="background: linear-gradient(135deg, #0046A5, #007BFF); color: white; padding: 3rem; border-radius: 12px; height: 100%;">
-            <h3 style="color: white; font-size: 1.8rem; margin-bottom: 2rem;">Why Choose AdsGeniusLab?</h3>
+            <h3 style="color: white; font-size: 1.8rem; margin-bottom: 2rem;" data-i18n="why_choose_title">Why Choose AdsGeniusLab?</h3>
 
             <div style="margin-bottom: 2rem;">
               <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
@@ -203,8 +232,8 @@
                   </div>
                 </div>
                 <div>
-                  <h4 style="color: white; margin-bottom: 0.5rem;">Expert Team</h4>
-                  <p style="margin-bottom: 0; font-size: 0.95rem; color: rgba(255,255,255,0.9);">Experienced professionals dedicated to your success</p>
+                  <h4 style="color: white; margin-bottom: 0.5rem;" data-i18n="why_expert_title">Expert Team</h4>
+                  <p style="margin-bottom: 0; font-size: 0.95rem; color: rgba(255,255,255,0.9);" data-i18n="why_expert_desc">Experienced professionals dedicated to your success</p>
                 </div>
               </div>
 
@@ -215,8 +244,8 @@
                   </div>
                 </div>
                 <div>
-                  <h4 style="color: white; margin-bottom: 0.5rem;">Proven Results</h4>
-                  <p style="margin-bottom: 0; font-size: 0.95rem; color: rgba(255,255,255,0.9);">500+ successful campaigns delivered</p>
+                  <h4 style="color: white; margin-bottom: 0.5rem;" data-i18n="why_proven_title">Proven Results</h4>
+                  <p style="margin-bottom: 0; font-size: 0.95rem; color: rgba(255,255,255,0.9);" data-i18n="why_proven_desc">500+ successful campaigns delivered</p>
                 </div>
               </div>
 
@@ -227,8 +256,8 @@
                   </div>
                 </div>
                 <div>
-                  <h4 style="color: white; margin-bottom: 0.5rem;">Fast Response</h4>
-                  <p style="margin-bottom: 0; font-size: 0.95rem; color: rgba(255,255,255,0.9);">24-hour response guarantee</p>
+                  <h4 style="color: white; margin-bottom: 0.5rem;" data-i18n="why_fast_title">Fast Response</h4>
+                  <p style="margin-bottom: 0; font-size: 0.95rem; color: rgba(255,255,255,0.9);" data-i18n="why_fast_desc">24-hour response guarantee</p>
                 </div>
               </div>
 
@@ -239,24 +268,24 @@
                   </div>
                 </div>
                 <div>
-                  <h4 style="color: white; margin-bottom: 0.5rem;">Custom Solutions</h4>
-                  <p style="margin-bottom: 0; font-size: 0.95rem; color: rgba(255,255,255,0.9);">Tailored strategies for your unique needs</p>
+                  <h4 style="color: white; margin-bottom: 0.5rem;" data-i18n="why_custom_title">Custom Solutions</h4>
+                  <p style="margin-bottom: 0; font-size: 0.95rem; color: rgba(255,255,255,0.9);" data-i18n="why_custom_desc">Tailored strategies for your unique needs</p>
                 </div>
               </div>
             </div>
 
             <hr style="border-color: rgba(255,255,255,0.2); margin: 2rem 0;">
 
-            <h4 style="color: white; margin-bottom: 1rem;">Business Hours</h4>
+            <h4 style="color: white; margin-bottom: 1rem;" data-i18n="business_hours_title">Business Hours</h4>
             <ul style="list-style: none; padding: 0;">
               <li style="margin-bottom: 0.5rem; color: rgba(255,255,255,0.9);">
-                <i class="fas fa-calendar"></i> Monday - Friday: <strong>9 AM - 6 PM EST</strong>
+                <i class="fas fa-calendar"></i> <span data-i18n="hours_mon_fri">Monday - Friday:</span> <strong data-i18n="hours_mon_fri_time">9 AM - 6 PM EST</strong>
               </li>
               <li style="margin-bottom: 0.5rem; color: rgba(255,255,255,0.9);">
-                <i class="fas fa-calendar"></i> Saturday: <strong>10 AM - 4 PM EST</strong>
+                <i class="fas fa-calendar"></i> <span data-i18n="hours_sat">Saturday:</span> <strong data-i18n="hours_sat_time">10 AM - 4 PM EST</strong>
               </li>
               <li style="color: rgba(255,255,255,0.9);">
-                <i class="fas fa-calendar"></i> Sunday: <strong>Closed</strong>
+                <i class="fas fa-calendar"></i> <span data-i18n="hours_sun">Sunday:</span> <strong data-i18n="hours_sun_time">Closed</strong>
               </li>
             </ul>
           </div>
@@ -272,9 +301,9 @@
        ============================================ -->
   <section style="background: linear-gradient(135deg, #0046A5 0%, #007BFF 100%); color: white; padding: 80px 0; text-align: center;">
     <div class="container">
-      <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to Start Your Journey?</h2>
-      <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;">Don't wait! Reach out today and let's discuss how we can transform your digital marketing strategy.</p>
-      <a href="consultation.html" class="btn-primary-custom">
+      <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;" data-i18n="cta_journey_title">Ready to Start Your Journey?</h2>
+      <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;" data-i18n="cta_journey_desc">Don't wait! Reach out today and let's discuss how we can transform your digital marketing strategy.</p>
+      <a href="consultation.html" class="btn-primary-custom" data-i18n="btn_schedule">
         <i class="fas fa-phone"></i> Schedule Your Free Consultation
       </a>
     </div>
@@ -287,8 +316,8 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4><i class="fas fa-lightbulb"></i> AdsGeniusLab</h4>
-          <p>Transforming businesses through innovative digital marketing solutions worldwide.</p>
+          <h4><i class="fas fa-lightbulb"></i> <span data-i18n="footer_company_name">AdsGeniusLab</span></h4>
+          <p data-i18n="footer_company_desc">Transforming businesses through innovative digital marketing solutions worldwide.</p>
           <div class="social-links">
             <a href="https://whatsapp.com" target="_blank" title="WhatsApp">
               <i class="fab fa-whatsapp"></i>
@@ -306,45 +335,45 @@
         </div>
 
         <div class="footer-section">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">What We Do</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="footer_home">Home</a></li>
+            <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+            <li><a href="services.html" data-i18n="footer_services">What We Do</a></li>
+            <li><a href="consultation.html" data-i18n="footer_consultation">Consultation</a></li>
+            <li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>What We Do</h4>
+          <h4 data-i18n="footer_what_we_do">What We Do</h4>
           <ul class="footer-links">
-            <li><a href="services.html#seo">SEO Optimization</a></li>
-            <li><a href="services.html#social">Social Media Marketing</a></li>
-            <li><a href="services.html#content">Content Strategy</a></li>
-            <li><a href="services.html#ppc">PPC Advertising</a></li>
+            <li><a href="services.html#seo" data-i18n="footer_seo">SEO Optimization</a></li>
+            <li><a href="services.html#social" data-i18n="footer_social">Social Media Marketing</a></li>
+            <li><a href="services.html#content" data-i18n="footer_content">Content Strategy</a></li>
+            <li><a href="services.html#ppc" data-i18n="footer_ppc">PPC Advertising</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>Contact Info</h4>
+          <h4 data-i18n="footer_contact_info">Contact Info</h4>
           <p>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);">adsgeniuslab@gmail.com</a>
+            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);" data-i18n="footer_email">adsgeniuslab@gmail.com</a>
           </p>
           <p>
             <i class="fas fa-phone"></i>
-            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);">+92 318 1292628</a>
+            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);" data-i18n="footer_phone">+92 318 1292628</a>
           </p>
           <p>
             <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);">WhatsApp Us</a>
+            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);" data-i18n="footer_whatsapp">WhatsApp Us</a>
           </p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 AdsGeniusLab. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);">Terms of Service</a></p>
+        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
       </div>
     </div>
   </footer>
@@ -359,5 +388,269 @@
 
   <!-- Custom JS -->
   <script src="js/script.js?v=20251101"></script>
+
+  <!-- Language Switching Script -->
+  <script>
+    // Comprehensive translations for entire page
+    const pageTranslations = {
+      en: {
+        // Navigation
+        'nav_home': 'Home',
+        'nav_about': 'About',
+        'nav_services': 'What We Do',
+        'nav_blog': 'Blog',
+        'nav_consultation': 'Consultation',
+        'nav_contact': 'Contact',
+        
+        // Hero Section
+        'hero_title': 'Get In Touch',
+        'hero_subtitle': 'We\'re here to help and answer any questions you might have',
+        
+        // Contact Info
+        'reach_title': 'How to Reach Us',
+        'contact_email_title': 'Email',
+        'contact_email_desc': 'Got a question? Send us an email anytime.',
+        'contact_email_time': 'Response time: 24 hours',
+        'contact_phone_title': 'Phone',
+        'contact_phone_desc': 'Call us during business hours. We\'re ready to help!',
+        'contact_phone_hours': 'Mon - Fri: 9 AM - 6 PM EST',
+        'contact_whatsapp_title': 'WhatsApp',
+        'contact_whatsapp_desc': 'Message us on WhatsApp for quick support.',
+        'contact_whatsapp_available': 'Instant messaging available',
+        'contact_office_title': 'Office Location',
+        'contact_office_desc': 'Visit our office for in-person consultations.',
+        'contact_office_address': '123 Marketing Street<br>Digital City, DC 10001<br>United States',
+        'contact_office_appointment': 'By appointment',
+        
+        // Contact Form
+        'form_title': 'Send Us a Message',
+        'form_desc': 'Have a specific question or project in mind? Fill out the form below and we\'ll get back to you promptly with a response.',
+        'form_name_label': 'Name',
+        'form_email_label': 'Email',
+        'form_subject_label': 'Subject',
+        'form_message_label': 'Message',
+        'form_submit': 'Send Message',
+        
+        // Why Choose
+        'why_choose_title': 'Why Choose AdsGeniusLab?',
+        'why_expert_title': 'Expert Team',
+        'why_expert_desc': 'Experienced professionals dedicated to your success',
+        'why_proven_title': 'Proven Results',
+        'why_proven_desc': '500+ successful campaigns delivered',
+        'why_fast_title': 'Fast Response',
+        'why_fast_desc': '24-hour response guarantee',
+        'why_custom_title': 'Custom Solutions',
+        'why_custom_desc': 'Tailored strategies for your unique needs',
+        
+        // Business Hours
+        'business_hours_title': 'Business Hours',
+        'hours_mon_fri': 'Monday - Friday:',
+        'hours_mon_fri_time': '9 AM - 6 PM EST',
+        'hours_sat': 'Saturday:',
+        'hours_sat_time': '10 AM - 4 PM EST',
+        'hours_sun': 'Sunday:',
+        'hours_sun_time': 'Closed',
+        
+        // CTA
+        'cta_journey_title': 'Ready to Start Your Journey?',
+        'cta_journey_desc': 'Don\'t wait! Reach out today and let\'s discuss how we can transform your digital marketing strategy.',
+        'btn_schedule': 'Schedule Your Free Consultation',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
+        'footer_quick_links': 'Quick Links',
+        'footer_what_we_do': 'What We Do',
+        'footer_contact_info': 'Contact Info',
+        'footer_home': 'Home',
+        'footer_about': 'About Us',
+        'footer_services': 'What We Do',
+        'footer_consultation': 'Consultation',
+        'footer_contact': 'Contact',
+        'footer_seo': 'SEO Optimization',
+        'footer_social': 'Social Media Marketing',
+        'footer_content': 'Content Strategy',
+        'footer_ppc': 'PPC Advertising',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'WhatsApp Us',
+        'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
+        'footer_privacy': 'Privacy Policy',
+        'footer_terms': 'Terms of Service'
+      },
+      ar: {
+        // Navigation
+        'nav_home': 'الرئيسية',
+        'nav_about': 'عننا',
+        'nav_services': 'ما نفعله',
+        'nav_blog': 'المدونة',
+        'nav_consultation': 'استشارة',
+        'nav_contact': 'تواصل معنا',
+        
+        // Hero Section
+        'hero_title': 'تواصل معنا',
+        'hero_subtitle': 'نحن هنا لمساعدتك والإجابة على أي أسئلة قد تكون لديك',
+        
+        // Contact Info
+        'reach_title': 'كيفية التواصل معنا',
+        'contact_email_title': 'البريد الإلكتروني',
+        'contact_email_desc': 'هل لديك سؤال؟ أرسل لنا بريداً إلكترونياً في أي وقت.',
+        'contact_email_time': 'وقت الرد: 24 ساعة',
+        'contact_phone_title': 'الهاتف',
+        'contact_phone_desc': 'اتصل بنا أثناء ساعات العمل. نحن مستعدون لمساعدتك!',
+        'contact_phone_hours': 'الإثنين - الجمعة: 9 صباحاً - 6 مساءً بتوقيت شرق أمريكا',
+        'contact_whatsapp_title': 'واتس آب',
+        'contact_whatsapp_desc': 'أرسل لنا رسالة على واتس آب للحصول على دعم سريع.',
+        'contact_whatsapp_available': 'المراسلة الفورية متاحة',
+        'contact_office_title': 'موقع المكتب',
+        'contact_office_desc': 'قم بزيارة مكتبنا للاستشارات الشخصية.',
+        'contact_office_address': '123 شارع التسويق<br>مدينة رقمية، DC 10001<br>الولايات المتحدة',
+        'contact_office_appointment': 'بموعد مسبق',
+        
+        // Contact Form
+        'form_title': 'أرسل لنا رسالة',
+        'form_desc': 'هل لديك سؤال محدد أو مشروع معين في الاعتبار؟ ملء النموذج أدناه وسنعود إليك بسرعة برد.',
+        'form_name_label': 'الاسم',
+        'form_email_label': 'البريد الإلكتروني',
+        'form_subject_label': 'الموضوع',
+        'form_message_label': 'الرسالة',
+        'form_submit': 'إرسال الرسالة',
+        
+        // Why Choose
+        'why_choose_title': 'لماذا تختار AdsGeniusLab؟',
+        'why_expert_title': 'فريق خبير',
+        'why_expert_desc': 'محترفون ذوو خبرة مكرسون لنجاحك',
+        'why_proven_title': 'نتائج مثبتة',
+        'why_proven_desc': 'أكثر من 500 حملة ناجحة منجزة',
+        'why_fast_title': 'رد سريع',
+        'why_fast_desc': 'ضمان الرد خلال 24 ساعة',
+        'why_custom_title': 'حلول مخصصة',
+        'why_custom_desc': 'استراتيجيات مخصصة لاحتياجاتك الفريدة',
+        
+        // Business Hours
+        'business_hours_title': 'ساعات العمل',
+        'hours_mon_fri': 'الإثنين - الجمعة:',
+        'hours_mon_fri_time': '9 صباحاً - 6 مساءً بتوقيت شرق أمريكا',
+        'hours_sat': 'السبت:',
+        'hours_sat_time': '10 صباحاً - 4 مساءً بتوقيت شرق أمريكا',
+        'hours_sun': 'الأحد:',
+        'hours_sun_time': 'مغلق',
+        
+        // CTA
+        'cta_journey_title': 'هل أنت مستعد لبدء رحلتك؟',
+        'cta_journey_desc': 'لا تنتظر! اتصل بنا اليوم ودعنا نناقش كيفية تحويل استراتيجية التسويق الرقمي الخاصة بك.',
+        'btn_schedule': 'احجز استشارتك المجانية',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
+        'footer_quick_links': 'الروابط السريعة',
+        'footer_what_we_do': 'ما نفعله',
+        'footer_contact_info': 'معلومات التواصل',
+        'footer_home': 'الرئيسية',
+        'footer_about': 'عننا',
+        'footer_services': 'ما نفعله',
+        'footer_consultation': 'استشارة',
+        'footer_contact': 'تواصل معنا',
+        'footer_seo': 'تحسين محركات البحث',
+        'footer_social': 'التسويق عبر وسائل التواصل الاجتماعي',
+        'footer_content': 'استراتيجية المحتوى',
+        'footer_ppc': 'إعلانات الدفع مقابل النقر',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
+        'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
+        'footer_privacy': 'سياسة الخصوصية',
+        'footer_terms': 'شروط الخدمة'
+      }
+    };
+
+    let currentLanguage = localStorage.getItem('siteLanguage') || 'en';
+
+    function initLanguage() {
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      const isChecked = currentLanguage === 'ar';
+      
+      if (desktopToggle) {
+        desktopToggle.checked = isChecked;
+      }
+      if (mobileToggle) {
+        mobileToggle.checked = isChecked;
+      }
+      applyLanguage(currentLanguage);
+    }
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+      localStorage.setItem('siteLanguage', currentLanguage);
+      
+      // Sync both language toggle checkboxes
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      
+      const isChecked = currentLanguage === 'ar';
+      if (desktopToggle) desktopToggle.checked = isChecked;
+      if (mobileToggle) mobileToggle.checked = isChecked;
+      
+      applyLanguage(currentLanguage);
+    }
+
+    function applyLanguage(lang) {
+      // Update page direction
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+
+      // Update all translatable elements
+      updateAllText(lang);
+      
+      // Update navigation links
+      updateNavigation(lang);
+    }
+
+    function updateAllText(lang) {
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (pageTranslations[lang][key]) {
+          if (element.tagName === 'INPUT' && element.type === 'submit') {
+            element.value = pageTranslations[lang][key];
+          } else if (element.classList.contains('typing-text')) {
+            // For typing text elements, update both the text and the data-text attribute
+            element.textContent = pageTranslations[lang][key];
+            element.setAttribute('data-text', pageTranslations[lang][key]);
+          } else {
+            element.textContent = pageTranslations[lang][key];
+          }
+        }
+      });
+    }
+
+    function updateNavigation(lang) {
+      const navItems = document.querySelectorAll('.navbar-nav .nav-item:not(.language-toggle-container) .nav-link');
+      const translationKeys = ['nav_home', 'nav_about', 'nav_services', 'nav_blog', 'nav_consultation', 'nav_contact'];
+
+      navItems.forEach((link, index) => {
+        if (translationKeys[index] && pageTranslations[lang][translationKeys[index]]) {
+          link.textContent = pageTranslations[lang][translationKeys[index]];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initLanguage);
+    window.addEventListener('pageshow', () => {
+      const savedLang = localStorage.getItem('siteLanguage') || 'en';
+      if (savedLang !== currentLanguage) {
+        currentLanguage = savedLang;
+        initLanguage();
+      }
+    });
+  </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn animate" title="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>

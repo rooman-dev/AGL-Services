@@ -23,22 +23,51 @@
        NAVIGATION BAR
        ============================================ -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        Ads Genius Lab
+    <div class="container d-flex align-items-center">
+      <!-- Logo on Left -->
+      <a class="navbar-brand me-auto" href="index.html">
+        adsGeniuslab.
       </a>
+
+      <!-- Language Toggle in Header (not in menu) -->
+      <div class="language-toggle-container me-3 d-none d-lg-block">
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
+      <!-- Mobile Language Toggle -->
+      <div class="language-toggle-container me-3 d-lg-none">
+        <span class="language-label">EN | AR</span>
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-     
+        <!-- Navigation Pages -->
+        <ul class="navbar-nav ms-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html">What We Do</a>
+            <a class="nav-link active" href="services.html">What We Do</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="blog.html">Blog</a>
@@ -60,8 +89,8 @@
   <section class="hero typing-trigger" style="min-height: 30px; padding: 50px 0;">
     <div class="container">
       <div class="hero-content">
-        <h1><span class="typing-text" data-text="What We Do">What We Do</span></h1>
-        <p class="fade-in-up">Comprehensive digital marketing solutions tailored to your unique business needs</p>
+        <h1><span class="typing-text" data-text="What We Do" data-i18n="hero_title">What We Do</span></h1>
+        <p class="fade-in-up" data-i18n="hero_subtitle">Comprehensive digital marketing solutions tailored to your unique business needs</p>
       </div>
     </div>
   </section>
@@ -72,7 +101,7 @@
   <section class="services typing-trigger">
     <div class="container">
       <div class="section-title">
-        <h2 class="typing-text" data-text="What We Offer">What We Offer</h2>
+        <h2 class="typing-text" data-text="What We Offer" data-i18n="offer_title">What We Offer</h2>
         <div class="title-underline"></div>
       </div>
 
@@ -82,15 +111,15 @@
           <div class="service-icon">
             <i class="fas fa-search"></i>
           </div>
-          <h3>SEO Optimization</h3>
-          <p>Boost your online visibility with our comprehensive SEO strategies. We optimize your website to rank higher on search engines and drive organic traffic.</p>
+          <h3 data-i18n="service_seo_title">SEO Optimization</h3>
+          <p data-i18n="service_seo_desc">Boost your online visibility with our comprehensive SEO strategies. We optimize your website to rank higher on search engines and drive organic traffic.</p>
           <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Keyword research & analysis</li>
-            <li style="margin-bottom: 0.5rem;">On-page optimization</li>
-            <li style="margin-bottom: 0.5rem;">Link building strategies</li>
-            <li style="margin-bottom: 0.5rem;">Technical SEO</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_seo_1">Keyword research & analysis</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_seo_2">On-page optimization</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_seo_3">Link building strategies</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_seo_4">Technical SEO</li>
           </ul>
-          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;">Learn More</a>
+          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;" data-i18n="btn_learn_more">Learn More</a>
         </div>
 
         <!-- Service 2: Social Media -->
@@ -98,15 +127,15 @@
           <div class="service-icon">
             <i class="fas fa-share-alt"></i>
           </div>
-          <h3>Social Media Marketing</h3>
-          <p>Engage your audience and build brand loyalty through strategic social media campaigns across all major platforms.</p>
+          <h3 data-i18n="service_social_title">Social Media Marketing</h3>
+          <p data-i18n="service_social_desc">Engage your audience and build brand loyalty through strategic social media campaigns across all major platforms.</p>
           <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Content creation & scheduling</li>
-            <li style="margin-bottom: 0.5rem;">Community management</li>
-            <li style="margin-bottom: 0.5rem;">Influencer partnerships</li>
-            <li style="margin-bottom: 0.5rem;">Performance analytics</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_social_1">Content creation & scheduling</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_social_2">Community management</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_social_3">Influencer partnerships</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_social_4">Performance analytics</li>
           </ul>
-          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;">Learn More</a>
+          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;" data-i18n="btn_learn_more">Learn More</a>
         </div>
 
         <!-- Service 3: Content Strategy -->
@@ -114,15 +143,15 @@
           <div class="service-icon">
             <i class="fas fa-pen-fancy"></i>
           </div>
-          <h3>Content Strategy</h3>
-          <p>Compelling content that resonates with your audience and drives conversions. From blogs to videos, we create it all.</p>
+          <h3 data-i18n="service_content_title">Content Strategy</h3>
+          <p data-i18n="service_content_desc">Compelling content that resonates with your audience and drives conversions. From blogs to videos, we create it all.</p>
           <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Blog writing & optimization</li>
-            <li style="margin-bottom: 0.5rem;">Video content creation</li>
-            <li style="margin-bottom: 0.5rem;">Infographics & visuals</li>
-            <li style="margin-bottom: 0.5rem;">Email marketing campaigns</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_content_1">Blog writing & optimization</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_content_2">Video content creation</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_content_3">Infographics & visuals</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_content_4">Email marketing campaigns</li>
           </ul>
-          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;">Learn More</a>
+          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;" data-i18n="btn_learn_more">Learn More</a>
         </div>
 
         <!-- Service 4: PPC Advertising -->
@@ -130,15 +159,15 @@
           <div class="service-icon">
             <i class="fas fa-bullhorn"></i>
           </div>
-          <h3>PPC Advertising</h3>
-          <p>Maximize ROI with targeted paid advertising campaigns on Google, Facebook, Instagram, and other platforms.</p>
+          <h3 data-i18n="service_ppc_title">PPC Advertising</h3>
+          <p data-i18n="service_ppc_desc">Maximize ROI with targeted paid advertising campaigns on Google, Facebook, Instagram, and other platforms.</p>
           <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Google Ads management</li>
-            <li style="margin-bottom: 0.5rem;">Facebook & Instagram ads</li>
-            <li style="margin-bottom: 0.5rem;">Retargeting campaigns</li>
-            <li style="margin-bottom: 0.5rem;">A/B testing & optimization</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_ppc_1">Google Ads management</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_ppc_2">Facebook & Instagram ads</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_ppc_3">Retargeting campaigns</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_ppc_4">A/B testing & optimization</li>
           </ul>
-          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;">Learn More</a>
+          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;" data-i18n="btn_learn_more">Learn More</a>
         </div>
 
         <!-- Service 5: Brand Development -->
@@ -146,15 +175,15 @@
           <div class="service-icon">
             <i class="fas fa-gem"></i>
           </div>
-          <h3>Brand Development</h3>
-          <p>Build a strong, recognizable brand identity that stands out in the market and connects with your target audience.</p>
+          <h3 data-i18n="service_brand_title">Brand Development</h3>
+          <p data-i18n="service_brand_desc">Build a strong, recognizable brand identity that stands out in the market and connects with your target audience.</p>
           <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Logo & brand design</li>
-            <li style="margin-bottom: 0.5rem;">Brand guidelines</li>
-            <li style="margin-bottom: 0.5rem;">Website design</li>
-            <li style="margin-bottom: 0.5rem;">Marketing collateral</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_brand_1">Logo & brand design</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_brand_2">Brand guidelines</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_brand_3">Website design</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_brand_4">Marketing collateral</li>
           </ul>
-          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;">Learn More</a>
+          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;" data-i18n="btn_learn_more">Learn More</a>
         </div>
 
         <!-- Service 6: Analytics & Reporting -->
@@ -162,15 +191,15 @@
           <div class="service-icon">
             <i class="fas fa-chart-bar"></i>
           </div>
-          <h3>Analytics & Reporting</h3>
-          <p>Data-driven insights to measure campaign performance and make informed business decisions for continuous improvement.</p>
+          <h3 data-i18n="service_analytics_title">Analytics & Reporting</h3>
+          <p data-i18n="service_analytics_desc">Data-driven insights to measure campaign performance and make informed business decisions for continuous improvement.</p>
           <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Google Analytics setup</li>
-            <li style="margin-bottom: 0.5rem;">Monthly performance reports</li>
-            <li style="margin-bottom: 0.5rem;">KPI tracking</li>
-            <li style="margin-bottom: 0.5rem;">Conversion optimization</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_analytics_1">Google Analytics setup</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_analytics_2">Monthly performance reports</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_analytics_3">KPI tracking</li>
+            <li style="margin-bottom: 0.5rem;" data-i18n="service_analytics_4">Conversion optimization</li>
           </ul>
-          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;">Learn More</a>
+          <a href="consultation.html" class="btn-outline-custom" style="width: 100%; text-align: center;" data-i18n="btn_learn_more">Learn More</a>
         </div>
       </div>
     </div>
@@ -181,9 +210,9 @@
        ============================================ -->
   <section style="background: linear-gradient(135deg, var(--dark-blue) 0%, var(--light-blue) 100%); color: white; padding: 100px 0; text-align: center; animation: fadeInUp 0.8s ease-out;">
     <div class="container">
-      <h2 style="color: white; font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 900; font-family: 'Space Grotesk', sans-serif;">Ready to Transform Your Digital Presence?</h2>
-      <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 2rem; font-family: 'Inter', sans-serif; line-height: 1.8;">Let's discuss how we can create a customized marketing strategy tailored to your unique business goals and challenges.</p>
-      <a href="consultation.html" class="btn-primary-custom">
+      <h2 style="color: white; font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 900; font-family: 'Space Grotesk', sans-serif;" data-i18n="cta_title">Ready to Transform Your Digital Presence?</h2>
+      <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 2rem; font-family: 'Inter', sans-serif; line-height: 1.8;" data-i18n="cta_desc">Let's discuss how we can create a customized marketing strategy tailored to your unique business goals and challenges.</p>
+      <a href="consultation.html" class="btn-primary-custom" data-i18n="btn_schedule">
         <i class="fas fa-calendar-check"></i> Schedule Your Free Consultation
       </a>
     </div>
@@ -195,9 +224,9 @@
   <section style="background-color: var(--light-gray); padding: 120px 0;">
     <div class="container">
       <div class="section-title">
-        <h2>What Our Clients Say</h2>
+        <h2 data-i18n="testimonial_title">What Our Clients Say</h2>
         <div class="title-underline"></div>
-        <p>Real results from real clients across industries worldwide</p>
+        <p data-i18n="testimonial_subtitle">Real results from real clients across industries worldwide</p>
       </div>
 
       <div class="row g-4">
@@ -265,8 +294,8 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4><i class="fas fa-lightbulb"></i> AdsGeniusLab</h4>
-          <p>Transforming businesses through innovative digital marketing solutions worldwide.</p>
+          <h4><i class="fas fa-lightbulb"></i> <span data-i18n="footer_company_name">AdsGeniusLab</span></h4>
+          <p data-i18n="footer_company_desc">Transforming businesses through innovative digital marketing solutions worldwide.</p>
           <div class="social-links">
             <a href="https://whatsapp.com" target="_blank" title="WhatsApp">
               <i class="fab fa-whatsapp"></i>
@@ -284,45 +313,45 @@
         </div>
 
         <div class="footer-section">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">What We Do</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="footer_home">Home</a></li>
+            <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+            <li><a href="services.html" data-i18n="footer_services">What We Do</a></li>
+            <li><a href="consultation.html" data-i18n="footer_consultation">Consultation</a></li>
+            <li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>What We Do</h4>
+          <h4 data-i18n="footer_what_we_do">What We Do</h4>
           <ul class="footer-links">
-            <li><a href="services.html#seo">SEO Optimization</a></li>
-            <li><a href="services.html#social">Social Media Marketing</a></li>
-            <li><a href="services.html#content">Content Strategy</a></li>
-            <li><a href="services.html#ppc">PPC Advertising</a></li>
+            <li><a href="services.html#seo" data-i18n="footer_seo">SEO Optimization</a></li>
+            <li><a href="services.html#social" data-i18n="footer_social">Social Media Marketing</a></li>
+            <li><a href="services.html#content" data-i18n="footer_content">Content Strategy</a></li>
+            <li><a href="services.html#ppc" data-i18n="footer_ppc">PPC Advertising</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>Contact Info</h4>
+          <h4 data-i18n="footer_contact_info">Contact Info</h4>
           <p>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);">adsgeniuslab@gmail.com</a>
+            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);" data-i18n="footer_email">adsgeniuslab@gmail.com</a>
           </p>
           <p>
             <i class="fas fa-phone"></i>
-            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);">+92 318 1292628</a>
+            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);" data-i18n="footer_phone">+92 318 1292628</a>
           </p>
           <p>
             <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);">WhatsApp Us</a>
+            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);" data-i18n="footer_whatsapp">WhatsApp Us</a>
           </p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 AdsGeniusLab. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);">Terms of Service</a></p>
+        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
       </div>
     </div>
   </footer>
@@ -337,5 +366,283 @@
 
   <!-- Custom JS -->
   <script src="js/script.js?v=20251101"></script>
+
+  <!-- Language Switching Script -->
+  <script>
+    // Comprehensive translations for entire page
+    const pageTranslations = {
+      en: {
+        // Navigation
+        'nav_home': 'Home',
+        'nav_about': 'About',
+        'nav_services': 'What We Do',
+        'nav_blog': 'Blog',
+        'nav_consultation': 'Consultation',
+        'nav_contact': 'Contact',
+        
+        // Hero Section
+        'hero_title': 'What We Do',
+        'hero_subtitle': 'Comprehensive digital marketing solutions tailored to your unique business needs',
+        
+        // What We Offer
+        'offer_title': 'What We Offer',
+        
+        // Services
+        'service_seo_title': 'SEO Optimization',
+        'service_seo_desc': 'Boost your online visibility with our comprehensive SEO strategies. We optimize your website to rank higher on search engines and drive organic traffic.',
+        'service_seo_1': 'Keyword research & analysis',
+        'service_seo_2': 'On-page optimization',
+        'service_seo_3': 'Link building strategies',
+        'service_seo_4': 'Technical SEO',
+        
+        'service_social_title': 'Social Media Marketing',
+        'service_social_desc': 'Engage your audience and build brand loyalty through strategic social media campaigns across all major platforms.',
+        'service_social_1': 'Content creation & scheduling',
+        'service_social_2': 'Community management',
+        'service_social_3': 'Influencer partnerships',
+        'service_social_4': 'Performance analytics',
+        
+        'service_content_title': 'Content Strategy',
+        'service_content_desc': 'Compelling content that resonates with your audience and drives conversions. From blogs to videos, we create it all.',
+        'service_content_1': 'Blog writing & optimization',
+        'service_content_2': 'Video content creation',
+        'service_content_3': 'Infographics & visuals',
+        'service_content_4': 'Email marketing campaigns',
+        
+        'service_ppc_title': 'PPC Advertising',
+        'service_ppc_desc': 'Maximize ROI with targeted paid advertising campaigns on Google, Facebook, Instagram, and other platforms.',
+        'service_ppc_1': 'Google Ads management',
+        'service_ppc_2': 'Facebook & Instagram ads',
+        'service_ppc_3': 'Retargeting campaigns',
+        'service_ppc_4': 'A/B testing & optimization',
+        
+        'service_brand_title': 'Brand Development',
+        'service_brand_desc': 'Build a strong, recognizable brand identity that stands out in the market and connects with your target audience.',
+        'service_brand_1': 'Logo & brand design',
+        'service_brand_2': 'Brand guidelines',
+        'service_brand_3': 'Website design',
+        'service_brand_4': 'Marketing collateral',
+        
+        'service_analytics_title': 'Analytics & Reporting',
+        'service_analytics_desc': 'Data-driven insights to measure campaign performance and make informed business decisions for continuous improvement.',
+        'service_analytics_1': 'Google Analytics setup',
+        'service_analytics_2': 'Monthly performance reports',
+        'service_analytics_3': 'KPI tracking',
+        'service_analytics_4': 'Conversion optimization',
+        
+        'btn_learn_more': 'Learn More',
+        
+        // CTA
+        'cta_title': 'Ready to Transform Your Digital Presence?',
+        'cta_desc': 'Let\'s discuss how we can create a customized marketing strategy tailored to your unique business goals and challenges.',
+        'btn_schedule': 'Schedule Your Free Consultation',
+        
+        // Testimonials
+        'testimonial_title': 'What Our Clients Say',
+        'testimonial_subtitle': 'Real results from real clients across industries worldwide',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
+        'footer_quick_links': 'Quick Links',
+        'footer_what_we_do': 'What We Do',
+        'footer_contact_info': 'Contact Info',
+        'footer_home': 'Home',
+        'footer_about': 'About Us',
+        'footer_services': 'What We Do',
+        'footer_consultation': 'Consultation',
+        'footer_contact': 'Contact',
+        'footer_seo': 'SEO Optimization',
+        'footer_social': 'Social Media Marketing',
+        'footer_content': 'Content Strategy',
+        'footer_ppc': 'PPC Advertising',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'WhatsApp Us',
+        'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
+        'footer_privacy': 'Privacy Policy',
+        'footer_terms': 'Terms of Service'
+      },
+      ar: {
+        // Navigation
+        'nav_home': 'الرئيسية',
+        'nav_about': 'عننا',
+        'nav_services': 'ما نفعله',
+        'nav_blog': 'المدونة',
+        'nav_consultation': 'استشارة',
+        'nav_contact': 'تواصل معنا',
+        
+        // Hero Section
+        'hero_title': 'ما نفعله',
+        'hero_subtitle': 'حلول تسويق رقمي شاملة مخصصة لاحتياجات عملك الفريدة',
+        
+        // What We Offer
+        'offer_title': 'ما نقدمه',
+        
+        // Services
+        'service_seo_title': 'تحسين محركات البحث',
+        'service_seo_desc': 'عزز رؤيتك عبر الإنترنت باستخدام استراتيجياتنا الشاملة لتحسين محركات البحث. نحسن موقعك ليحتل مرتبة أعلى في محركات البحث ونزيد حركة المرور العضوية.',
+        'service_seo_1': 'بحث وتحليل الكلمات الرئيسية',
+        'service_seo_2': 'تحسين على الصفحة',
+        'service_seo_3': 'استراتيجيات بناء الروابط',
+        'service_seo_4': 'تحسين محركات البحث التقني',
+        
+        'service_social_title': 'التسويق عبر وسائل التواصل الاجتماعي',
+        'service_social_desc': 'جذب جمهورك وبناء ولاء العلامة التجارية من خلال حملات وسائل التواصل الاجتماعي الاستراتيجية عبر جميع المنصات الرئيسية.',
+        'service_social_1': 'إنشاء المحتوى والجدولة',
+        'service_social_2': 'إدارة المجتمع',
+        'service_social_3': 'شراكات المؤثرين',
+        'service_social_4': 'تحليلات الأداء',
+        
+        'service_content_title': 'استراتيجية المحتوى',
+        'service_content_desc': 'محتوى جذاب يتردد مع جمهورك ويحفز التحويلات. من المدونات إلى مقاطع الفيديو، نحن ننشئها جميعاً.',
+        'service_content_1': 'كتابة المدونة وتحسينها',
+        'service_content_2': 'إنشاء محتوى الفيديو',
+        'service_content_3': 'الرسوم البيانية والمرئيات',
+        'service_content_4': 'حملات البريد الإلكتروني التسويقية',
+        
+        'service_ppc_title': 'الإعلان بالدفع لكل نقرة',
+        'service_ppc_desc': 'زيادة العائد على الاستثمار من خلال حملات الإعلانات المدفوعة الموجهة على Google و Facebook و Instagram والمنصات الأخرى.',
+        'service_ppc_1': 'إدارة إعلانات Google',
+        'service_ppc_2': 'إعلانات Facebook و Instagram',
+        'service_ppc_3': 'حملات إعادة الاستهداف',
+        'service_ppc_4': 'اختبار A/B والتحسين',
+        
+        'service_brand_title': 'تطوير العلامة التجارية',
+        'service_brand_desc': 'بناء هوية علامة تجارية قوية وقابلة للتعرف عليها تتميز عن السوق وتتواصل مع جمهورك المستهدف.',
+        'service_brand_1': 'تصميم الشعار والعلامة التجارية',
+        'service_brand_2': 'إرشادات العلامة التجارية',
+        'service_brand_3': 'تصميم الموقع الإلكتروني',
+        'service_brand_4': 'المواد التسويقية',
+        
+        'service_analytics_title': 'التحليلات والتقارير',
+        'service_analytics_desc': 'رؤى قائمة على البيانات لقياس أداء الحملة واتخاذ قرارات عملية مستنيرة للتحسين المستمر.',
+        'service_analytics_1': 'إعداد Google Analytics',
+        'service_analytics_2': 'تقارير الأداء الشهرية',
+        'service_analytics_3': 'تتبع مؤشرات الأداء الرئيسية',
+        'service_analytics_4': 'تحسين التحويل',
+        
+        'btn_learn_more': 'تعرف على المزيد',
+        
+        // CTA
+        'cta_title': 'هل أنت مستعد لتحويل وجودك الرقمي؟',
+        'cta_desc': 'دعنا نناقش كيف يمكننا إنشاء استراتيجية تسويق مخصصة مصممة خصيصاً لأهدافك وتحديات عملك الفريدة.',
+        'btn_schedule': 'احجز استشارتك المجانية',
+        
+        // Testimonials
+        'testimonial_title': 'ماذا يقول عملاؤنا',
+        'testimonial_subtitle': 'نتائج حقيقية من عملاء حقيقيين عبر جميع الصناعات حول العالم',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
+        'footer_quick_links': 'الروابط السريعة',
+        'footer_what_we_do': 'ما نفعله',
+        'footer_contact_info': 'معلومات التواصل',
+        'footer_home': 'الرئيسية',
+        'footer_about': 'عننا',
+        'footer_services': 'ما نفعله',
+        'footer_consultation': 'استشارة',
+        'footer_contact': 'تواصل معنا',
+        'footer_seo': 'تحسين محركات البحث',
+        'footer_social': 'التسويق عبر وسائل التواصل الاجتماعي',
+        'footer_content': 'استراتيجية المحتوى',
+        'footer_ppc': 'إعلانات الدفع مقابل النقر',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
+        'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
+        'footer_privacy': 'سياسة الخصوصية',
+        'footer_terms': 'شروط الخدمة'
+      }
+    };
+
+    let currentLanguage = localStorage.getItem('siteLanguage') || 'en';
+
+    function initLanguage() {
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      const isChecked = currentLanguage === 'ar';
+      
+      if (desktopToggle) {
+        desktopToggle.checked = isChecked;
+      }
+      if (mobileToggle) {
+        mobileToggle.checked = isChecked;
+      }
+      applyLanguage(currentLanguage);
+    }
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+      localStorage.setItem('siteLanguage', currentLanguage);
+      
+      // Sync both language toggle checkboxes
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      
+      const isChecked = currentLanguage === 'ar';
+      if (desktopToggle) desktopToggle.checked = isChecked;
+      if (mobileToggle) mobileToggle.checked = isChecked;
+      
+      applyLanguage(currentLanguage);
+    }
+
+    function applyLanguage(lang) {
+      // Update page direction
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+
+      // Update all translatable elements
+      updateAllText(lang);
+      
+      // Update navigation links
+      updateNavigation(lang);
+    }
+
+    function updateAllText(lang) {
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (pageTranslations[lang][key]) {
+          if (element.tagName === 'INPUT' && element.type === 'submit') {
+            element.value = pageTranslations[lang][key];
+          } else if (element.classList.contains('typing-text')) {
+            // For typing text elements, update both the text and the data-text attribute
+            element.textContent = pageTranslations[lang][key];
+            element.setAttribute('data-text', pageTranslations[lang][key]);
+          } else {
+            element.textContent = pageTranslations[lang][key];
+          }
+        }
+      });
+    }
+
+    function updateNavigation(lang) {
+      const navItems = document.querySelectorAll('.navbar-nav .nav-item:not(.language-toggle-container) .nav-link');
+      const translationKeys = ['nav_home', 'nav_about', 'nav_services', 'nav_blog', 'nav_consultation', 'nav_contact'];
+
+      navItems.forEach((link, index) => {
+        if (translationKeys[index] && pageTranslations[lang][translationKeys[index]]) {
+          link.textContent = pageTranslations[lang][translationKeys[index]];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initLanguage);
+    window.addEventListener('pageshow', () => {
+      const savedLang = localStorage.getItem('siteLanguage') || 'en';
+      if (savedLang !== currentLanguage) {
+        currentLanguage = savedLang;
+        initLanguage();
+      }
+    });
+  </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn animate" title="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>

@@ -26,17 +26,46 @@
        NAVIGATION BAR
        ============================================ -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        Ads Genius Lab
+    <div class="container d-flex align-items-center">
+      <!-- Logo on Left -->
+      <a class="navbar-brand me-auto" href="index.html">
+        adsGeniuslab.
       </a>
+
+      <!-- Language Toggle in Header (not in menu) -->
+      <div class="language-toggle-container me-3 d-none d-lg-block">
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
+      <!-- Mobile Language Toggle -->
+      <div class="language-toggle-container me-3 d-lg-none">
+        <span class="language-label">EN | AR</span>
+        <label class="language-toggle">
+          <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
+          <span class="toggle-slider">
+            <span class="toggle-label-text toggle-label-en">EN</span>
+            <span class="toggle-label-text toggle-label-ar">AR</span>
+          </span>
+        </label>
+      </div>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-      
+        <!-- Navigation Pages -->
+        <ul class="navbar-nav ms-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
@@ -47,7 +76,7 @@
             <a class="nav-link" href="blog.html">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="consultation.html">Consultation</a>
+            <a class="nav-link active" href="consultation.html">Consultation</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -63,8 +92,8 @@
   <section class="hero typing-trigger" style="min-height: 30px; padding: 50px 0;">
     <div class="container">
       <div class="hero-content">
-        <h1><span class="typing-text" data-text="Free Consultation">Free Consultation</span></h1>
-        <p class="fade-in-up">Let's discuss how we can transform your digital presence and drive growth for your business</p>
+        <h1><span class="typing-text" data-text="Free Consultation" data-i18n="consultation_hero_title">Free Consultation</span></h1>
+        <p class="fade-in-up" data-i18n="consultation_hero_subtitle">Let's discuss how we can transform your digital presence and drive growth for your business</p>
       </div>
     </div>
   </section>
@@ -74,82 +103,82 @@
        ============================================ -->
   <section class="consultation typing-trigger">
     <div class="container">
-      <h2 class="typing-text" data-text="Schedule Your Consultation" style="text-align: center; margin-bottom: 3rem; color: white !important;">Schedule Your Consultation</h2>
+      <h2 class="typing-text" data-text="Schedule Your Consultation" data-i18n="consultation_form_title" style="text-align: center; margin-bottom: 3rem; color: white !important;">Schedule Your Consultation</h2>
 
       <div class="consultation-container">
         <form id="consultationForm" action="https://formspree.io/f/xrboynle" method="POST" class="consultation-form needs-validation" novalidate>
           <!-- Name Field -->
           <div class="form-group">
-            <label for="name" class="form-label">Full Name</label>
+            <label for="name" class="form-label" data-i18n="form_name_label">Full Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" data-i18n="form_name_error">
               Please provide your full name.
             </div>
           </div>
 
           <!-- Email Field -->
           <div class="form-group">
-            <label for="email" class="form-label">Email Address</label>
+            <label for="email" class="form-label" data-i18n="form_email_label">Email Address</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" data-i18n="form_email_error">
               Please provide a valid email address.
             </div>
           </div>
 
           <!-- Phone Field -->
           <div class="form-group">
-            <label for="phone" class="form-label">Phone Number</label>
+            <label for="phone" class="form-label" data-i18n="form_phone_label">Phone Number</label>
             <input type="tel" class="form-control" id="phone" name="phone" placeholder="+1 (234) 567-890">
           </div>
 
           <!-- Company Field -->
           <div class="form-group">
-            <label for="company" class="form-label">Company/Business Name</label>
+            <label for="company" class="form-label" data-i18n="form_company_label">Company/Business Name</label>
             <input type="text" class="form-control" id="company" name="company" placeholder="Your Company">
           </div>
 
           <!-- Service Interest Field -->
           <div class="form-group">
-            <label for="service" class="form-label">Service of Interest</label>
+            <label for="service" class="form-label" data-i18n="form_service_label">Service of Interest</label>
             <select class="form-select" id="service" name="service" required>
-              <option value="">-- Select a service --</option>
-              <option value="seo">SEO Optimization</option>
-              <option value="social">Social Media Marketing</option>
-              <option value="content">Content Strategy</option>
-              <option value="ppc">PPC Advertising</option>
-              <option value="brand">Brand Development</option>
-              <option value="analytics">Analytics & Reporting</option>
-              <option value="all">All Services</option>
+              <option value="" data-i18n="form_service_placeholder">-- Select a service --</option>
+              <option value="seo" data-i18n="service_seo_option">SEO Optimization</option>
+              <option value="social" data-i18n="service_social_option">Social Media Marketing</option>
+              <option value="content" data-i18n="service_content_option">Content Strategy</option>
+              <option value="ppc" data-i18n="service_ppc_option">PPC Advertising</option>
+              <option value="brand" data-i18n="service_brand_option">Brand Development</option>
+              <option value="analytics" data-i18n="service_analytics_option">Analytics & Reporting</option>
+              <option value="all" data-i18n="service_all_option">All Services</option>
             </select>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" data-i18n="form_service_error">
               Please select a service.
             </div>
           </div>
 
           <!-- Message Field -->
           <div class="form-group">
-            <label for="message" class="form-label">Tell Us About Your Business & Goals</label>
+            <label for="message" class="form-label" data-i18n="form_message_label">Tell Us About Your Business & Goals</label>
             <textarea class="form-control" id="message" name="message" placeholder="Describe your business, current challenges, and what you want to achieve..." required></textarea>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" data-i18n="form_message_error">
               Please share details about your business.
             </div>
           </div>
 
           <!-- Preferred Contact Method -->
           <div class="form-group">
-            <label class="form-label">Preferred Contact Method</label>
+            <label class="form-label" data-i18n="form_contact_method_label">Preferred Contact Method</label>
             <div>
               <div class="form-check" style="margin-bottom: 0.5rem;">
                 <input class="form-check-input" type="radio" name="contact_method" id="phone_call" value="phone_call" checked>
-                <label class="form-check-label" for="phone_call">Phone Call</label>
+                <label class="form-check-label" for="phone_call" data-i18n="form_contact_phone">Phone Call</label>
               </div>
               <div class="form-check" style="margin-bottom: 0.5rem;">
                 <input class="form-check-input" type="radio" name="contact_method" id="email_reply" value="email_reply">
-                <label class="form-check-label" for="email_reply">Email</label>
+                <label class="form-check-label" for="email_reply" data-i18n="form_contact_email">Email</label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="contact_method" id="whatsapp" value="whatsapp">
-                <label class="form-check-label" for="whatsapp">WhatsApp</label>
+                <label class="form-check-label" for="whatsapp" data-i18n="form_contact_whatsapp">WhatsApp</label>
               </div>
             </div>
           </div>
@@ -159,30 +188,30 @@
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
               <label class="form-check-label" for="terms" style="color: var(--text-dark);">
-                I agree to the <a href="#" style="color: var(--primary-blue); text-decoration: underline;">Privacy Policy</a> and <a href="#" style="color: var(--primary-blue); text-decoration: underline;">Terms of Service</a>
+                <span data-i18n="form_agree_text">I agree to the</span> <a href="#" style="color: var(--primary-blue); text-decoration: underline;" data-i18n="form_privacy_link">Privacy Policy</a> <span data-i18n="form_and_text">and</span> <a href="#" style="color: var(--primary-blue); text-decoration: underline;" data-i18n="form_terms_link">Terms of Service</a>
               </label>
-              <div class="invalid-feedback" style="color: #dc3545;">
+              <div class="invalid-feedback" style="color: #dc3545;" data-i18n="form_agree_error">
                 You must agree to the terms.
               </div>
             </div>
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" class="btn-primary-custom" style="width: 100%; padding: 16px; font-size: 1.1rem;">
+          <button type="submit" class="btn-primary-custom" style="width: 100%; padding: 16px; font-size: 1.1rem;" data-i18n="form_submit">
             <i class="fas fa-paper-plane"></i> Send Consultation Request
           </button>
         </form>
 
         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
-          <p style="margin-bottom: 1rem; font-size: 0.95rem; color: var(--text-gray);">Or reach out directly:</p>
+          <p style="margin-bottom: 1rem; font-size: 0.95rem; color: var(--text-gray);" data-i18n="form_direct_reach">Or reach out directly:</p>
           <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-            <a href="tel:+923181292628" class="btn-secondary-custom">
+            <a href="tel:+923181292628" class="btn-secondary-custom" data-i18n="btn_call_us">
               <i class="fas fa-phone"></i> Call Us
             </a>
-            <a href="https://wa.me/923181292628" target="_blank" class="btn-secondary-custom">
+            <a href="https://wa.me/923181292628" target="_blank" class="btn-secondary-custom" data-i18n="btn_whatsapp_direct">
               <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-            <a href="mailto:adsgeniuslab@gmail.com" class="btn-secondary-custom">
+            <a href="mailto:adsgeniuslab@gmail.com" class="btn-secondary-custom" data-i18n="btn_email_direct">
               <i class="fas fa-envelope"></i> Email
             </a>
           </div>
@@ -197,7 +226,7 @@
   <section style="background-color: var(--light-gray); padding: 100px 0;">
     <div class="container">
       <div class="section-title">
-        <h2>What You'll Get From Your Consultation</h2>
+        <h2 data-i18n="consultation_benefits_title">What You'll Get From Your Consultation</h2>
         <div class="title-underline"></div>
       </div>
 
@@ -207,8 +236,8 @@
             <div style="font-size: 2.5rem; color: #0056D2; margin-bottom: 1rem;">
               <i class="fas fa-binoculars"></i>
             </div>
-            <h4 style="color: #0046A5; margin-bottom: 1rem;">In-Depth Analysis</h4>
-            <p style="color: #555555; line-height: 1.6;">We'll analyze your current digital presence and identify growth opportunities specific to your business.</p>
+            <h4 style="color: #0046A5; margin-bottom: 1rem;" data-i18n="benefit_analysis_title">In-Depth Analysis</h4>
+            <p style="color: #555555; line-height: 1.6;" data-i18n="benefit_analysis_desc">We'll analyze your current digital presence and growth opportunities specific to your business.</p>
           </div>
         </div>
 
@@ -217,8 +246,8 @@
             <div style="font-size: 2.5rem; color: #0056D2; margin-bottom: 1rem;">
               <i class="fas fa-map"></i>
             </div>
-            <h4 style="color: #0046A5; margin-bottom: 1rem;">Custom Strategy</h4>
-            <p style="color: #555555; line-height: 1.6;">Receive a personalized marketing strategy tailored to your goals, budget, and target audience.</p>
+            <h4 style="color: #0046A5; margin-bottom: 1rem;" data-i18n="benefit_strategy_title">Custom Strategy</h4>
+            <p style="color: #555555; line-height: 1.6;" data-i18n="benefit_strategy_desc">Receive a personalized marketing strategy tailored to your goals, budget, and target audience.</p>
           </div>
         </div>
 
@@ -227,8 +256,8 @@
             <div style="font-size: 2.5rem; color: #0056D2; margin-bottom: 1rem;">
               <i class="fas fa-handshake"></i>
             </div>
-            <h4 style="color: #0046A5; margin-bottom: 1rem;">Partnership Proposal</h4>
-            <p style="color: #555555; line-height: 1.6;">Get a clear proposal outlining services, timelines, investment, and expected outcomes.</p>
+            <h4 style="color: #0046A5; margin-bottom: 1rem;" data-i18n="benefit_proposal_title">Partnership Proposal</h4>
+            <p style="color: #555555; line-height: 1.6;" data-i18n="benefit_proposal_desc">Get a clear proposal outlining services, timelines, investment, and expected outcomes.</p>
           </div>
         </div>
       </div>
@@ -242,8 +271,8 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4><i class="fas fa-lightbulb"></i> AdsGeniusLab</h4>
-          <p>Transforming businesses through innovative digital marketing solutions worldwide.</p>
+          <h4><i class="fas fa-lightbulb"></i> <span data-i18n="footer_company_name">AdsGeniusLab</span></h4>
+          <p data-i18n="footer_company_desc">Transforming businesses through innovative digital marketing solutions worldwide.</p>
           <div class="social-links">
             <a href="https://whatsapp.com" target="_blank" title="WhatsApp">
               <i class="fab fa-whatsapp"></i>
@@ -261,45 +290,45 @@
         </div>
 
         <div class="footer-section">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">What We Do</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="footer_home">Home</a></li>
+            <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+            <li><a href="services.html" data-i18n="footer_services">What We Do</a></li>
+            <li><a href="consultation.html" data-i18n="footer_consultation">Consultation</a></li>
+            <li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>What We Do</h4>
+          <h4 data-i18n="footer_what_we_do">What We Do</h4>
           <ul class="footer-links">
-            <li><a href="services.html#seo">SEO Optimization</a></li>
-            <li><a href="services.html#social">Social Media Marketing</a></li>
-            <li><a href="services.html#content">Content Strategy</a></li>
-            <li><a href="services.html#ppc">PPC Advertising</a></li>
+            <li><a href="services.html#seo" data-i18n="footer_seo">SEO Optimization</a></li>
+            <li><a href="services.html#social" data-i18n="footer_social">Social Media Marketing</a></li>
+            <li><a href="services.html#content" data-i18n="footer_content">Content Strategy</a></li>
+            <li><a href="services.html#ppc" data-i18n="footer_ppc">PPC Advertising</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>Contact Info</h4>
+          <h4 data-i18n="footer_contact_info">Contact Info</h4>
           <p>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);">adsgeniuslab@gmail.com</a>
+            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);" data-i18n="footer_email">adsgeniuslab@gmail.com</a>
           </p>
           <p>
             <i class="fas fa-phone"></i>
-            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);">+92 318 1292628</a>
+            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);" data-i18n="footer_phone">+92 318 1292628</a>
           </p>
           <p>
             <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);">WhatsApp Us</a>
+            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);" data-i18n="footer_whatsapp">WhatsApp Us</a>
           </p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 AdsGeniusLab. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);">Terms of Service</a></p>
+        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
       </div>
     </div>
   </footer>
@@ -314,5 +343,259 @@
 
   <!-- Custom JS -->
   <script src="js/script.js?v=20251101"></script>
+
+  <!-- Language Switching Script -->
+  <script>
+    // Comprehensive translations for entire page
+    const pageTranslations = {
+      en: {
+        // Navigation
+        'nav_home': 'Home',
+        'nav_about': 'About',
+        'nav_services': 'What We Do',
+        'nav_blog': 'Blog',
+        'nav_consultation': 'Consultation',
+        'nav_contact': 'Contact',
+        
+        // Hero Section
+        'consultation_hero_title': 'Free Consultation',
+        'consultation_hero_subtitle': 'Let\'s discuss how we can transform your digital presence and drive growth for your business',
+        
+        // Consultation Form
+        'consultation_form_title': 'Schedule Your Consultation',
+        'form_name_label': 'Full Name',
+        'form_name_error': 'Please provide your full name.',
+        'form_email_label': 'Email Address',
+        'form_email_error': 'Please provide a valid email address.',
+        'form_phone_label': 'Phone Number',
+        'form_company_label': 'Company/Business Name',
+        'form_service_label': 'Service of Interest',
+        'form_service_placeholder': '-- Select a service --',
+        'form_service_error': 'Please select a service.',
+        'service_seo_option': 'SEO Optimization',
+        'service_social_option': 'Social Media Marketing',
+        'service_content_option': 'Content Strategy',
+        'service_ppc_option': 'PPC Advertising',
+        'service_brand_option': 'Brand Development',
+        'service_analytics_option': 'Analytics & Reporting',
+        'service_all_option': 'All Services',
+        'form_message_label': 'Tell Us About Your Business & Goals',
+        'form_message_error': 'Please share details about your business.',
+        'form_contact_method_label': 'Preferred Contact Method',
+        'form_contact_phone': 'Phone Call',
+        'form_contact_email': 'Email',
+        'form_contact_whatsapp': 'WhatsApp',
+        'form_agree_text': 'I agree to the',
+        'form_privacy_link': 'Privacy Policy',
+        'form_and_text': 'and',
+        'form_terms_link': 'Terms of Service',
+        'form_agree_error': 'You must agree to the terms.',
+        'form_submit': 'Send Consultation Request',
+        'form_direct_reach': 'Or reach out directly:',
+        'btn_call_us': 'Call Us',
+        'btn_whatsapp_direct': 'WhatsApp',
+        'btn_email_direct': 'Email',
+        
+        // Benefits Section
+        'consultation_benefits_title': 'What You\'ll Get From Your Consultation',
+        'benefit_analysis_title': 'In-Depth Analysis',
+        'benefit_analysis_desc': 'We\'ll analyze your current digital presence and growth opportunities specific to your business.',
+        'benefit_strategy_title': 'Custom Strategy',
+        'benefit_strategy_desc': 'Receive a personalized marketing strategy tailored to your goals, budget, and target audience.',
+        'benefit_proposal_title': 'Partnership Proposal',
+        'benefit_proposal_desc': 'Get a clear proposal outlining services, timelines, investment, and expected outcomes.',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
+        'footer_quick_links': 'Quick Links',
+        'footer_what_we_do': 'What We Do',
+        'footer_contact_info': 'Contact Info',
+        'footer_home': 'Home',
+        'footer_about': 'About Us',
+        'footer_services': 'What We Do',
+        'footer_consultation': 'Consultation',
+        'footer_contact': 'Contact',
+        'footer_seo': 'SEO Optimization',
+        'footer_social': 'Social Media Marketing',
+        'footer_content': 'Content Strategy',
+        'footer_ppc': 'PPC Advertising',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'WhatsApp Us',
+        'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
+        'footer_privacy': 'Privacy Policy',
+        'footer_terms': 'Terms of Service'
+      },
+      ar: {
+        // Navigation
+        'nav_home': 'الرئيسية',
+        'nav_about': 'عننا',
+        'nav_services': 'ما نفعله',
+        'nav_blog': 'المدونة',
+        'nav_consultation': 'استشارة',
+        'nav_contact': 'تواصل معنا',
+        
+        // Hero Section
+        'consultation_hero_title': 'استشارة مجانية',
+        'consultation_hero_subtitle': 'دعنا نناقش كيفية تحويل حضورك الرقمي وتحقيق النمو لعملك',
+        
+        // Consultation Form
+        'consultation_form_title': 'احجز استشارتك',
+        'form_name_label': 'الاسم الكامل',
+        'form_name_error': 'يرجى تقديم اسمك الكامل.',
+        'form_email_label': 'عنوان البريد الإلكتروني',
+        'form_email_error': 'يرجى تقديم عنوان بريد إلكتروني صحيح.',
+        'form_phone_label': 'رقم الهاتف',
+        'form_company_label': 'اسم الشركة/النشاط التجاري',
+        'form_service_label': 'الخدمة المطلوبة',
+        'form_service_placeholder': '-- اختر خدمة --',
+        'form_service_error': 'يرجى اختيار خدمة.',
+        'service_seo_option': 'تحسين محركات البحث',
+        'service_social_option': 'التسويق عبر وسائل التواصل الاجتماعي',
+        'service_content_option': 'استراتيجية المحتوى',
+        'service_ppc_option': 'إعلانات الدفع مقابل النقر',
+        'service_brand_option': 'تطوير العلامة التجارية',
+        'service_analytics_option': 'التحليلات والتقارير',
+        'service_all_option': 'جميع الخدمات',
+        'form_message_label': 'أخبرنا عن عملك وأهدافك',
+        'form_message_error': 'يرجى مشاركة تفاصيل حول عملك.',
+        'form_contact_method_label': 'طريقة الاتصال المفضلة',
+        'form_contact_phone': 'مكالمة هاتفية',
+        'form_contact_email': 'البريد الإلكتروني',
+        'form_contact_whatsapp': 'واتس آب',
+        'form_agree_text': 'أوافق على',
+        'form_privacy_link': 'سياسة الخصوصية',
+        'form_and_text': 'و',
+        'form_terms_link': 'شروط الخدمة',
+        'form_agree_error': 'يجب عليك الموافقة على الشروط.',
+        'form_submit': 'إرسال طلب الاستشارة',
+        'form_direct_reach': 'أو اتصل بنا مباشرة:',
+        'btn_call_us': 'اتصل بنا',
+        'btn_whatsapp_direct': 'واتس آب',
+        'btn_email_direct': 'البريد الإلكتروني',
+        
+        // Benefits Section
+        'consultation_benefits_title': 'ما ستحصل عليه من استشارتك',
+        'benefit_analysis_title': 'تحليل متعمق',
+        'benefit_analysis_desc': 'سنقوم بتحليل حضورك الرقمي الحالي وفرص النمو المحددة لعملك.',
+        'benefit_strategy_title': 'استراتيجية مخصصة',
+        'benefit_strategy_desc': 'احصل على استراتيجية تسويق شخصية مصممة لأهدافك والميزانية والجمهور المستهدف.',
+        'benefit_proposal_title': 'عرض شراكة',
+        'benefit_proposal_desc': 'احصل على عرض واضح يوضح الخدمات والجداول الزمنية والاستثمار والنتائج المتوقعة.',
+        
+        // Footer
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
+        'footer_quick_links': 'الروابط السريعة',
+        'footer_what_we_do': 'ما نفعله',
+        'footer_contact_info': 'معلومات التواصل',
+        'footer_home': 'الرئيسية',
+        'footer_about': 'عننا',
+        'footer_services': 'ما نفعله',
+        'footer_consultation': 'استشارة',
+        'footer_contact': 'تواصل معنا',
+        'footer_seo': 'تحسين محركات البحث',
+        'footer_social': 'التسويق عبر وسائل التواصل الاجتماعي',
+        'footer_content': 'استراتيجية المحتوى',
+        'footer_ppc': 'إعلانات الدفع مقابل النقر',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
+        'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
+        'footer_privacy': 'سياسة الخصوصية',
+        'footer_terms': 'شروط الخدمة'
+      }
+    };
+
+    let currentLanguage = localStorage.getItem('siteLanguage') || 'en';
+
+    function initLanguage() {
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      const isChecked = currentLanguage === 'ar';
+      
+      if (desktopToggle) {
+        desktopToggle.checked = isChecked;
+      }
+      if (mobileToggle) {
+        mobileToggle.checked = isChecked;
+      }
+      applyLanguage(currentLanguage);
+    }
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+      localStorage.setItem('siteLanguage', currentLanguage);
+      
+      // Sync both language toggle checkboxes
+      const desktopToggle = document.getElementById('languageToggle');
+      const mobileToggle = document.getElementById('languageToggleMobile');
+      
+      const isChecked = currentLanguage === 'ar';
+      if (desktopToggle) desktopToggle.checked = isChecked;
+      if (mobileToggle) mobileToggle.checked = isChecked;
+      
+      applyLanguage(currentLanguage);
+    }
+
+    function applyLanguage(lang) {
+      // Update page direction
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+
+      // Update all translatable elements
+      updateAllText(lang);
+      
+      // Update navigation links
+      updateNavigation(lang);
+    }
+
+    function updateAllText(lang) {
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (pageTranslations[lang][key]) {
+          if (element.tagName === 'INPUT' && element.type === 'submit') {
+            element.value = pageTranslations[lang][key];
+          } else if (element.tagName === 'OPTION') {
+            element.textContent = pageTranslations[lang][key];
+          } else if (element.classList.contains('typing-text')) {
+            // For typing text elements, update both the text and the data-text attribute
+            element.textContent = pageTranslations[lang][key];
+            element.setAttribute('data-text', pageTranslations[lang][key]);
+          } else {
+            element.textContent = pageTranslations[lang][key];
+          }
+        }
+      });
+    }
+
+    function updateNavigation(lang) {
+      const navItems = document.querySelectorAll('.navbar-nav .nav-item:not(.language-toggle-container) .nav-link');
+      const translationKeys = ['nav_home', 'nav_about', 'nav_services', 'nav_blog', 'nav_consultation', 'nav_contact'];
+
+      navItems.forEach((link, index) => {
+        if (translationKeys[index] && pageTranslations[lang][translationKeys[index]]) {
+          link.textContent = pageTranslations[lang][translationKeys[index]];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initLanguage);
+    window.addEventListener('pageshow', () => {
+      const savedLang = localStorage.getItem('siteLanguage') || 'en';
+      if (savedLang !== currentLanguage) {
+        currentLanguage = savedLang;
+        initLanguage();
+      }
+    });
+  </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn animate" title="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>

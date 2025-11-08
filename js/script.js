@@ -3,72 +3,120 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
-  initializeNavbar();
-  initializeFormValidation();
-  initializeSmoothScroll();
-  observeAnimations();
-  initializeTypingAnimation();
+  try {
+    initializeNavbar();
+  } catch (error) {
+    console.warn('Navbar initialization error:', error);
+  }
+  
+  try {
+    initializeFormValidation();
+  } catch (error) {
+    console.warn('Form validation initialization error:', error);
+  }
+  
+  try {
+    initializeSmoothScroll();
+  } catch (error) {
+    console.warn('Smooth scroll initialization error:', error);
+  }
+  
+  try {
+    observeAnimations();
+  } catch (error) {
+    console.warn('Animation observer initialization error:', error);
+  }
+  
+  try {
+    initializeTypingAnimation();
+  } catch (error) {
+    console.warn('Typing animation initialization error:', error);
+  }
 });
 
 /* ============================================
    Navbar Mobile Menu Toggle
    ============================================ */
 function initializeNavbar() {
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  const navbarCollapse = document.querySelector('.navbar-collapse');
+  try {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
 
-  if (navbarToggler) {
+    if (!navbarToggler || !navbarCollapse) {
+      // Navbar elements not present on this page
+      return;
+    }
+
     navbarToggler.addEventListener('click', function() {
-      this.classList.toggle('active');
-    });
-  }
-
-  // Close mobile menu when a link is clicked
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-        navbarToggler.click();
+      try {
+        this.classList.toggle('active');
+      } catch (error) {
+        console.warn('Navbar toggle error:', error);
       }
     });
-  });
+
+    // Close mobile menu when a link is clicked
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        try {
+          if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+          }
+        } catch (error) {
+          console.warn('Nav link click error:', error);
+        }
+      });
+    });
+  } catch (error) {
+    console.warn('Navbar initialization error:', error);
+  }
 }
 
 /* ============================================
    Form Validation
    ============================================ */
 function initializeFormValidation() {
-  const forms = document.querySelectorAll('.needs-validation');
+  try {
+    const forms = document.querySelectorAll('.needs-validation');
 
-  forms.forEach(form => {
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      event.stopPropagation();
+    if (forms.length === 0) {
+      // No forms on this page, skip initialization
+      return;
+    }
 
-      if (!this.checkValidity()) {
+    forms.forEach(form => {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (!this.checkValidity()) {
+          this.classList.add('was-validated');
+          return false;
+        }
+
         this.classList.add('was-validated');
-        return false;
-      }
-
-      this.classList.add('was-validated');
-      handleFormSubmit(this);
-    });
-  });
-
-  // Real-time validation feedback
-  const inputs = document.querySelectorAll('.form-control, .form-select, textarea');
-  inputs.forEach(input => {
-    input.addEventListener('change', function() {
-      if (this.value.trim() !== '') {
-        this.classList.add('is-valid');
-        this.classList.remove('is-invalid');
-      }
+        handleFormSubmit(this);
+      });
     });
 
-    input.addEventListener('blur', function() {
-      validateField(this);
+    // Real-time validation feedback
+    const inputs = document.querySelectorAll('.form-control, .form-select, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('change', function() {
+        if (this.value.trim() !== '') {
+          this.classList.add('is-valid');
+          this.classList.remove('is-invalid');
+        }
+      });
+
+      input.addEventListener('blur', function() {
+        validateField(this);
+      });
     });
-  });
+  } catch (error) {
+    console.warn('Form validation initialization error:', error);
+  }
 }
 
 /* ============================================
@@ -209,6 +257,12 @@ function initializeTypingAnimation() {
    Intersection Observer for Animations
    ============================================ */
 function observeAnimations() {
+  // Check if IntersectionObserver is supported
+  if (typeof IntersectionObserver === 'undefined') {
+    console.warn('IntersectionObserver not supported');
+    return;
+  }
+
   const options = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -239,51 +293,63 @@ function observeAnimations() {
     });
   }, options);
 
-  // Observe service cards and other elements
-  const elements = document.querySelectorAll('.service-card, .contact-card, .about-content, .typing-trigger');
-  elements.forEach(el => observer.observe(el));
+  // Only observe elements if they exist on the page
+  const serviceCards = document.querySelectorAll('.service-card');
+  const contactCards = document.querySelectorAll('.contact-card');
+  const aboutContent = document.querySelectorAll('.about-content');
+  const typingTriggers = document.querySelectorAll('.typing-trigger');
+
+  serviceCards.forEach(el => observer.observe(el));
+  contactCards.forEach(el => observer.observe(el));
+  aboutContent.forEach(el => observer.observe(el));
+  typingTriggers.forEach(el => observer.observe(el));
 }
 
 function startTyping(element) {
-  // Get the text from data-text attribute first, then fall back to current content
-  let text = element.getAttribute('data-text');
-  
-  // If no data-text, don't clear and animate - just keep original text
-  if (!text) {
-    return;
-  }
-  
-  // Build the full HTML structure first to preserve layout
-  element.style.opacity = '1';
-  element.style.display = 'block';
-  element.style.whiteSpace = 'normal';
-  element.style.wordWrap = 'break-word';
-  element.style.maxWidth = '100%';
-  element.style.borderRight = '3px solid var(--accent-blue)';
-  element.style.paddingRight = '5px';
-  element.style.visibility = 'visible';
-  
-  // Create a container for the text that will be gradually revealed
-  element.innerHTML = '';
-  let charIndex = 0;
-  
-  const typingInterval = setInterval(() => {
-    if (charIndex < text.length) {
-      // Append one character at a time, preserving spaces and structure
-      element.textContent = text.substring(0, charIndex + 1);
-      charIndex++;
-    } else {
-      clearInterval(typingInterval);
-      // Add blinking cursor effect after typing completes
-      let cursorVisible = true;
-      setInterval(() => {
-        cursorVisible = !cursorVisible;
-        element.style.borderRight = cursorVisible 
-          ? '3px solid var(--accent-blue)' 
-          : '3px solid transparent';
-      }, 500);
+  try {
+    // Get the text from data-text attribute first, then fall back to current content
+    let text = element.getAttribute('data-text');
+    
+    // If no data-text, don't clear and animate - just keep original text
+    if (!text) {
+      return;
     }
-  }, 20);
+    
+    // Build the full HTML structure first to preserve layout
+    element.style.opacity = '1';
+    element.style.display = 'block';
+    element.style.whiteSpace = 'normal';
+    element.style.wordWrap = 'break-word';
+    element.style.maxWidth = '100%';
+    element.style.borderRight = '3px solid var(--accent-blue)';
+    element.style.paddingRight = '5px';
+    element.style.visibility = 'visible';
+    
+    // Create a container for the text that will be gradually revealed
+    element.innerHTML = '';
+    let charIndex = 0;
+    let typingInterval = null;
+    
+    typingInterval = setInterval(() => {
+      if (charIndex < text.length) {
+        // Append one character at a time, preserving spaces and structure
+        element.textContent = text.substring(0, charIndex + 1);
+        charIndex++;
+      } else {
+        clearInterval(typingInterval);
+        // Add blinking cursor effect after typing completes
+        let cursorVisible = true;
+        const cursorInterval = setInterval(() => {
+          cursorVisible = !cursorVisible;
+          element.style.borderRight = cursorVisible 
+            ? '3px solid var(--accent-blue)' 
+            : '3px solid transparent';
+        }, 500);
+      }
+    }, 20);
+  } catch (error) {
+    console.warn('Typing animation error:', error);
+  }
 }
 
 /* ============================================
