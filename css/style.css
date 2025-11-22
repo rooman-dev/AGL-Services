@@ -244,8 +244,7 @@ a:hover {
 }
 
 .navbar-toggler {
-  border: 2px solid var(--text-light);
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   order: 10;
 }
 
@@ -363,7 +362,7 @@ a:hover {
 
 .toggle-label-text {
   position: absolute;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 800;
   top: 50%;
   transform: translateY(-50%);
@@ -371,6 +370,11 @@ a:hover {
   letter-spacing: 0.5px;
   pointer-events: none;
   z-index: 1;
+}
+.language-label{
+  font-size: 0.7rem;
+  height: 100%;
+  width: 100%;
 }
 
 .toggle-label-en {
