@@ -102,29 +102,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-h1 {
-  font-size: 5rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-}
-
-h2 {
-  font-size: 3.75rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
-
-h3 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
+/* Fluid responsive heading sizes */
+h1 { font-size: clamp(2.4rem, 6.5vw, 5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+h2 { font-size: clamp(1.9rem, 5vw, 3.75rem); font-weight: 800; letter-spacing: -0.02em; }
+h3 { font-size: clamp(1.4rem, 3.6vw, 2.25rem); font-weight: 700; letter-spacing: -0.01em; }
+h4 { font-size: clamp(1.15rem, 2.4vw, 1.5rem); font-weight: 700; }
 
 p {
   font-size: 1.125rem;
@@ -521,7 +503,7 @@ a:hover {
 
 .hero h1 {
   color: var(--text-white);
-  font-size: 5.5rem;
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
   margin-bottom: 2rem;
   font-weight: 800;
   line-height: 1.08;
@@ -752,7 +734,7 @@ section {
 .service-card {
   background: var(--card-bg);
   border-radius: 12px;
-  padding: 2.5rem 2rem;
+  padding: clamp(1.25rem, 2.5vw, 2.5rem) clamp(1rem, 2vw, 2rem);
   text-align: left;
   transition: all 0.3s ease;
   box-shadow: var(--shadow-md);
@@ -773,11 +755,11 @@ section {
 }
 
 .service-icon {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   margin-bottom: 1.5rem;
   display: inline-block;
-  width: 64px;
-  height: 64px;
+  width: clamp(48px, 12vw, 64px);
+  height: clamp(48px, 12vw, 64px);
   background: var(--accent-blue);
   border-radius: 12px;
   display: flex;
@@ -806,11 +788,34 @@ section {
 }
 
 .service-card p {
-  font-size: 1rem;
-  color: var(--text-light);
+    padding: clamp(1rem, 3vw, 1.5rem);
+    min-height: auto;
   margin-bottom: 1.5rem;
   line-height: 1.6;
   font-weight: 400;
+}
+
+/* Logical list spacing for LTR / RTL and shared list styling */
+.service-card ul,
+.article-content ul,
+.pricing-features {
+  padding-inline-start: 1.2rem;
+  padding-inline-end: 0;
+}
+[dir="rtl"] .service-card ul,
+[dir="rtl"] .article-content ul,
+[dir="rtl"] .pricing-features {
+  padding-inline-end: 1.2rem;
+  padding-inline-start: 0;
+}
+
+/* Accessible focus states for interactive cards */
+.service-card:focus-visible,
+.feature-card:focus-visible,
+.pricing-card:focus-visible,
+.contact-card:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
 }
 
 .service-card ul li {
@@ -964,7 +969,7 @@ textarea {
 
 .contact-card {
   background: var(--card-bg);
-  padding: 2rem;
+  padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 2rem);
   border-radius: 12px;
   text-align: center;
   box-shadow: var(--shadow-md);
@@ -1442,7 +1447,7 @@ textarea.is-valid {
 .feature-card {
   background: #FFFFFF;
   border-radius: 12px;
-  padding: 2rem;
+  padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 2rem);
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 1px solid #E5E7EB;
@@ -1458,7 +1463,7 @@ textarea.is-valid {
 }
 
 .feature-card-icon {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   color: var(--accent-blue);
   margin-bottom: 1.25rem;
   transition: all 0.3s ease;
@@ -1541,7 +1546,7 @@ textarea.is-valid {
 .pricing-card {
   background: var(--card-bg);
   border-radius: 16px;
-  padding: 2.5rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2.5rem);
   border: 2px solid var(--border-dark);
   transition: all 0.3s ease;
   box-shadow: var(--shadow-md);
@@ -1775,8 +1780,8 @@ textarea.is-valid {
  
 
   .service-card {
-    padding: 1.5rem;
-    min-height: 280px;
+    padding: clamp(0.9rem, 4vw, 1.5rem);
+    min-height: auto;
   }
 
   .feature-card {
@@ -2040,4 +2045,177 @@ a, .btn-primary-custom, .btn-secondary-custom, .btn-outline-custom {
     height: 50px;
     font-size: 1.3rem;
   }
+}
+
+/* ============================================
+   Card Layout Utilities (Equal Height System)
+   ============================================ */
+/* Generic responsive grid wrapper for card collections */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.2rem, 2.8vw, 2.2rem);
+  align-items: stretch;
+}
+
+/* Base flexible card pattern (opt-in) */
+.card-flex,
+.service-card,
+.feature-card,
+.pricing-card,
+.contact-card,
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Shared body region that grows to fill vertical space */
+.card-body-flex,
+.blog-card .card-body,
+.service-card .card-body-flex { /* service cards can wrap content inside this if needed */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push actions (links / buttons) to bottom consistently */
+.card-action,
+.blog-card .card-action {
+  margin-top: auto;
+}
+
+/* ============================================
+   Blog Card Component (refactored from inline styles)
+   ============================================ */
+.blog-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 1px solid var(--border-dark);
+  cursor: pointer;
+  min-height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent-blue);
+}
+
+.blog-card .media {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-card .media i {
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  color: #FFFFFF;
+  opacity: 0.85;
+}
+
+.blog-card .card-body {
+  padding: clamp(1.4rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card .card-meta {
+  color: var(--text-gray);
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.blog-card h4 {
+  color: var(--text-white);
+  margin: 0 0 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.blog-card p {
+  color: var(--text-gray);
+  margin: 0 0 1.2rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.blog-card .card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--accent-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.blog-card .card-action:hover {
+  color: var(--white);
+}
+
+/* RTL tweaks: ensure arrow direction feels natural */
+[dir="rtl"] .blog-card .card-action i {
+  transform: scaleX(-1);
+}
+
+/* ============================================
+   Team Card Component
+   ============================================ */
+.team-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  transition: all 0.35s ease;
+  text-align: center;
+  border: 1px solid var(--border-dark);
+  display: flex;
+  flex-direction: column;
+}
+.team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); border-color: var(--accent-blue); }
+.team-card-media {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-light));
+}
+.team-card-media i { font-size: 5rem; color: var(--white); }
+.team-card-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.team-card-body h4 { color: var(--text-light); margin-bottom: 0.5rem; font-weight: 700; }
+.team-card-body p { font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.5rem; }
+.team-card-body .role { font-size: 0.95rem; color: var(--accent-blue); font-weight: 600; }
+
+/* ============================================
+   Service Card List Refinement
+   ============================================ */
+.service-card ul { margin: 1.5rem 0; }
+.service-card ul li { margin-bottom: 0.5rem; }
+
+/* ============================================
+   Responsive Adjustments for Cards
+   ============================================ */
+@media (max-width: 768px) {
+  .blog-card .card-body {
+    padding: clamp(1rem, 4vw, 1.5rem);
+  }
+  .blog-card h4 { font-size: 1.05rem; }
+  .blog-card p { font-size: 0.9rem; }
+}
+
+@media (max-width: 576px) {
+  .cards-grid { gap: 1.25rem; }
+  .blog-card .media { height: 170px; }
+  .blog-card h4 { font-size: 0.98rem; }
+  .blog-card p { font-size: 0.85rem; }
 }
