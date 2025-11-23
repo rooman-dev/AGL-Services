@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
   <!-- ============================================
        NAVIGATION BAR
        ============================================ -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
     <div class="container d-flex align-items-center">
       <!-- Logo on Left -->
       <a class="navbar-brand me-auto" href="index.html">
@@ -36,34 +36,35 @@
       </a>
 
       <!-- Language Toggle in Header (not in menu) -->
+     <!-- Language Toggle in Header (not in menu) -->
       <div class="language-toggle-container me-3 d-none d-lg-block">
         <label class="language-toggle">
           <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
           <span class="toggle-slider">
             <span class="toggle-label-text toggle-label-en">EN</span>
-            <span class="toggle-label-text toggle-label-ar">AR</span>
+            <span class="toggle-label-text toggle-label-ar">العربیہ</span>
           </span>
         </label>
       </div>
 
       <!-- Mobile Language Toggle -->
       <div class="language-toggle-container me-3 d-lg-none">
-        <span class="language-label">EN | AR</span>
+        <span class="language-label">EN | العربیہ</span>
         <label class="language-toggle">
           <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
           <span class="toggle-slider">
             <span class="toggle-label-text toggle-label-en">EN</span>
-            <span class="toggle-label-text toggle-label-ar">AR</span>
+            <span class="toggle-label-text toggle-label-ar">العربیہ</span>
           </span>
         </label>
       </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="mainNav">
         <!-- Navigation Pages -->
         <ul class="navbar-nav ms-4">
           <li class="nav-item">
@@ -511,7 +512,7 @@
       }
     };
 
-    let currentLanguage = localStorage.getItem('siteLanguage') || 'en';
+    let currentLanguage = localStorage.getItem('siteLanguage') || 'ar';
 
     function initLanguage() {
       const desktopToggle = document.getElementById('languageToggle');
@@ -588,7 +589,7 @@
 
     document.addEventListener('DOMContentLoaded', initLanguage);
     window.addEventListener('pageshow', () => {
-      const savedLang = localStorage.getItem('siteLanguage') || 'en';
+      const savedLang = localStorage.getItem('siteLanguage') || 'ar';
       if (savedLang !== currentLanguage) {
         currentLanguage = savedLang;
         initLanguage();

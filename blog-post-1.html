@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="10 SEO Strategies to Boost Your Rankings in 2024 - Learn proven SEO techniques to improve your website ranking.">
-  <meta name="keywords" content="SEO, Search Engine Optimization, Rankings, Digital Marketing">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>10 SEO Strategies to Boost Your Rankings - AdsGeniusLab Blog</title>
+  <meta name="description" content="Learn modern SEO strategies for 2025 focused on EEAT, user experience, technical excellence, and sustainable organic growth.">
+  <meta name="keywords" content="SEO 2025, search engine optimization, EEAT, technical SEO, semantic search">
+  <meta name="author" content="AdsGeniusLab">
+  <title>SEO in 2025 — Strategies That Deliver Real, Sustainable Growth - AdsGeniusLab Blog</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -19,108 +20,84 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Custom CSS -->
+  <!-- Custom CSS (must be after Bootstrap to override) -->
   <link rel="stylesheet" href="css/style.css?v=20251109">
 
   <style>
-    .blog-article {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 3rem 2rem;
-      margin: 2rem auto;
-      max-width: 800px;
-      line-height: 1.8;
+    body { background: var(--dark-bg); color: var(--text-white); }
+
+    .blog-container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+    .article-header { margin: 3rem 0 2rem; }
+    .article-title { font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-white); }
+    .article-meta { display: flex; gap: 2rem; margin-bottom: 2rem; color: var(--text-gray); font-size: 0.95rem; flex-wrap: wrap; }
+    .article-meta span { display: flex; align-items: center; gap: 0.5rem; }
+
+    .article-content { line-height: 1.8; margin: 3rem 0; }
+    .article-content h2 { font-size: 1.8rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--accent-light); border-left: 4px solid var(--accent-blue); padding-left: 1.5rem; }
+    .article-content h3 { font-size: 1.3rem; font-weight: 700; margin: 1.5rem 0 1rem; color: var(--text-white); }
+    .article-content p { margin-bottom: 1.2rem; color: var(--text-light); font-size: 1.05rem; }
+    .article-content ul { margin: 1.5rem 0 1.5rem 2rem; }
+    .article-content li { margin-bottom: 0.8rem; color: var(--text-light); }
+    .article-content strong { color: var(--accent-light); font-weight: 600; }
+
+    .highlight-box { background: var(--card-bg); border-left: 4px solid var(--accent-blue); padding: 1.5rem; margin: 2rem 0; border-radius: 8px; }
+    .highlight-box p { margin: 0; color: var(--text-light); }
+
+    .back-to-blog { margin-bottom: 2rem; }
+    .back-to-blog a { color: var(--accent-light); font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; }
+
+    .whatsapp-floating-btn {
+      position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+      background: linear-gradient(135deg, #10B981 0%, #34D399 100%); 
+      color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease; z-index: 999;
     }
-    .blog-article h2 {
-      color: var(--text-white);
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      font-size: 1.8rem;
-    }
-    .blog-article h3 {
-      color: var(--accent-light);
-      margin-top: 1.5rem;
-      margin-bottom: 0.8rem;
-      font-weight: 600;
-    }
-    .blog-article p {
-      color: var(--text-gray);
-      margin-bottom: 1.5rem;
-    }
-    .blog-article ul {
-      color: var(--text-gray);
-      margin-bottom: 1.5rem;
-      margin-left: 2rem;
-    }
-    .blog-article li {
-      margin-bottom: 0.8rem;
-    }
-    .blog-article a {
-      color: var(--accent-light);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .blog-article a:hover {
-      text-decoration: underline;
-    }
-    .article-meta {
-      color: var(--text-gray);
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 2px solid var(--accent-blue);
-    }
-    .back-to-blog {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--accent-light);
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 2rem;
-    }
-    .back-to-blog:hover {
-      text-decoration: underline;
-    }
+    .whatsapp-floating-btn:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4); }
   </style>
 </head>
 <body>
+
   <!-- ============================================
        NAVIGATION BAR
        ============================================ -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
     <div class="container d-flex align-items-center">
+      <!-- Logo on Left -->
       <a class="navbar-brand me-auto" href="index.html">
         adsGeniuslab.
       </a>
 
+     <!-- Language Toggle in Header (not in menu) -->
       <div class="language-toggle-container me-3 d-none d-lg-block">
         <label class="language-toggle">
           <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
           <span class="toggle-slider">
             <span class="toggle-label-text toggle-label-en">EN</span>
-            <span class="toggle-label-text toggle-label-ar">AR</span>
+            <span class="toggle-label-text toggle-label-ar">العربیہ</span>
           </span>
         </label>
       </div>
 
+      <!-- Mobile Language Toggle -->
       <div class="language-toggle-container me-3 d-lg-none">
-        <span class="language-label">EN | AR</span>
+        <span class="language-label">EN | العربیہ</span>
         <label class="language-toggle">
           <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
           <span class="toggle-slider">
             <span class="toggle-label-text toggle-label-en">EN</span>
-            <span class="toggle-label-text toggle-label-ar">AR</span>
+            <span class="toggle-label-text toggle-label-ar">العربیہ</span>
           </span>
         </label>
       </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="mainNav">
+        <!-- Navigation Pages -->
         <ul class="navbar-nav ms-4">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
@@ -132,7 +109,7 @@
             <a class="nav-link" href="services.html">What We Do</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="blog.html">Blog</a>
+            <a class="nav-link" href="blog.html">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="consultation.html">Consultation</a>
@@ -145,108 +122,267 @@
     </div>
   </nav>
 
-  <!-- Article Content -->
-  <section style="background: var(--dark-bg); padding: 60px 0; min-height: 100vh;">
-    <div class="blog-article">
-      <a href="blog.html" class="back-to-blog">
-        <i class="fas fa-arrow-left"></i> <span>Back to Blog</span>
-      </a>
-
-      <h1 style="color: var(--text-white); font-size: 2.5rem; margin-bottom: 1rem; margin-top: 2rem; font-weight: 800;">
-        10 SEO Strategies to Boost Your Rankings in 2024
-      </h1>
-
-      <div class="article-meta">
-        <i class="fas fa-calendar"></i> Published on November 1, 2024 | 
-        <i class="fas fa-clock"></i> 8 min read | 
-        <i class="fas fa-user"></i> By AdsGeniusLab Team
+  <!-- ============================================
+       ARTICLE CONTENT
+       ============================================ -->
+  <section style="padding: 60px 0; background: var(--dark-bg);">
+    <div class="blog-container">
+      <div class="back-to-blog">
+        <a href="blog.html"><i class="fas fa-arrow-left"></i> Back to Blog</a>
       </div>
 
-      <p>
-        Search Engine Optimization (SEO) remains one of the most critical components of digital marketing. With search engines constantly updating their algorithms and user behavior changing, staying ahead of the curve is essential. This comprehensive guide will walk you through the 10 most effective SEO strategies to boost your rankings in 2024.
-      </p>
+      <article class="article-header">
+        <h1 class="article-title">SEO in 2025 — Strategies That Deliver Real, Sustainable Growth</h1>
+        <div class="article-meta">
+          <span><i class="fas fa-calendar"></i> November 19, 2025</span>
+          <span><i class="fas fa-clock"></i> 10 min read</span>
+          <span><i class="fas fa-user"></i> AdsGeniusLab</span>
+        </div>
+      </article>
 
-      <h2>1. Focus on User Experience (UX)</h2>
-      <p>
-        Google now prioritizes websites with excellent user experience. Ensure your website loads quickly, is mobile-responsive, and provides intuitive navigation. The Core Web Vitals (LCP, FID, CLS) are key ranking factors.
-      </p>
+      <div class="article-content">
+        <p>SEO in 2025 has fundamentally shifted. The old playbook of keyword stuffing, low-quality backlinks, and technical tricks doesn't work anymore. Google's algorithms have become sophisticated enough to reward genuine value and punish manipulation.</p>
 
-      <h2>2. Create High-Quality, Relevant Content</h2>
-      <p>
-        Content is still king. Create in-depth, valuable content that answers your audience's questions. Aim for comprehensive guides, case studies, and well-researched articles that provide real value to your readers.
-      </p>
+        <p>If you want sustainable, long-term organic growth, you need to understand what Google actually wants—and it's not what most people think.</p>
 
-      <h2>3. Optimize for Search Intent</h2>
-      <p>
-        Understanding user search intent is crucial. Are they looking for information, making a purchase decision, or seeking navigation? Tailor your content to match the intent behind the keywords your audience is searching for.
-      </p>
+        <h2>The New SEO Landscape: What Changed and Why</h2>
 
-      <h2>4. Master Technical SEO</h2>
-      <p>
-        Technical SEO involves optimizing your website's infrastructure. This includes:
-      </p>
-      <ul>
-        <li>Fixing crawl errors and broken links</li>
-        <li>Creating an XML sitemap</li>
-        <li>Optimizing robots.txt</li>
-        <li>Implementing structured data markup</li>
-        <li>Ensuring HTTPS security</li>
-      </ul>
+        <p>Google's algorithm updates over the past 2-3 years have fundamentally prioritized:</p>
+        <ul>
+          <li><strong>Experience:</strong> Does your site load fast? Is it easy to navigate? Is it mobile-friendly?</li>
+          <li><strong>Expertise:</strong> Do you clearly demonstrate you know what you're talking about?</li>
+          <li><strong>Authoritativeness:</strong> Do reputable sources link to you? Are you cited as a trusted resource?</li>
+          <li><strong>Trustworthiness:</strong> Do you have clear author bios, credentials, and transparent business information?</li>
+        </ul>
 
-      <h2>5. Build High-Quality Backlinks</h2>
-      <p>
-        Backlinks are still a major ranking factor. Focus on building links from authoritative, relevant websites. This can be done through guest posting, broken link building, and creating linkable assets.
-      </p>
+        <p>These four pillars—known as EEAT—are now the foundation of Google's ranking criteria.</p>
 
-      <h2>6. Optimize for Long-Tail Keywords</h2>
-      <p>
-        Long-tail keywords have lower search volume but higher conversion intent. These keywords are often easier to rank for and attract more qualified traffic. Incorporate them naturally into your content.
-      </p>
+        <h2>1. Master EEAT: The New Ranking Factor</h2>
 
-      <h2>7. Leverage Local SEO</h2>
-      <p>
-        If you have a physical location or serve specific geographic areas, optimize your Google Business Profile, build local citations, and encourage customer reviews to improve local search visibility.
-      </p>
+        <h3>Experience</h3>
+        <p>Google now wants to see that real humans with real experience have created your content. This is especially true for YMYL (Your Money, Your Life) topics like health, finance, and legal advice.</p>
+        <ul>
+          <li>Include author bylines with credentials and photos</li>
+          <li>Write from firsthand experience, not just research</li>
+          <li>Update outdated content regularly</li>
+          <li>Show real case studies and results</li>
+        </ul>
 
-      <h2>8. Create Content Clusters and Internal Linking</h2>
-      <p>
-        Organize your content into topic clusters with a pillar page covering the main topic and cluster pages diving deeper. Use strategic internal linking to establish topic authority and improve crawlability.
-      </p>
+        <h3>Expertise</h3>
+        <p>Demonstrate that you're an expert in your field:</p>
+        <ul>
+          <li>Create comprehensive, in-depth guides (2,000+ words for competitive topics)</li>
+          <li>Include expert interviews and quotes</li>
+          <li>Build a knowledge base of interconnected content</li>
+          <li>Show your process, methodology, and unique angle</li>
+        </ul>
 
-      <h2>9. Optimize for Featured Snippets</h2>
-      <p>
-        Featured snippets (position zero) drive significant traffic. Structure your content with clear headings, lists, tables, and concise answers to common questions to increase chances of earning featured snippets.
-      </p>
+        <h3>Authoritativeness</h3>
+        <p>Build authority through:</p>
+        <ul>
+          <li>Earning backlinks from reputable, relevant websites</li>
+          <li>Being featured in industry publications</li>
+          <li>Building a strong brand presence</li>
+          <li>Getting mentioned by other authorities in your field</li>
+        </ul>
 
-      <h2>10. Monitor and Adapt Using Data</h2>
-      <p>
-        Use tools like Google Analytics 4, Google Search Console, and SEO platforms to monitor your performance. Track keyword rankings, organic traffic, click-through rates, and make data-driven adjustments to your strategy.
-      </p>
+        <h3>Trustworthiness</h3>
+        <p>Trust is everything:</p>
+        <ul>
+          <li>Include clear contact information and physical address</li>
+          <li>Have transparent privacy policies and terms of service</li>
+          <li>Display customer testimonials and reviews</li>
+          <li>Create an About Us page that clearly explains who you are</li>
+          <li>Use HTTPS (SSL certificate) across your entire site</li>
+        </ul>
 
-      <h2>Conclusion</h2>
-      <p>
-        SEO is an ongoing process that requires consistent effort and adaptation. By implementing these 10 strategies, you'll be well-positioned to improve your search rankings and drive more organic traffic to your website in 2024. Remember, focus on providing value to your users first, and the rankings will follow.
-      </p>
+        <h2>2. Technical SEO: The Non-Negotiable Foundation</h2>
 
-      <p>
-        <strong>Ready to improve your SEO strategy?</strong> <a href="consultation.html">Book a free consultation with our team</a> today and let AdsGeniusLab help you dominate search rankings!
-      </p>
+        <h3>Core Web Vitals (Google's New Page Experience Metrics)</h3>
+        <p>These three metrics directly impact your rankings:</p>
+        <ul>
+          <li><strong>Largest Contentful Paint (LCP):</strong> How fast does the main content load? Target: Under 2.5 seconds</li>
+          <li><strong>First Input Delay (FID):</strong> How responsive is your page to user interaction? Target: Under 100 milliseconds</li>
+          <li><strong>Cumulative Layout Shift (CLS):</strong> Does your page layout jump around while loading? Target: Under 0.1</li>
+        </ul>
+        <p>Use Google PageSpeed Insights to check your site. Anything below 90 needs improvement.</p>
 
-      <a href="blog.html" class="back-to-blog">
-        <i class="fas fa-arrow-left"></i> <span>Back to Blog</span>
-      </a>
+        <h3>Site Structure and Internal Linking</h3>
+        <p>Proper site architecture helps both users and search engines:</p>
+        <ul>
+          <li>Use a logical hierarchy: Home → Category → Subcategory → Post</li>
+          <li>Implement breadcrumb navigation</li>
+          <li>Create pillar pages (comprehensive guides) with cluster content linking back</li>
+          <li>Link strategically to related content (3-5 internal links per post)</li>
+        </ul>
+
+        <h3>Mobile Optimization</h3>
+        <p>Google now indexes mobile-first. If your mobile site is slow or broken, your rankings suffer.</p>
+        <ul>
+          <li>Test mobile usability in Google Search Console</li>
+          <li>Ensure buttons and forms are easy to use on mobile</li>
+          <li>Avoid intrusive interstitials that block content</li>
+          <li>Use responsive design, not a separate mobile site</li>
+        </ul>
+
+        <h2>3. Content Strategy: Quality Over Quantity</h2>
+
+        <h3>The Death of Thin Content</h3>
+        <p>500-word blog posts don't rank anymore (unless you're already an authority). Here's what works:</p>
+        <ul>
+          <li><strong>Comprehensive guides:</strong> 2,000-5,000 words covering every angle of a topic</li>
+          <li><strong>Original research:</strong> Conduct surveys, analyze data, publish unique insights</li>
+          <li><strong>Real examples:</strong> Case studies, screenshots, data, and actionable takeaways</li>
+          <li><strong>Answer intent:</strong> Understand what the searcher actually wants and deliver it</li>
+        </ul>
+
+        <h3>Semantic SEO: Write for Meaning, Not Keywords</h3>
+        <p>Stop writing for keywords. Write for topics and search intent.</p>
+        <ul>
+          <li>Use related keywords and synonyms naturally throughout your content</li>
+          <li>Cover related subtopics that searchers expect</li>
+          <li>Use schema markup to help Google understand your content</li>
+          <li>Answer common follow-up questions (and create content for those too)</li>
+        </ul>
+
+        <h3>The Content Refresh Strategy</h3>
+        <p>Old content doesn't rank as well, even if it was good. Refresh content quarterly:</p>
+        <ul>
+          <li>Add new data, statistics, and case studies</li>
+          <li>Update outdated information</li>
+          <li>Add new sections based on recent questions you've received</li>
+          <li>Improve formatting and readability</li>
+          <li>Don't just republish—Google will notice the change date</li>
+        </ul>
+
+        <h2>4. Zero-Click Optimization</h2>
+
+        <h3>What Is Zero-Click?</h3>
+        <p>Zero-click means people get their answer from search results without visiting your site. This sounds bad, but it's actually an opportunity.</p>
+
+        <p>According to studies, over 50% of searches end with zero-clicks. Google shows featured snippets, knowledge panels, and answer boxes directly in the search results.</p>
+
+        <h3>How to Win Zero-Click Searches</h3>
+        <ul>
+          <li><strong>Target featured snippet positions:</strong> Write concise answers to common questions in your industry</li>
+          <li><strong>Use tables and lists:</strong> Google loves structured data</li>
+          <li><strong>Answer "People Also Ask" queries:</strong> Create content around these questions</li>
+          <li><strong>Optimize for voice search:</strong> Use conversational language and long-tail keywords</li>
+        </ul>
+
+        <h2>5. Link Building: Quality Over Quantity</h2>
+
+        <h3>The New Link Building Rules</h3>
+        <p>Cheap, spammy link building gets you penalized now. Here's what actually works:</p>
+        <ul>
+          <li><strong>Create linkable assets:</strong> Original research, tools, templates, and guides that people naturally want to link to</li>
+          <li><strong>Guest posting on relevant sites:</strong> Not for the backlinks, but for credibility and reaching new audiences</li>
+          <li><strong>Broken link building:</strong> Find broken links in competitor sites and offer your content as a replacement</li>
+          <li><strong>Resource page links:</strong> Get included on industry resource pages</li>
+          <li><strong>Unlinked mentions:</strong> Find where you're mentioned without a link and ask for one</li>
+        </ul>
+
+        <h3>What NOT to Do</h3>
+        <ul>
+          <li>❌ Buy backlinks from link farms</li>
+          <li>❌ Participate in link exchange schemes</li>
+          <li>❌ Use PBN (Private Blog Network) networks</li>
+          <li>❌ Get links from irrelevant, low-quality sites</li>
+          <li>❌ Exact-match anchor text from hundreds of sites</li>
+        </ul>
+
+        <h2>6. User Behavior and Engagement Signals</h2>
+
+        <h3>Click-Through Rate (CTR) in Search Results</h3>
+        <p>Your title and meta description directly impact whether people click. Optimize these:</p>
+        <ul>
+          <li>Include your main keyword in the title</li>
+          <li>Create compelling, benefit-focused titles that stand out</li>
+          <li>Use your meta description to answer the searcher's intent in 155 characters</li>
+          <li>Include power words: "Proven," "Expert," "Complete Guide"</li>
+        </ul>
+
+        <h3>Dwell Time and Bounce Rate</h3>
+        <p>If people leave your site immediately, Google notices. Keep visitors engaged:</p>
+        <ul>
+          <li>Write compelling introductions that grab attention in the first 2 sentences</li>
+          <li>Use subheadings to break up content and show structure</li>
+          <li>Include images, videos, and visual elements every 300 words</li>
+          <li>Remove intrusive ads and pop-ups that distract from content</li>
+        </ul>
+
+        <h2>7. Local SEO for Multi-Location Businesses</h2>
+
+        <p>If you serve customers in specific locations, local SEO is critical:</p>
+        <ul>
+          <li>Claim and optimize your Google Business Profile</li>
+          <li>Get listed in relevant local directories</li>
+          <li>Gather reviews on Google, Trustpilot, and industry-specific platforms</li>
+          <li>Create location-specific landing pages</li>
+          <li>Use local keywords in content and meta tags</li>
+        </ul>
+
+        <h2>Your 90-Day SEO Action Plan</h2>
+
+        <h3>Weeks 1-2: Audit and Foundation</h3>
+        <ul>
+          <li>Run a technical audit with Google Search Console and Lighthouse</li>
+          <li>Fix critical issues (broken links, missing HTTPS, slow pages)</li>
+          <li>Create or improve your EEAT elements (author bios, credentials, About page)</li>
+        </ul>
+
+        <h3>Weeks 3-4: Content Strategy</h3>
+        <ul>
+          <li>Research your top 20 competitor keywords</li>
+          <li>Identify content gaps (topics they rank for that you don't)</li>
+          <li>Create a pillar/cluster content strategy</li>
+        </ul>
+
+        <h3>Weeks 5-8: Content Creation and Optimization</h3>
+        <ul>
+          <li>Write 2-3 pillar pages (2,000+ words each)</li>
+          <li>Refresh your top 10 underperforming pages</li>
+          <li>Improve internal linking structure</li>
+        </ul>
+
+        <h3>Weeks 9-12: Link Building and Promotion</h3>
+        <ul>
+          <li>Reach out to relevant sites for backlink opportunities</li>
+          <li>Promote your best content on social media and relevant communities</li>
+          <li>Implement schema markup</li>
+          <li>Monitor rankings and adjust strategy</li>
+        </ul>
+
+        <h2>Tools You'll Need</h2>
+
+        <div class="highlight-box">
+          <p><strong>Essentials:</strong> Google Search Console (free), Google Analytics (free), Ahrefs or SEMrush (paid)</p>
+          <p><strong>Content:</strong> Surfer SEO, Clearscope, or MarketMuse for content optimization</p>
+          <p><strong>Technical:</strong> Google Lighthouse, PageSpeed Insights, Screaming Frog</p>
+        </div>
+
+        <h2>The Bottom Line</h2>
+
+        <p>SEO in 2025 rewards businesses that do the right thing: create genuine value, be transparent, build authority through quality work, and respect user experience. It's not a race—it's a marathon.</p>
+
+        <p>The businesses that will dominate search in the next 3-5 years are those starting their SEO efforts now. If you haven't invested in SEO yet, there's no better time than today.</p>
+
+        <div class="highlight-box" style="background: linear-gradient(135deg, #0056D2 0%, #007BFF 100%); border-left: none; text-align: center; margin-top: 3rem;">
+          <p style="margin: 0; font-weight: 700; font-size: 1.1rem;">Need help implementing these SEO strategies? <a href="contact.html" style="color: white; text-decoration: underline;">Let AdsGeniusLab audit your site</a> and create a winning SEO strategy.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============================================
        FOOTER
        ============================================ -->
-  <footer>
+<footer>
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4><i class="fas fa-lightbulb"></i> <span>AdsGeniusLab</span></h4>
-          <p>Transforming businesses through innovative digital marketing solutions worldwide.</p>
+          <h4><i class="fas fa-lightbulb"></i> <span data-i18n="footer_company_name">AdsGeniusLab</span></h4>
+          <p data-i18n="footer_company_desc">Transforming businesses through innovative digital marketing solutions worldwide.</p>
           <div class="social-links">
             <a href="https://whatsapp.com" target="_blank" title="WhatsApp">
               <i class="fab fa-whatsapp"></i>
@@ -264,118 +400,55 @@
         </div>
 
         <div class="footer-section">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">What We Do</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="footer_home">Home</a></li>
+            <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+            <li><a href="services.html" data-i18n="footer_services">What We Do</a></li>
+            <li><a href="consultation.html" data-i18n="footer_consultation">Consultation</a></li>
+            <li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>What We Do</h4>
+          <h4 data-i18n="footer_what_we_do">What We Do</h4>
           <ul class="footer-links">
-            <li><a href="services.html#seo">SEO Optimization</a></li>
-            <li><a href="services.html#social">Social Media Marketing</a></li>
-            <li><a href="services.html#content">Content Strategy</a></li>
-            <li><a href="services.html#ppc">PPC Advertising</a></li>
+            <li><a href="services.html#seo" data-i18n="footer_seo">SEO Optimization</a></li>
+            <li><a href="services.html#social" data-i18n="footer_social">Social Media Marketing</a></li>
+            <li><a href="services.html#content" data-i18n="footer_content">Content Strategy</a></li>
+            <li><a href="services.html#ppc" data-i18n="footer_ppc">PPC Advertising</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
-          <h4>Contact Info</h4>
+          <h4 data-i18n="footer_contact_info">Contact Info</h4>
           <p>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);">adsgeniuslab@gmail.com</a>
+            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);" data-i18n="footer_email">adsgeniuslab@gmail.com</a>
           </p>
           <p>
             <i class="fas fa-phone"></i>
-            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);">+92 318 1292628</a>
+            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);" data-i18n="footer_phone">+92 318 1292628</a>
           </p>
           <p>
             <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);">WhatsApp Us</a>
+            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);" data-i18n="footer_whatsapp">WhatsApp Us</a>
           </p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p><span>&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);">Terms of Service</a></p>
+        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
       </div>
     </div>
   </footer>
-
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 52px; height: 52px; background: var(--gradient-blue); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 1.2rem; z-index: 999; box-shadow: 0 4px 15px rgba(0, 86, 210, 0.25); transition: all 0.3s ease;">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Custom JS -->
-  <script src="js/script.js?v=20251109"></script>
-
-  <script>
-    // Scroll to Top Button
-    const scrollBtn = document.getElementById('scrollToTopBtn');
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        scrollBtn.style.display = 'block';
-      } else {
-        scrollBtn.style.display = 'none';
-      }
-    });
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Language Switching
-    const pageTranslations = {
-      en: {},
-      ar: {}
-    };
-
-    let currentLanguage = localStorage.getItem('siteLanguage') || 'en';
-
-    function initLanguage() {
-      const desktopToggle = document.getElementById('languageToggle');
-      const mobileToggle = document.getElementById('languageToggleMobile');
-      const isChecked = currentLanguage === 'ar';
-      
-      if (desktopToggle) desktopToggle.checked = isChecked;
-      if (mobileToggle) mobileToggle.checked = isChecked;
-      applyLanguage(currentLanguage);
-    }
-
-    function toggleLanguage() {
-      currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
-      localStorage.setItem('siteLanguage', currentLanguage);
-      
-      const desktopToggle = document.getElementById('languageToggle');
-      const mobileToggle = document.getElementById('languageToggleMobile');
-      
-      const isChecked = currentLanguage === 'ar';
-      if (desktopToggle) desktopToggle.checked = isChecked;
-      if (mobileToggle) mobileToggle.checked = isChecked;
-      
-      applyLanguage(currentLanguage);
-    }
-
-    function applyLanguage(lang) {
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
-    }
-
-    document.addEventListener('DOMContentLoaded', initLanguage);
-  </script>
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn" title="Contact us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

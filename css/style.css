@@ -244,8 +244,12 @@ a:hover {
 }
 
 .navbar-toggler {
-  font-size: 0.8rem;
+  font-size: 1rem;
   order: 10;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border-dark);
+  border-radius: 6px;
+  background: var(--card-bg);
 }
 
 .navbar-toggler:focus {
@@ -254,8 +258,74 @@ a:hover {
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(30, 41, 59, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(96,165,250,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M5 7h20M5 15h20M5 23h20'/%3e%3c/svg%3e");
 }
+
+/* ============================================
+   Mobile Navbar Enhancements
+   ============================================ */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: var(--primary-dark);
+    padding: 1rem 1.25rem 1.25rem;
+    border-top: 1px solid var(--border-dark);
+    box-shadow: 0 12px 24px -6px rgba(0,0,0,0.45);
+    border-radius: 0 0 12px 12px;
+  }
+  .navbar-nav {
+    margin: 0 !important;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  .nav-item {
+    height: auto;
+    display: block;
+  }
+  .nav-link {
+    margin: 0 !important;
+    padding: 0.85rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  [dir="rtl"] .nav-link {
+    justify-content: flex-end;
+  }
+  .navbar-nav .nav-item + .nav-item {
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-link::after { display: none; }
+  .nav-link:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+  }
+  .nav-link.active {
+    background: linear-gradient(135deg, rgba(37,99,235,0.25) 0%, rgba(96,165,250,0.3) 100%);
+    color: var(--white) !important;
+    font-weight: 700;
+  }
+  .nav-link:hover:not(.active) {
+    background: rgba(255,255,255,0.05);
+  }
+  .language-toggle-container {
+    order: -1;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 0 0.75rem 0;
+    margin-bottom: 0.75rem;
+    border-left: none;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  [dir="rtl"] .language-toggle-container { justify-content: flex-end; }
+  .navbar-toggler { border-color: var(--accent-blue); }
+  .navbar-toggler:hover { background: var(--accent-blue); }
+}
+
+/* RTL underline adaptation in desktop */
+[dir="rtl"] .nav-link::after { left: auto; right: 0; }
 
 /* ============================================
    Dropdown Menu Styling
@@ -309,7 +379,7 @@ a:hover {
   position: relative;
   display: inline-flex;
   align-items: center;
-  width: 70px;
+  width: 100px;
   height: 36px;
   background-color: var(--card-bg);
   border: 2px solid var(--border-dark);
@@ -349,9 +419,9 @@ a:hover {
 .toggle-slider::before {
   content: '';
   position: absolute;
-  height: 26px;
-  width: 26px;
-  left: 4px;
+  height: 0px;
+  width: 0px;
+  left: 0px;
   top: 50%;
   transform: translateY(-50%);
   background-color: white;

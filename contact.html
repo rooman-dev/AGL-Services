@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,47 +20,54 @@
 
   <!-- Custom CSS (must be after Bootstrap to override) -->
   <link rel="stylesheet" href="css/style.css?v=20251109">
+  <style>
+    /* Utility class to avoid inline CSS parsing issues for position and z-index */
+    .relative-zindex {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
   <!-- ============================================
        NAVIGATION BAR
        ============================================ -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
     <div class="container d-flex align-items-center">
       <!-- Logo on Left -->
       <a class="navbar-brand me-auto" href="index.html">
         adsGeniuslab.
       </a>
 
-      <!-- Language Toggle in Header (not in menu) -->
+     <!-- Language Toggle in Header (not in menu) -->
       <div class="language-toggle-container me-3 d-none d-lg-block">
         <label class="language-toggle">
           <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
           <span class="toggle-slider">
             <span class="toggle-label-text toggle-label-en">EN</span>
-            <span class="toggle-label-text toggle-label-ar">AR</span>
+            <span class="toggle-label-text toggle-label-ar">العربیہ</span>
           </span>
         </label>
       </div>
 
       <!-- Mobile Language Toggle -->
       <div class="language-toggle-container me-3 d-lg-none">
-        <span class="language-label">EN | AR</span>
+        <span class="language-label">EN | العربیہ</span>
         <label class="language-toggle">
           <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
           <span class="toggle-slider">
             <span class="toggle-label-text toggle-label-en">EN</span>
-            <span class="toggle-label-text toggle-label-ar">AR</span>
+            <span class="toggle-label-text toggle-label-ar">العربیہ</span>
           </span>
         </label>
       </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="mainNav">
         <!-- Navigation Pages -->
         <ul class="navbar-nav ms-4">
           <li class="nav-item">
@@ -161,6 +168,10 @@
           </a>
           <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;" data-i18n="contact_office_appointment">By appointment</p>
         </div>
+      </div>
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cdefs%3E%3ClinearGradient id=\"g6\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"%3E%3Cstop offset=\"0%\" style=\"stop-color:rgba(45,90,159,0.04)\" /%3E%3Cstop offset=\"100%\" style=\"stop-color:rgba(13,31,60,0.02)\" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\"60\" height=\"60\" fill=\"url(%23g6)\"%3E%3C/rect%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"8\" fill=\"none\" stroke=\"rgba(45,90,159,0.1)\" stroke-width=\"1\"%3E%3C/circle%3E%3C/svg%3E'); background-size: 150px 150px; opacity: 0.5; pointer-events: none; z-index: 0; animation: float 25s ease-in-out infinite;"></div>
+    <div class="container relative-zindex">
+      <div class="row g-4">
       </div>
     </div>
   </section>
@@ -568,7 +579,7 @@
       }
     };
 
-    let currentLanguage = localStorage.getItem('siteLanguage') || 'en';
+    let currentLanguage = localStorage.getItem('siteLanguage') || 'ar';
 
     function initLanguage() {
       const desktopToggle = document.getElementById('languageToggle');
@@ -643,7 +654,7 @@
 
     document.addEventListener('DOMContentLoaded', initLanguage);
     window.addEventListener('pageshow', () => {
-      const savedLang = localStorage.getItem('siteLanguage') || 'en';
+      const savedLang = localStorage.getItem('siteLanguage') || 'ar';
       if (savedLang !== currentLanguage) {
         currentLanguage = savedLang;
         initLanguage();
