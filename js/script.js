@@ -437,8 +437,73 @@ function initializeScrollToTop() {
 initializeScrollToTop();
 
 /* ============================================
-   Export functions for external use
+   Cookie Consent Management
    ============================================ */
+function initializeCookieConsent() {
+  const cookieConsent = document.getElementById('cookieConsent');
+  const acceptBtn = document.getElementById('acceptCookies');
+  const rejectBtn = document.getElementById('rejectCookies');
+  const cookiePolicy = document.getElementById('cookiePolicy');
+
+  if (!cookieConsent) return;
+
+  // Check if user has already made a choice
+  const cookieChoice = localStorage.getItem('cookieConsent');
+  
+  if (cookieChoice) {
+    // User has already made a choice, hide the popup
+    cookieConsent.style.display = 'none';
+  } else {
+    // Show the popup
+    cookieConsent.style.display = 'flex';
+  }
+
+  // Accept cookies
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'accepted');
+      cookieConsent.classList.add('fade-out');
+      setTimeout(() => {
+        cookieConsent.style.display = 'none';
+      }, 300);
+      // You can add Google Analytics or other tracking code here
+      loadAnalytics();
+    });
+  }
+
+  // Reject cookies
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'rejected');
+      cookieConsent.classList.add('fade-out');
+      setTimeout(() => {
+        cookieConsent.style.display = 'none';
+      }, 300);
+    });
+  }
+
+  // Link to privacy policy
+  if (cookiePolicy) {
+    cookiePolicy.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Replace with actual privacy policy page
+      window.location.href = '#privacy-policy';
+    });
+  }
+}
+
+// Load analytics if cookies are accepted
+function loadAnalytics() {
+  // Add Google Analytics or other tracking code here
+  // Example:
+  // window.dataLayer = window.dataLayer || [];
+  // function gtag(){dataLayer.push(arguments);}
+  // gtag('js', new Date());
+  // gtag('config', 'YOUR_GA_ID');
+}
+
+// Initialize cookie consent on page load
+document.addEventListener('DOMContentLoaded', initializeCookieConsent);
 window.AdsGeniusLab = {
   openWhatsApp,
   sendEmail,

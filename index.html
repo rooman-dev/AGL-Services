@@ -367,7 +367,14 @@
         'footer_whatsapp': 'WhatsApp Us',
         'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
         'footer_privacy': 'Privacy Policy',
-        'footer_terms': 'Terms of Service'
+        'footer_terms': 'Terms of Service',
+        
+        // Cookie Consent
+        'cookie_title': 'We Use Cookies',
+        'cookie_message': 'We use cookies to enhance your experience, personalize content, and analyze traffic. By continuing to browse our site, you agree to our use of cookies.',
+        'cookie_policy_link': 'Privacy Policy',
+        'cookie_accept': 'Accept',
+        'cookie_reject': 'Reject'
       },
       ar: {
         // Navigation
@@ -435,7 +442,14 @@
         'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
         'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
         'footer_privacy': 'سياسة الخصوصية',
-        'footer_terms': 'شروط الخدمة'
+        'footer_terms': 'شروط الخدمة',
+        
+        // Cookie Consent
+        'cookie_title': 'نستخدم ملفات تعريف الارتباط',
+        'cookie_message': 'نستخدم ملفات تعريف الارتباط لتحسين تجربتك وتخصيص المحتوى وتحليل حركة المرور. بمتابعتك تصفح موقعنا، فإنك توافق على استخدامنا لملفات تعريف الارتباط.',
+        'cookie_policy_link': 'سياسة الخصوصية',
+        'cookie_accept': 'قبول',
+        'cookie_reject': 'رفض'
       }
     };
 
@@ -536,5 +550,23 @@
   <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn animate" title="Contact us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- Cookie Consent Popup -->
+  <div id="cookieConsent" class="cookie-consent-popup">
+    <div class="cookie-content">
+      <div class="cookie-icon">
+        <i class="fas fa-cookie-bite"></i>
+      </div>
+      <div class="cookie-text">
+        <h3 id="cookieTitle" data-i18n="cookie_title">We Use Cookies</h3>
+        <p id="cookieMessage" data-i18n="cookie_message">We use cookies to enhance your experience, personalize content, and analyze traffic. By continuing to browse our site, you agree to our use of cookies.</p>
+        <a href="#" id="cookiePolicy" data-i18n="cookie_policy_link">Privacy Policy</a>
+      </div>
+      <div class="cookie-actions">
+        <button id="acceptCookies" class="cookie-btn cookie-accept" data-i18n="cookie_accept">Accept</button>
+        <button id="rejectCookies" class="cookie-btn cookie-reject" data-i18n="cookie_reject">Reject</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
