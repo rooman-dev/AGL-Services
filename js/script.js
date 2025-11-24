@@ -353,16 +353,26 @@ function startTyping(element) {
 }
 
 /* ============================================
-   Navbar Background on Scroll
+   Navbar Background on Scroll (Throttled)
    ============================================ */
+let ticking = false;
+let lastScrollY = 0;
+
 window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 50) {
-    navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
-  } else {
-    navbar.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.08)';
+  lastScrollY = window.scrollY;
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const navbar = document.querySelector('.navbar');
+      if (lastScrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      ticking = false;
+    });
+    ticking = true;
   }
-});
+}, { passive: true });
 
 /* ============================================
    WhatsApp Integration

@@ -138,6 +138,12 @@ a:hover {
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid var(--border-dark);
+  transition: box-shadow 0.3s ease;
+  will-change: box-shadow;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .navbar .container {
@@ -193,12 +199,13 @@ a:hover {
   color: var(--text-light) !important;
   margin-left: 1.5rem;
   position: relative;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.3px;
   display: flex;
   align-items: center;
   height: 100%;
+  will-change: color;
 }
 
 .nav-link::after {
@@ -209,12 +216,12 @@ a:hover {
   width: 0;
   height: 3px;
   background: var(--gradient-accent);
-  transition: width 0.3s ease;
+  transition: width 0.25s ease;
+  will-change: width;
 }
 
 .nav-link:hover {
   color: var(--accent-light) !important;
-  font-weight: 700;
 }
 
 .nav-link:hover::after {
@@ -233,11 +240,18 @@ a:hover {
   border: 1px solid var(--border-dark);
   border-radius: 6px;
   background: var(--card-bg);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  will-change: background;
 }
 
 .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
+  border-color: var(--accent-blue);
+}
+
+.navbar-toggler:active {
+  background: var(--accent-blue);
 }
 
 .navbar-toggler-icon {
@@ -252,8 +266,20 @@ a:hover {
     background: var(--primary-dark);
     padding: 1rem 1.25rem 1.25rem;
     border-top: 1px solid var(--border-dark);
-    box-shadow: 0 12px 24px -6px rgba(0,0,0,0.45);
-    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 16px -4px rgba(0,0,0,0.3);
+    border-radius: 0 0 8px 8px;
+    animation: slideDown 0.25s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   .navbar-nav {
     margin: 0 !important;
@@ -273,6 +299,8 @@ a:hover {
     letter-spacing: 0.5px;
     width: 100%;
     justify-content: flex-start;
+    transition: background 0.2s ease, color 0.2s ease;
+    will-change: background;
   }
   [dir="rtl"] .nav-link {
     justify-content: flex-end;
@@ -291,7 +319,11 @@ a:hover {
     font-weight: 700;
   }
   .nav-link:hover:not(.active) {
-    background: rgba(255,255,255,0.05);
+    background: rgba(96,165,250,0.15);
+  }
+
+  .nav-link:active {
+    background: rgba(96,165,250,0.25);
   }
   .language-toggle-container {
     order: -1;
@@ -301,8 +333,14 @@ a:hover {
     margin-bottom: 0.75rem;
     border-left: none;
     border-bottom: 1px solid rgba(255,255,255,0.06);
+    animation: fadeIn 0.25s ease-out 0.05s both;
   }
   [dir="rtl"] .language-toggle-container { justify-content: flex-end; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
   .navbar-toggler { border-color: var(--accent-blue); }
   .navbar-toggler:hover { background: var(--accent-blue); }
 }
