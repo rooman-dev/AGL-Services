@@ -43,25 +43,18 @@ function initializeNavbar() {
     const navbarCollapse = document.querySelector('.navbar-collapse');
 
     if (!navbarToggler || !navbarCollapse) {
-      // Navbar elements not present on this page
       return;
     }
-
-    navbarToggler.addEventListener('click', function() {
-      try {
-        this.classList.toggle('active');
-      } catch (error) {
-        console.warn('Navbar toggle error:', error);
-      }
-    });
 
     // Close mobile menu when a link is clicked
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         try {
+          // Check if menu is open using Bootstrap's show class
           if (navbarCollapse.classList.contains('show')) {
-            navbarToggler.click();
+            // Use Bootstrap's collapse method to close it properly
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
           }
         } catch (error) {
           console.warn('Nav link click error:', error);
