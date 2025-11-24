@@ -1,42 +1,22 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AdsGeniusLab Blog - Digital Marketing Insights, Strategies, and Industry Tips">
-  <meta name="keywords" content="Blog, Digital Marketing, SEO Tips, Social Media Strategy, Growth Marketing">
+  <meta name="description" content="AdsGeniusLab Blog - Digital Marketing Insights">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
   <title>Blog - AdsGeniusLab</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap 5 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS (must be after Bootstrap to override) -->
-  <link rel="stylesheet" href="css/style.css?v=20251109">
+  <link rel="stylesheet" href="css/style.css?v=20251124">
 </head>
 <body>
-  <!-- ============================================
-       NAVIGATION BAR
-       ============================================ -->
+
   <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
     <div class="container d-flex align-items-center">
-      <!-- Logo on Left -->
-      <a class="navbar-brand me-auto" href="index.html">
-        adsGeniuslab.
-      </a>
+      <a class="navbar-brand me-auto" href="index.html">adsGeniuslab.</a>
 
-     <!-- Language Toggle in Header (not in menu) -->
       <div class="language-toggle-container me-3 d-none d-lg-block">
         <label class="language-toggle">
           <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
@@ -47,7 +27,6 @@
         </label>
       </div>
 
-      <!-- Mobile Language Toggle -->
       <div class="language-toggle-container me-3 d-lg-none">
         <span class="language-label">EN | العربیہ</span>
         <label class="language-toggle">
@@ -59,41 +38,23 @@
         </label>
       </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="mainNav">
-        <!-- Navigation Pages -->
         <ul class="navbar-nav ms-4">
-    
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">What We Do</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="consultation.html">Consultation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav_services">What We Do</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html" data-i18n="nav_blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="consultation.html" data-i18n="nav_consultation">Consultation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ============================================
-       HERO SECTION
-       ============================================ -->
   <section class="hero typing-trigger" style="min-height: 30px; padding: 50px 0;">
     <div class="container">
       <div class="hero-content">
@@ -103,18 +64,13 @@
     </div>
   </section>
 
-  <!-- ============================================
-       BLOG POSTS SECTION
-       ============================================ -->
   <section class="py-5" style="background: var(--dark-bg);">
     <div class="container">
-      <div class="row g-4">
-        <!-- Blog Post 1 -->
-        <div class="col-md-6 col-lg-4">
+      <div class="row g-4" id="blog-grid">
+        
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card">
-            <div class="media" style="background: linear-gradient(135deg, #0056D2 0%, #007BFF 100%);">
-              <i class="fas fa-search"></i>
-            </div>
+            <div class="media" style="background: linear-gradient(135deg, #0056D2 0%, #007BFF 100%);"><i class="fas fa-search"></i></div>
             <div class="card-body">
               <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_1">November 1, 2024</span></div>
               <h4 data-i18n="blog_title_1">10 SEO Strategies to Boost Your Rankings in 2024</h4>
@@ -124,134 +80,172 @@
           </div>
         </div>
 
-        <!-- Blog Post 2 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card">
-            <div class="media" style="background: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%);">
-              <i class="fas fa-share-alt"></i>
-            </div>
+            <div class="media" style="background: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%);"><i class="fas fa-share-alt"></i></div>
             <div class="card-body">
               <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_2">November 19, 2025</span></div>
-              <h4 data-i18n="blog_title_2">The Role of Social Media Marketing in Modern Business Growth (2025 Edition)</h4>
-              <p data-i18n="blog_desc_2">Discover how social media has become a crucial growth channel for building brand visibility, customer engagement, and driving digital sales.</p>
+              <h4 data-i18n="blog_title_2">The Role of Social Media Marketing in Modern Business Growth</h4>
+              <p data-i18n="blog_desc_2">Discover how social media has become a crucial growth channel for building brand visibility and engagement.</p>
               <a href="blog-post-2.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
 
-        <!-- Blog Post 3 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card">
-            <div class="media" style="background: linear-gradient(135deg, #0046A5 0%, #2563EB 100%);">
-              <i class="fas fa-chart-line"></i>
-            </div>
+            <div class="media" style="background: linear-gradient(135deg, #0046A5 0%, #2563EB 100%);"><i class="fas fa-chart-line"></i></div>
             <div class="card-body">
               <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_3">November 19, 2025</span></div>
               <h4 data-i18n="blog_title_3">How to Create High-Performing Social Media Ads That Convert</h4>
-              <p data-i18n="blog_desc_3">Master the science of high-converting ads with impactful visuals, clear messaging, advanced targeting, and proven conversion strategies.</p>
+              <p data-i18n="blog_desc_3">Master the science of high-converting ads with impactful visuals, clear messaging, and advanced targeting.</p>
               <a href="blog-post-3.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
 
-        <!-- Blog Post 4 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card">
-            <div class="media" style="background: linear-gradient(135deg, #1A2942 0%, #0A1628 100%);">
-              <i class="fas fa-robot" style="color:#60A5FA;"></i>
-            </div>
+            <div class="media" style="background: linear-gradient(135deg, #1A2942 0%, #0A1628 100%);"><i class="fas fa-robot" style="color:#60A5FA;"></i></div>
             <div class="card-body">
               <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_4">November 19, 2025</span></div>
               <h4 data-i18n="blog_title_4">SEO in 2025 — Strategies That Deliver Real, Sustainable Growth</h4>
-              <p data-i18n="blog_desc_4">Learn modern SEO strategies focused on user experience, content authenticity, EEAT, and technical excellence that drive lasting rankings.</p>
+              <p data-i18n="blog_desc_4">Learn modern SEO strategies focused on user experience, content authenticity, EEAT, and technical excellence.</p>
               <a href="blog-post-4.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
 
-        <!-- Blog Post 5 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card">
-            <div class="media" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E72 100%);">
-              <i class="fas fa-lightbulb"></i>
-            </div>
+            <div class="media" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E72 100%);"><i class="fas fa-lightbulb"></i></div>
             <div class="card-body">
               <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_5">November 19, 2025</span></div>
               <h4 data-i18n="blog_title_5">Why Branding Is the Foundation of Digital Marketing Success</h4>
-              <p data-i18n="blog_desc_5">Understand how strong branding through consistent visuals, voice, storytelling, and customer experience builds trust and drives conversions.</p>
+              <p data-i18n="blog_desc_5">Understand how strong branding through consistent visuals, voice, and storytelling builds trust and drives conversions.</p>
               <a href="blog-post-5.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
 
-        <!-- Blog Post 6 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card">
-            <div class="media" style="background: linear-gradient(135deg, #10B981 0%, #34D399 100%);">
-              <i class="fas fa-exclamation-triangle"></i>
-            </div>
+            <div class="media" style="background: linear-gradient(135deg, #10B981 0%, #34D399 100%);"><i class="fas fa-exclamation-triangle"></i></div>
             <div class="card-body">
               <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_6">November 19, 2025</span></div>
-              <h4 data-i18n="blog_title_6">Why Businesses Struggle on Social Media — And How to Transform Performance</h4>
-              <p data-i18n="blog_desc_6">Discover common social media failures and proven strategies to fix underperforming accounts and achieve consistent growth.</p>
+              <h4 data-i18n="blog_title_6">Why Businesses Struggle on Social Media — And How to Fix It</h4>
+              <p data-i18n="blog_desc_6">Discover common social media failures and proven strategies to fix underperforming accounts and achieve growth.</p>
               <a href="blog-post-6.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
+
+        <div class="col-md-6 col-lg-4 blog-item" style="display: none;">
+          <div class="blog-card">
+            <div class="media" style="background: linear-gradient(135deg, #6610f2 0%, #6f42c1 100%);"><i class="fas fa-video"></i></div>
+            <div class="card-body">
+              <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_7">November 20, 2025</span></div>
+              <h4 data-i18n="blog_title_7">Video Marketing Trends for 2025</h4>
+              <p data-i18n="blog_desc_7">Why short-form video content is dominating social algorithms and how to leverage it for your brand.</p>
+              <a href="blog-post-7.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 blog-item" style="display: none;">
+          <div class="blog-card">
+            <div class="media" style="background: linear-gradient(135deg, #d63384 0%, #e83e8c 100%);"><i class="fas fa-envelope-open-text"></i></div>
+            <div class="card-body">
+              <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_8">November 21, 2025</span></div>
+              <h4 data-i18n="blog_title_8">Email Marketing Automation Secrets</h4>
+              <p data-i18n="blog_desc_8">How to set up drip campaigns that nurture leads while you sleep and increase lifetime value.</p>
+              <a href="blog-post-8.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 blog-item" style="display: none;">
+          <div class="blog-card">
+            <div class="media" style="background: linear-gradient(135deg, #fd7e14 0%, #ffc107 100%);"><i class="fas fa-bullhorn"></i></div>
+            <div class="card-body">
+              <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_9">November 22, 2025</span></div>
+              <h4 data-i18n="blog_title_9">PPC vs. Organic: Where to Spend?</h4>
+              <p data-i18n="blog_desc_9">A detailed breakdown of when to use paid ads and when to rely on organic search for growth.</p>
+              <a href="blog-post-9.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 blog-item" style="display: none;">
+          <div class="blog-card">
+            <div class="media" style="background: linear-gradient(135deg, #20c997 0%, #28a745 100%);"><i class="fas fa-mobile-alt"></i></div>
+            <div class="card-body">
+              <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_10">November 23, 2025</span></div>
+              <h4 data-i18n="blog_title_10">Mobile-First Indexing Explained</h4>
+              <p data-i18n="blog_desc_10">Ensuring your website is optimized for the mobile-first world of Google search and user behavior.</p>
+              <a href="blog-post-10.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 blog-item" style="display: none;">
+          <div class="blog-card">
+            <div class="media" style="background: linear-gradient(135deg, #6c757d 0%, #343a40 100%);"><i class="fas fa-shield-alt"></i></div>
+            <div class="card-body">
+              <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_11">November 24, 2025</span></div>
+              <h4 data-i18n="blog_title_11">Data Privacy and Marketing</h4>
+              <p data-i18n="blog_desc_11">Navigating the new world of cookies, consent, and user privacy in advertising ecosystems.</p>
+              <a href="blog-post-11.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 blog-item" style="display: none;">
+          <div class="blog-card">
+            <div class="media" style="background: linear-gradient(135deg, #0dcaf0 0%, #39ace7 100%);"><i class="fas fa-globe"></i></div>
+            <div class="card-body">
+              <div class="card-meta"><i class="fas fa-calendar"></i> <span data-i18n="blog_date_12">November 25, 2025</span></div>
+              <h4 data-i18n="blog_title_12">Global Marketing Strategies</h4>
+              <p data-i18n="blog_desc_12">How to localize your content and campaigns to reach international audiences effectively.</p>
+              <a href="blog-post-12.html" class="card-action"><span data-i18n="btn_read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Pagination -->
       <nav style="margin-top: 3rem; display: flex; justify-content: center;">
         <ul style="display: flex; gap: 1rem; list-style: none; padding: 0;">
-          <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'" data-i18n="btn_previous">Previous</a></li>
-          <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: linear-gradient(135deg, #0056D2 0%, #007BFF 100%); color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">1</a></li>
-          <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'">2</a></li>
-          <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'">3</a></li>
-          <li><a href="#" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='var(--card-bg)'" data-i18n="btn_next">Next</a></li>
+          <li><a href="javascript:void(0)" onclick="changePage(currentPage - 1)" id="btn_prev" class="pagination-btn" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600;" data-i18n="btn_previous">Previous</a></li>
+          <li><a href="javascript:void(0)" onclick="changePage(1)" id="page_1" class="pagination-btn" style="display: inline-block; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600;">1</a></li>
+          <li><a href="javascript:void(0)" onclick="changePage(2)" id="page_2" class="pagination-btn" style="display: inline-block; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600;">2</a></li>
+          <li><a href="javascript:void(0)" onclick="changePage(currentPage + 1)" id="btn_next" class="pagination-btn" style="display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600;" data-i18n="btn_next">Next</a></li>
         </ul>
       </nav>
     </div>
   </section>
 
-  <!-- ============================================
-       NEWSLETTER SIGNUP SECTION
-       ============================================ -->
   <section class="typing-trigger" style="background: linear-gradient(135deg, #1A2942 0%, #0A1628 100%); padding: 80px 0; text-align: center;">
     <div class="container">
-      <h2 style="color: var(--text-white); font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 800;" data-i18n="newsletter_title">Subscribe to Our Newsletter</h2>
-      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; color: var(--text-light);" data-i18n="newsletter_desc">Get the latest digital marketing insights and industry tips delivered directly to your inbox.</p>
-      <form action="https://formspree.io/f/xrboynle" method="POST" style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
-        <input type="email" name="email" placeholder="Enter your email" style="flex: 1; min-width: 250px; padding: 1rem; border: 2px solid var(--accent-blue); border-radius: 8px; background: transparent; color: var(--text-white); font-size: 1rem;" required>
-        <button type="submit" class="btn-primary-custom" style="padding: 1rem 2rem; border: none; cursor: pointer;" data-i18n="btn_subscribe">Subscribe</button>
+      <h2 style="color: var(--text-white); margin-bottom: 1.5rem;" data-i18n="newsletter_title">Subscribe to Our Newsletter</h2>
+      <p style="margin: 0 auto 2rem; color: var(--text-light);" data-i18n="newsletter_desc">Get the latest digital marketing insights delivered to your inbox.</p>
+      <form action="https://formspree.io/f/xrboynle" method="POST" style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto; justify-content: center;">
+        <input type="email" name="email" placeholder="Enter your email" style="flex: 1; padding: 1rem; border-radius: 8px; border: 2px solid var(--accent-blue); background: transparent; color: white;" required>
+        <button type="submit" class="btn-primary-custom" style="padding: 1rem 2rem;" data-i18n="btn_subscribe">Subscribe</button>
       </form>
     </div>
   </section>
 
-  <!-- ============================================
-       FOOTER
-       ============================================ -->
   <footer>
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4><i class="fas fa-lightbulb"></i> <span data-i18n="footer_company_name">AdsGeniusLab</span></h4>
+          <h4 data-i18n="footer_company_name">AdsGeniusLab</h4>
           <p data-i18n="footer_company_desc">Transforming businesses through innovative digital marketing solutions worldwide.</p>
           <div class="social-links">
-            <a href="https://wa.me/923181292628" target="_blank" title="WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <!-- <a href="https://facebook.com/adsgeniuslab" target="_blank" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://linkedin.com/company/adsgeniuslab" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://instagram.com/adsgeniuslab" target="_blank" title="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a> -->
+            <a href="https://wa.me/923181292628" target="_blank"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
-
         <div class="footer-section">
           <h4 data-i18n="footer_quick_links">Quick Links</h4>
           <ul class="footer-links">
@@ -262,249 +256,130 @@
             <li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
           </ul>
         </div>
-
-        <div class="footer-section">
-          <h4 data-i18n="footer_what_we_do">What We Do</h4>
-          <ul class="footer-links">
-            <li><a href="services.html#seo" data-i18n="footer_seo">SEO Optimization</a></li>
-            <li><a href="services.html#social" data-i18n="footer_social">Social Media Marketing</a></li>
-            <li><a href="services.html#content" data-i18n="footer_content">Content Strategy</a></li>
-            <li><a href="services.html#ppc" data-i18n="footer_ppc">PPC Advertising</a></li>
-          </ul>
-        </div>
-
         <div class="footer-section">
           <h4 data-i18n="footer_contact_info">Contact Info</h4>
-          <p>
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:adsgeniuslab@gmail.com" style="color: rgba(255,255,255,0.9);" data-i18n="footer_email">adsgeniuslab@gmail.com</a>
-          </p>
-          <p>
-            <i class="fas fa-phone"></i>
-            <a href="tel:+923181292628" style="color: rgba(255,255,255,0.9);" data-i18n="footer_phone">+92 318 1292628</a>
-          </p>
-          <p>
-            <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.me/923181292628" target="_blank" style="color: rgba(255,255,255,0.9);" data-i18n="footer_whatsapp">WhatsApp Us</a>
-          </p>
+          <p data-i18n="footer_email">adsgeniuslab@gmail.com</p>
+          <p data-i18n="footer_phone">+92 318 1292628</p>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
+        <p data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 52px; height: 52px; background: var(--gradient-blue); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 1.2rem; z-index: 999; box-shadow: 0 4px 15px rgba(0, 86, 210, 0.25); transition: all 0.3s ease;">
+  <button id="scrollToTopBtn" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 52px; height: 52px; background: var(--gradient-blue); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 1.2rem; z-index: 999; box-shadow: 0 4px 15px rgba(0, 86, 210, 0.25);">
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom JS -->
-  <script src="js/script.js?v=20251101"></script>
-
   <script>
-    // Scroll to Top Button
-    const scrollBtn = document.getElementById('scrollToTopBtn');
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        scrollBtn.style.display = 'block';
-      } else {
-        scrollBtn.style.display = 'none';
-      }
-    });
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Blog card hover effects
-    document.querySelectorAll('.blog-card').forEach(card => {
-      card.addEventListener('mouseover', function() {
-        this.style.transform = 'translateY(-10px)';
-        this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-      });
-      card.addEventListener('mouseout', function() {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = 'var(--shadow-lg)';
-      });
-    });
-
-    // Language Switching
+    // --- TRANSLATIONS (Includes Posts 7-12) ---
     const pageTranslations = {
       en: {
-        // Navigation
-        'nav_home': 'Home',
-        'nav_about': 'About',
-        'nav_services': 'What We Do',
-        'nav_blog': 'Blog',
-        'nav_consultation': 'Consultation',
-        'nav_contact': 'Contact',
-        
-        // Hero Section
-        'blog_hero_title': 'Blog Posts & Industry Insights',
-        'blog_hero_subtitle': 'Stay updated with the latest trends, strategies, and insights from the digital marketing world.',
-        
-        // Blog Posts
-        'blog_date_1': 'November 19, 2025',
-        'blog_title_1': 'The Role of Social Media Marketing in Modern Business Growth (2025 Edition)',
-        'blog_desc_1': 'Discover how social media has become a crucial growth channel for building brand visibility, customer engagement, and driving digital sales.',
-        
-        'blog_date_2': 'November 19, 2025',
-        'blog_title_2': 'How to Create High-Performing Social Media Ads That Convert',
-        'blog_desc_2': 'Master the science of high-converting ads with impactful visuals, clear messaging, advanced targeting, and proven conversion strategies.',
-        
-        'blog_date_3': 'November 19, 2025',
-        'blog_title_3': 'SEO in 2025 — Strategies That Deliver Real, Sustainable Growth',
-        'blog_desc_3': 'Learn modern SEO strategies focused on user experience, content authenticity, EEAT, and technical excellence that drive lasting rankings.',
-        
-        'blog_date_4': 'November 19, 2025',
-        'blog_title_4': 'Why Branding Is the Foundation of Digital Marketing Success',
-        'blog_desc_4': 'Understand how strong branding through consistent visuals, voice, storytelling, and customer experience builds trust and drives conversions.',
-        
-        'blog_date_5': 'November 19, 2025',
-        'blog_title_5': 'Why Businesses Struggle on Social Media — And How to Transform Performance',
-        'blog_desc_5': 'Discover common social media failures and proven strategies to fix underperforming accounts and achieve consistent growth.',
-        
-        'blog_date_6': 'November 19, 2025',
-        'blog_title_6': 'The Future of Digital Advertising — AI, Automation & Personalization (2025+)',
-        'blog_desc_6': 'Explore emerging advertising technologies including predictive AI targeting, automation, personalization, short-form video, and dynamic creative optimization.',
-        
-        // Pagination
-        'btn_read_more': 'Read More',
-        'btn_previous': 'Previous',
-        'btn_next': 'Next',
-        
-        // Newsletter
-        'newsletter_title': 'Subscribe to Our Newsletter',
-        'newsletter_desc': 'Get the latest digital marketing insights and industry tips delivered directly to your inbox.',
-        'btn_subscribe': 'Subscribe',
-        
-        // Footer
-        'footer_company_name': 'AdsGeniusLab',
-        'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
-        'footer_quick_links': 'Quick Links',
-        'footer_what_we_do': 'What We Do',
-        'footer_contact_info': 'Contact Info',
-        'footer_home': 'Home',
-        'footer_about': 'About Us',
-        'footer_services': 'What We Do',
-        'footer_consultation': 'Consultation',
-        'footer_contact': 'Contact',
-        'footer_seo': 'SEO Optimization',
-        'footer_social': 'Social Media Marketing',
-        'footer_content': 'Content Strategy',
-        'footer_ppc': 'PPC Advertising',
-        'footer_email': 'adsgeniuslab@gmail.com',
-        'footer_phone': '+92 318 1292628',
-        'footer_whatsapp': 'WhatsApp Us',
-        'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
-        'footer_privacy': 'Privacy Policy',
-        'footer_terms': 'Terms of Service'
+        'nav_home': 'Home', 'nav_about': 'About', 'nav_services': 'What We Do', 'nav_blog': 'Blog', 'nav_consultation': 'Consultation', 'nav_contact': 'Contact',
+        'blog_hero_title': 'Blog Posts & Industry Insights', 'blog_hero_subtitle': 'Stay updated with the latest trends, strategies, and insights from the digital marketing world.',
+        'btn_read_more': 'Read More', 'btn_previous': 'Previous', 'btn_next': 'Next', 'btn_subscribe': 'Subscribe',
+        'newsletter_title': 'Subscribe to Our Newsletter', 'newsletter_desc': 'Get the latest digital marketing insights and industry tips delivered directly to your inbox.',
+        'footer_company_name': 'AdsGeniusLab', 'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
+        'footer_quick_links': 'Quick Links', 'footer_contact_info': 'Contact Info', 'footer_home': 'Home', 'footer_about': 'About Us', 'footer_services': 'What We Do', 'footer_consultation': 'Consultation', 'footer_contact': 'Contact', 'footer_email': 'adsgeniuslab@gmail.com', 'footer_phone': '+92 318 1292628', 'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
+        // Posts 1-6
+        'blog_date_1': 'November 1, 2024', 'blog_title_1': '10 SEO Strategies to Boost Your Rankings in 2024', 'blog_desc_1': 'Discover proven SEO techniques that will help your website rank higher in search results.',
+        'blog_date_2': 'November 19, 2025', 'blog_title_2': 'The Role of Social Media Marketing in Modern Business', 'blog_desc_2': 'Discover how social media has become a crucial growth channel for building brand visibility.',
+        'blog_date_3': 'November 19, 2025', 'blog_title_3': 'How to Create High-Performing Social Media Ads', 'blog_desc_3': 'Master the science of high-converting ads with impactful visuals, clear messaging, and advanced targeting.',
+        'blog_date_4': 'November 19, 2025', 'blog_title_4': 'SEO in 2025 — Strategies That Deliver Real Growth', 'blog_desc_4': 'Learn modern SEO strategies focused on user experience, content authenticity, EEAT, and technical excellence.',
+        'blog_date_5': 'November 19, 2025', 'blog_title_5': 'Why Branding Is the Foundation of Digital Marketing', 'blog_desc_5': 'Understand how strong branding through consistent visuals and storytelling builds trust and drives conversions.',
+        'blog_date_6': 'November 19, 2025', 'blog_title_6': 'Why Businesses Struggle on Social Media', 'blog_desc_6': 'Discover common social media failures and proven strategies to fix underperforming accounts.',
+        // Posts 7-12
+        'blog_date_7': 'November 20, 2025', 'blog_title_7': 'Video Marketing Trends for 2025', 'blog_desc_7': 'Why short-form video content is dominating social algorithms and how to leverage it for your brand.',
+        'blog_date_8': 'November 21, 2025', 'blog_title_8': 'Email Marketing Automation Secrets', 'blog_desc_8': 'How to set up drip campaigns that nurture leads while you sleep and increase lifetime value.',
+        'blog_date_9': 'November 22, 2025', 'blog_title_9': 'PPC vs. Organic: Where to Spend?', 'blog_desc_9': 'A detailed breakdown of when to use paid ads and when to rely on organic search for growth.',
+        'blog_date_10': 'November 23, 2025', 'blog_title_10': 'Mobile-First Indexing Explained', 'blog_desc_10': 'Ensuring your website is optimized for the mobile-first world of Google search and user behavior.',
+        'blog_date_11': 'November 24, 2025', 'blog_title_11': 'Data Privacy and Marketing', 'blog_desc_11': 'Navigating the new world of cookies, consent, and user privacy in advertising ecosystems.',
+        'blog_date_12': 'November 25, 2025', 'blog_title_12': 'Global Marketing Strategies', 'blog_desc_12': 'How to localize your content and campaigns to reach international audiences effectively.'
       },
       ar: {
-        // Navigation
-        'nav_home': 'الرئيسية',
-        'nav_about': 'عننا',
-        'nav_services': 'ما نفعله',
-        'nav_blog': 'المدونة',
-        'nav_consultation': 'استشارة',
-        'nav_contact': 'تواصل معنا',
-        
-        // Hero Section
-        'blog_hero_title': 'مقالات المدونة والرؤى الصناعية',
-        'blog_hero_subtitle': 'ابق مطلعاً على أحدث الاتجاهات والاستراتيجيات والرؤى من عالم التسويق الرقمي.',
-        
-        // Blog Posts
-        'blog_date_1': '19 نوفمبر 2025',
-        'blog_title_1': 'دور التسويق عبر وسائل التواصل الاجتماعي في نمو الأعمال الحديثة (طبعة 2025)',
-        'blog_desc_1': 'اكتشف كيف أصبحت وسائل التواصل الاجتماعي قناة نمو حاسمة لبناء الوعي بالعلامة التجارية والتفاعل مع العملاء.',
-        
-        'blog_date_2': '19 نوفمبر 2025',
-        'blog_title_2': 'كيفية إنشاء إعلانات وسائل التواصل الاجتماعي الفعالة التي تحول',
-        'blog_desc_2': 'أتقن فن الإعلانات عالية التحويل مع الصور المؤثرة والرسائل الواضحة والاستهداف المتقدم والاستراتيجيات المثبتة.',
-        
-        'blog_date_3': '19 نوفمبر 2025',
-        'blog_title_3': 'تحسين محركات البحث في 2025 — استراتيجيات توفر نموواً حقيقياً ومستدامة',
-        'blog_desc_3': 'تعلم استراتيجيات SEO الحديثة المركزة على تجربة المستخدم والتميز في المحتوى والتفوق التقني.',
-        
-        'blog_date_4': '19 نوفمبر 2025',
-        'blog_title_4': 'لماذا تعتبر العلامة التجارية أساس نجاح التسويق الرقمي',
-        'blog_desc_4': 'افهم كيف تبني العلامة التجارية القوية الثقة وتعزز التحويلات من خلال الاتساق والرسائل والقصة.',
-        
-        'blog_date_5': '19 نوفمبر 2025',
-        'blog_title_5': 'لماذا تواجه الشركات صعوبات على وسائل التواصل الاجتماعي — وكيفية تحويل الأداء',
-        'blog_desc_5': 'اكتشف الأخطاء الشائعة واستراتيجيات مثبتة لإصلاح حساباتك وتحقيق نمو مستمر.',
-        
-        'blog_date_6': '19 نوفمبر 2025',
-        'blog_title_6': 'مستقبل الإعلانات الرقمية — الذكاء الاصطناعي والأتمتة والتخصيص (2025+)',
-        'blog_desc_6': 'استكشف تقنيات الإعلانات الناشئة بما فيها استهداف الذكاء الاصطناعي التنبؤي والأتمتة والتخصيص.',
-        
-        // Pagination
-        'btn_read_more': 'اقرأ المزيد',
-        'btn_previous': 'السابق',
-        'btn_next': 'التالي',
-        
-        // Newsletter
-        'newsletter_title': 'اشترك في رسالتنا الإخبارية',
-        'newsletter_desc': 'احصل على أحدث رؤى التسويق الرقمي وتلميحات الصناعة مباشرة في صندوق الوارد الخاص بك.',
-        'btn_subscribe': 'اشترك',
-        
-        // Footer
-        'footer_company_name': 'AdsGeniusLab',
-        'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
-        'footer_quick_links': 'الروابط السريعة',
-        'footer_what_we_do': 'ما نفعله',
-        'footer_contact_info': 'معلومات التواصل',
-        'footer_home': 'الرئيسية',
-        'footer_about': 'عننا',
-        'footer_services': 'ما نفعله',
-        'footer_consultation': 'استشارة',
-        'footer_contact': 'تواصل معنا',
-        'footer_seo': 'تحسين محركات البحث',
-        'footer_social': 'التسويق عبر وسائل التواصل الاجتماعي',
-        'footer_content': 'استراتيجية المحتوى',
-        'footer_ppc': 'إعلانات الدفع مقابل النقر',
-        'footer_email': 'adsgeniuslab@gmail.com',
-        'footer_phone': '+92 318 1292628',
-        'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
-        'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
-        'footer_privacy': 'سياسة الخصوصية',
-        'footer_terms': 'شروط الخدمة'
+        'nav_home': 'الرئيسية', 'nav_about': 'عننا', 'nav_services': 'ما نفعله', 'nav_blog': 'المدونة', 'nav_consultation': 'استشارة', 'nav_contact': 'تواصل معنا',
+        'blog_hero_title': 'مقالات المدونة والرؤى الصناعية', 'blog_hero_subtitle': 'ابق مطلعاً على أحدث الاتجاهات والاستراتيجيات والرؤى من عالم التسويق الرقمي.',
+        'btn_read_more': 'اقرأ المزيد', 'btn_previous': 'السابق', 'btn_next': 'التالي', 'btn_subscribe': 'اشترك',
+        'newsletter_title': 'اشترك في رسالتنا الإخبارية', 'newsletter_desc': 'احصل على أحدث رؤى التسويق الرقمي وتلميحات الصناعة مباشرة في صندوق الوارد الخاص بك.',
+        'footer_company_name': 'AdsGeniusLab', 'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
+        'footer_quick_links': 'الروابط السريعة', 'footer_contact_info': 'معلومات التواصل', 'footer_home': 'الرئيسية', 'footer_about': 'عننا', 'footer_services': 'ما نفعله', 'footer_consultation': 'استشارة', 'footer_contact': 'تواصل معنا', 'footer_email': 'adsgeniuslab@gmail.com', 'footer_phone': '+92 318 1292628', 'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
+        // Posts 1-6
+        'blog_date_1': '1 نوفمبر 2024', 'blog_title_1': '10 استراتيجيات SEO لتحسين ترتيبك في 2024', 'blog_desc_1': 'اكتشف تقنيات SEO المثبتة التي ستساعد موقعك على التصدر في نتائج البحث.',
+        'blog_date_2': '19 نوفمبر 2025', 'blog_title_2': 'دور التسويق عبر وسائل التواصل الاجتماعي في نمو الأعمال', 'blog_desc_2': 'اكتشف كيف أصبحت وسائل التواصل الاجتماعي قناة نمو حاسمة لبناء الوعي بالعلامة التجارية.',
+        'blog_date_3': '19 نوفمبر 2025', 'blog_title_3': 'كيفية إنشاء إعلانات وسائل التواصل الاجتماعي الفعالة', 'blog_desc_3': 'أتقن فن الإعلانات عالية التحويل مع الصور المؤثرة والرسائل الواضحة والاستهداف المتقدم.',
+        'blog_date_4': '19 نوفمبر 2025', 'blog_title_4': 'SEO في 2025 — استراتيجيات توفر نموواً حقيقياً', 'blog_desc_4': 'تعلم استراتيجيات SEO الحديثة المركزة على تجربة المستخدم والمحتوى الأصيل.',
+        'blog_date_5': '19 نوفمبر 2025', 'blog_title_5': 'لماذا تعتبر العلامة التجارية أساس نجاح التسويق الرقمي', 'blog_desc_5': 'افهم كيف تبني العلامة التجارية القوية الثقة وتعزز التحويلات من خلال الاتساق.',
+        'blog_date_6': '19 نوفمبر 2025', 'blog_title_6': 'لماذا تواجه الشركات صعوبات على وسائل التواصل الاجتماعي', 'blog_desc_6': 'اكتشف الأخطاء الشائعة واستراتيجيات مثبتة لإصلاح حساباتك وتحقيق نمو مستمر.',
+        // Posts 7-12
+        'blog_date_7': '20 نوفمبر 2025', 'blog_title_7': 'اتجاهات تسويق الفيديو لعام 2025', 'blog_desc_7': 'لماذا يهيمن محتوى الفيديو القصير على خوارزميات التواصل وكيف تستفيد منه.',
+        'blog_date_8': '21 نوفمبر 2025', 'blog_title_8': 'أسرار أتمتة التسويق عبر البريد الإلكتروني', 'blog_desc_8': 'كيفية إعداد حملات تقطيرية ترعى العملاء المحتملين وتزيد من القيمة الدائمة.',
+        'blog_date_9': '22 نوفمبر 2025', 'blog_title_9': 'الدفع لكل نقرة مقابل العضوي: أين تنفق؟', 'blog_desc_9': 'تفصيل دقيق لمتى تستخدم الإعلانات المدفوعة ومتى تعتمد على البحث العضوي.',
+        'blog_date_10': '23 نوفمبر 2025', 'blog_title_10': 'شرح الفهرسة للجوال أولاً', 'blog_desc_10': 'ضمان تحسين موقعك لعالم بحث جوجل وسلوك المستخدم الذي يركز على الجوال.',
+        'blog_date_11': '24 نوفمبر 2025', 'blog_title_11': 'خصوصية البيانات والتسويق', 'blog_desc_11': 'التنقل في العالم الجديد لملفات تعريف الارتباط والموافقة وخصوصية المستخدم.',
+        'blog_date_12': '25 نوفمبر 2025', 'blog_title_12': 'استراتيجيات التسويق العالمي', 'blog_desc_12': 'كيفية توطين المحتوى والحملات للوصول إلى الجماهير الدولية بفعالية.'
       }
     };
 
     let currentLanguage = localStorage.getItem('siteLanguage') || 'ar';
+    let currentPage = 1;
+    const itemsPerPage = 6;
+    const blogItems = document.querySelectorAll('.blog-item');
+    const totalPages = Math.ceil(blogItems.length / itemsPerPage);
 
+    function changePage(page) {
+      if (page < 1) page = 1;
+      if (page > totalPages) page = totalPages;
+      currentPage = page;
+
+      // Hide/Show Items
+      blogItems.forEach(item => item.style.display = 'none');
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      for (let i = start; i < end; i++) {
+        if (blogItems[i]) {
+          blogItems[i].style.display = 'block';
+          blogItems[i].classList.add('fade-in-up');
+        }
+      }
+
+      // Update Pagination Buttons
+      const activeStyle = "display: inline-block; padding: 0.5rem 1rem; background: linear-gradient(135deg, #0056D2 0%, #007BFF 100%); color: white; border-radius: 6px; text-decoration: none; font-weight: 600;";
+      const inactiveStyle = "display: inline-block; padding: 0.5rem 1rem; background: var(--card-bg); color: var(--accent-light); border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;";
+
+      const btn1 = document.getElementById('page_1');
+      const btn2 = document.getElementById('page_2');
+      if(btn1) btn1.style.cssText = currentPage === 1 ? activeStyle : inactiveStyle;
+      if(btn2) btn2.style.cssText = currentPage === 2 ? activeStyle : inactiveStyle;
+
+      const prevBtn = document.getElementById('btn_prev');
+      const nextBtn = document.getElementById('btn_next');
+      if(prevBtn) prevBtn.style.opacity = currentPage === 1 ? '0.5' : '1';
+      if(nextBtn) nextBtn.style.opacity = currentPage === totalPages ? '0.5' : '1';
+
+      document.querySelector('.section-title')?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Language Functions
     function initLanguage() {
       const desktopToggle = document.getElementById('languageToggle');
       const mobileToggle = document.getElementById('languageToggleMobile');
       const isChecked = currentLanguage === 'ar';
-      
-      if (desktopToggle) {
-        desktopToggle.checked = isChecked;
-      }
-      if (mobileToggle) {
-        mobileToggle.checked = isChecked;
-      }
+      if (desktopToggle) desktopToggle.checked = isChecked;
+      if (mobileToggle) mobileToggle.checked = isChecked;
       applyLanguage(currentLanguage);
     }
 
     function toggleLanguage() {
       currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
       localStorage.setItem('siteLanguage', currentLanguage);
-      
-      // Sync both language toggle checkboxes
       const desktopToggle = document.getElementById('languageToggle');
       const mobileToggle = document.getElementById('languageToggleMobile');
-      
       const isChecked = currentLanguage === 'ar';
       if (desktopToggle) desktopToggle.checked = isChecked;
       if (mobileToggle) mobileToggle.checked = isChecked;
-      
       applyLanguage(currentLanguage);
     }
 
@@ -513,7 +388,6 @@
       document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
       document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
       updateAllText(lang);
-      updateNavigation(lang);
     }
 
     function updateAllText(lang) {
@@ -529,21 +403,24 @@
       });
     }
 
-    function updateNavigation(lang) {
-      const navItems = document.querySelectorAll('.navbar-nav .nav-item:not(.language-toggle-container) .nav-link');
-      const keys = ['nav_home', 'nav_about', 'nav_services', 'nav_blog', 'nav_consultation', 'nav_contact'];
-      navItems.forEach((link, i) => { if (keys[i] && pageTranslations[lang][keys[i]]) link.textContent = pageTranslations[lang][keys[i]]; });
-    }
+    // Initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguage();
+      changePage(1);
+    });
 
-    document.addEventListener('DOMContentLoaded', initLanguage);
-    window.addEventListener('pageshow', () => {
-      const saved = localStorage.getItem('siteLanguage') || 'ar';
-      if (saved !== currentLanguage) { currentLanguage = saved; initLanguage(); }
+    // Scroll to Top
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) scrollBtn.style.display = 'block';
+      else scrollBtn.style.display = 'none';
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn animate" title="Contact us on WhatsApp">
+  <a href="https://wa.me/923181292628" target="_blank" class="whatsapp-floating-btn animate">
     <i class="fab fa-whatsapp"></i>
   </a>
 </body>
