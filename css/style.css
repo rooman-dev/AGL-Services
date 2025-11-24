@@ -150,6 +150,7 @@ a:hover {
   font-size: 1.6rem;
   font-weight: 300; /* thin */
   background: linear-gradient(90deg, #0b63ff 0%, #60a5fa 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -512,9 +513,10 @@ a:hover {
 
 .hero h1 .highlight {
   background: var(--gradient-accent);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: transparent;
 }
 
 .hero p {
@@ -1138,6 +1140,7 @@ footer {
    ============================================ */
 .text-gradient {
   background: var(--gradient-blue);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1938,6 +1941,7 @@ footer p {
 
 .gradient-text {
   background: var(--gradient-blue);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
