@@ -443,7 +443,8 @@ function initializeCookieConsent() {
   const cookieConsent = document.getElementById('cookieConsent');
   const acceptBtn = document.getElementById('acceptCookies');
   const rejectBtn = document.getElementById('rejectCookies');
-  const cookiePolicy = document.getElementById('cookiePolicy');
+  const closeBtn = document.getElementById('closeCookie');
+  const cookieTypesList = document.getElementById('cookieTypesList');
 
   if (!cookieConsent) return;
 
@@ -458,37 +459,51 @@ function initializeCookieConsent() {
     cookieConsent.style.display = 'flex';
   }
 
+  // Update cookie types list with translations
+  if (cookieTypesList) {
+    const listItems = cookieTypesList.querySelectorAll('li');
+    listItems.forEach((item) => {
+      const i18nKey = item.getAttribute('data-i18n');
+      if (i18nKey && pageTranslations && pageTranslations[currentLanguage]) {
+        item.textContent = pageTranslations[currentLanguage][i18nKey] || item.textContent;
+      }
+    });
+  }
+
   // Accept cookies
   if (acceptBtn) {
     acceptBtn.addEventListener('click', () => {
       localStorage.setItem('cookieConsent', 'accepted');
-      cookieConsent.classList.add('fade-out');
-      setTimeout(() => {
-        cookieConsent.style.display = 'none';
-      }, 300);
+      closeCookiePopup();
       // You can add Google Analytics or other tracking code here
       loadAnalytics();
     });
   }
 
-  // Reject cookies
+  // Reject non-essential cookies
   if (rejectBtn) {
     rejectBtn.addEventListener('click', () => {
       localStorage.setItem('cookieConsent', 'rejected');
-      cookieConsent.classList.add('fade-out');
-      setTimeout(() => {
-        cookieConsent.style.display = 'none';
-      }, 300);
+      closeCookiePopup();
     });
   }
 
-  // Link to privacy policy
-  if (cookiePolicy) {
-    cookiePolicy.addEventListener('click', (e) => {
-      e.preventDefault();
-      // Replace with actual privacy policy page
-      window.location.href = '#privacy-policy';
+  // Close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'dismissed');
+      closeCookiePopup();
     });
+  }
+}
+
+function closeCookiePopup() {
+  const cookieConsent = document.getElementById('cookieConsent');
+  if (cookieConsent) {
+    cookieConsent.classList.add('fade-out');
+    setTimeout(() => {
+      cookieConsent.style.display = 'none';
+    }, 300);
   }
 }
 
