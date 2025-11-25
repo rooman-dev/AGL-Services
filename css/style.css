@@ -158,12 +158,12 @@ a:hover {
 .nav-item {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 50%;
 }
 
 .nav-link {
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 400;
   color: var(--text-light) !important;
   margin-left: 1.5rem;
   position: relative;
@@ -172,7 +172,7 @@ a:hover {
   letter-spacing: 0.3px;
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 50%;
   will-change: color;
 }
 
@@ -182,7 +182,7 @@ a:hover {
   bottom: -5px;
   left: 0;
   width: 0;
-  height: 3px;
+  height: 1px;
   background: var(--gradient-accent);
   transition: width 0.25s ease;
   will-change: width;
@@ -264,8 +264,6 @@ a:hover {
   border-color: var(--accent-blue);
 }
 
-.language-toggle input:checked + .toggle-slider::before { left: 38px; }
-
 .toggle-slider {
   position: absolute;
   cursor: pointer;
@@ -283,13 +281,15 @@ a:hover {
 .toggle-slider::before {
   content: '';
   position: absolute;
-  height: 28px;
+  height: 0;
+  width: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: white;
-  transition: transform 0.3s ease, left 0.3s ease;
+  background-color: transparent;
+  transition: none;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: none;
+  display: none;
 }
 
 
@@ -350,8 +350,8 @@ a:hover {
   }
 
   .language-toggle {
-    width: 85px;
-    height: 32px;
+    width: 100px;
+    height: 40px;
   }
 
   .toggle-label-text {
@@ -1433,8 +1433,6 @@ footer {
   .hero h1 { font-size: 2rem; }
   section { padding: 50px 0; }
   .btn-primary-custom, .btn-secondary-custom { padding: 12px 24px; font-size: 0.95rem; width: 100%; display: block; text-align: center; margin-bottom: 0.5rem; }
-  .language-toggle { width: 60px; height: 32px; }
-  .toggle-slider::before { width: 24px; height: 24px; }
-  .language-toggle input:checked + .toggle-slider::before { left: 32px; }
+  .language-toggle { width: 80px; height: 38px; }
   .toggle-label-text { font-size: 0.6rem; }
 }
