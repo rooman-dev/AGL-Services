@@ -403,32 +403,6 @@ function animateCounter(element, target, duration = 2000) {
 }
 
 /* ============================================
-   Scroll to Top Button
-   ============================================ */
-function initializeScrollToTop() {
-  const scrollBtn = document.getElementById('scrollToTopBtn');
-
-  if (scrollBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        scrollBtn.style.display = 'block';
-      } else {
-        scrollBtn.style.display = 'none';
-      }
-    });
-
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
-}
-
-// Call scroll to top initialization
-initializeScrollToTop();
-
 /* ============================================
    Cookie Consent Management
    ============================================ */

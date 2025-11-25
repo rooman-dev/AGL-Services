@@ -12,12 +12,15 @@
   <link rel="stylesheet" href="css/style.css?v=20251124">
 </head>
 <body>
-
   <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
     <div class="container d-flex align-items-center">
-      <a class="navbar-brand me-auto" href="index.html">adsGeniuslab.</a>
+      <!-- Logo on Left -->
+      <a class="navbar-brand me-auto" href="index.html">
+        adsGeniuslab.
+      </a>
 
-      <div class="language-toggle-container me-3 d-none d-lg-block">
+      <!-- Language Toggle (Always Visible) -->
+      <div class="language-toggle-container me-3">
         <label class="language-toggle">
           <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
           <span class="toggle-slider">
@@ -27,29 +30,36 @@
         </label>
       </div>
 
-      <div class="language-toggle-container me-3 d-lg-none">
-        <span class="language-label">EN | العربیہ</span>
-        <label class="language-toggle">
-          <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
-          <span class="toggle-slider">
-            <span class="toggle-label-text toggle-label-en">EN</span>
-            <span class="toggle-label-text toggle-label-ar">العربیہ</span>
-          </span>
-        </label>
-      </div>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <!-- Navbar Toggler Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+    </div>
 
-      <div class="collapse navbar-collapse" id="mainNav">
+    <!-- Navigation Menu (Collapsible) - Outside container -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <div class="container">
+        <!-- Navigation Pages -->
         <ul class="navbar-nav ms-4">
-          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav_services">What We Do</a></li>
-          <li class="nav-item"><a class="nav-link active" href="blog.html" data-i18n="nav_blog">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="consultation.html" data-i18n="nav_consultation">Consultation</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="services.html">What We Do</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consultation.html">Consultation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -409,15 +419,6 @@
       changePage(1);
     });
 
-    // Scroll to Top
-    const scrollBtn = document.getElementById('scrollToTopBtn');
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) scrollBtn.style.display = 'block';
-      else scrollBtn.style.display = 'none';
-    });
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
   </script>
 
   <a href="https://wa.me/923181292628" target="_blank" class="whatsapp-floating-btn animate">
