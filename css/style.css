@@ -113,6 +113,8 @@ a:hover {
   display: flex;
   align-items: center;
   height: 100%;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
 }
 
 .navbar-brand {
@@ -131,6 +133,9 @@ a:hover {
   line-height: 1;
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  min-width: max-content;
   height: 100%;
   gap: 0.15rem;
 }
@@ -203,6 +208,8 @@ a:hover {
   transition: background 0.2s ease, border-color 0.2s ease;
   will-change: background;
   margin-left: 0.5rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .navbar-toggler:focus {
@@ -230,6 +237,7 @@ a:hover {
   height: 100%;
   flex-shrink: 0;
   order: 2;
+  white-space: nowrap;
 }
 
 .language-toggle {
@@ -318,22 +326,28 @@ a:hover {
 
   .navbar-brand {
     font-size: 1.4rem;
-    flex-grow: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
     margin: 0;
+    min-width: max-content;
   }
 
   .language-toggle-container {
     width: auto;
     border: none;
-    margin: 0;
+    margin: 0 0.5rem;
     padding: 0;
     justify-content: flex-end;
     order: 2;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .navbar-toggler {
     order: 3;
-    margin-left: 0.5rem;
+    margin-left: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .navbar-collapse {
