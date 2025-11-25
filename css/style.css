@@ -112,7 +112,9 @@ a:hover {
 .navbar .container {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: auto;
+  min-height: 70px;
+  width: 100%;
 }
 
 .navbar-brand {
@@ -131,8 +133,11 @@ a:hover {
   line-height: 1;
   display: inline-flex;
   align-items: center;
-  height: 100%;
+  height: auto;
   gap: 0.15rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+  min-width: max-content;
 }
 
 .navbar-brand:hover {
@@ -219,6 +224,12 @@ a:hover {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(96,165,250,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M5 7h20M5 15h20M5 23h20'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .language-toggle-container {
@@ -357,21 +368,24 @@ a:hover {
   .navbar-collapse {
     background: var(--primary-dark);
     padding: 1rem 1.25rem 1.25rem;
-    border-top: 1px solid var(--border-dark);
-    box-shadow: 0 8px 16px -4px rgba(0,0,0,0.3);
-    border-radius: 0 0 8px 8px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    border-top: 2px solid var(--accent-blue);
+    box-shadow: inset 0 8px 16px -10px rgba(0,0,0,0.2);
+    border-radius: 0;
+    margin-top: 0;
     width: 100%;
-    max-height: 85vh;
-    overflow-y: auto;
-    z-index: 9999;
-    animation: slideDown 0.3s ease-in-out forwards;
+    position: relative;
+    display: none;
   }
 
-  @keyframes slideDown {
+  .navbar-collapse.show {
+    display: block !important;
+    visibility: visible !important;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
+    animation: slideDownMenu 0.3s ease-out;
+  }
+
+  @keyframes slideDownMenu {
     from {
       opacity: 0;
       transform: translateY(-15px);
