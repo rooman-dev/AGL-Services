@@ -33,22 +33,10 @@
         adsGeniuslab.
       </a>
 
-      <!-- Language Toggle in Header (not in menu) -->
+      <!-- Language Toggle in Header (Desktop Only) -->
       <div class="language-toggle-container me-3 d-none d-lg-block">
         <label class="language-toggle">
           <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
-          <span class="toggle-slider">
-            <span class="toggle-label-text toggle-label-en">EN</span>
-            <span class="toggle-label-text toggle-label-ar">العربیہ</span>
-          </span>
-        </label>
-      </div>
-
-      <!-- Mobile Language Toggle -->
-      <div class="language-toggle-container me-3 d-lg-none">
-        <span class="language-label">EN | العربیہ</span>
-        <label class="language-toggle">
-          <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
           <span class="toggle-slider">
             <span class="toggle-label-text toggle-label-en">EN</span>
             <span class="toggle-label-text toggle-label-ar">العربیہ</span>
@@ -62,6 +50,18 @@
       </button>
 
       <div class="collapse navbar-collapse" id="mainNav">
+        <!-- Mobile Language Toggle (inside collapse) -->
+        <div class="language-toggle-container d-lg-none">
+          <span class="language-label">EN | العربیہ</span>
+          <label class="language-toggle">
+            <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
+            <span class="toggle-slider">
+              <span class="toggle-label-text toggle-label-en">EN</span>
+              <span class="toggle-label-text toggle-label-ar">العربیہ</span>
+            </span>
+          </label>
+        </div>
+
         <!-- Navigation Pages -->
         <ul class="navbar-nav ms-4">
           <li class="nav-item">
@@ -581,13 +581,13 @@
           </button>
         </div>
         <div class="cookie-body">
-          <p id="cookieMessage" data-i18n="cookie_message">We use cookies and similar tracking technologies to enhance your browsing experience, personalize content and advertisements, analyze website traffic, and understand user behavior. Your privacy is important to us.</p>
+          <p id="cookieMessage" data-i18n="cookie_message">We use cookies and similar tracking technologies to enhance your browsing experience, personalize content and advertisements, analyze website traffic, and understand user behavior.</p>
           
           <div class="cookie-details">
-            <h4 id="cookieSecurityTitle" data-i18n="cookie_security_title">🔒 Data Security</h4>
+            <h4 id="cookieSecurityTitle" data-i18n="cookie_security_title">Data Security</h4>
             <p id="cookieSecurityText" data-i18n="cookie_security_text">All data collected through cookies is encrypted and transmitted securely using SSL/TLS protocols. We do not sell your personal data to third parties.</p>
             
-            <h4 id="cookieTypesTitle" data-i18n="cookie_types_title">📊 Types of Cookies</h4>
+            <h4 id="cookieTypesTitle" data-i18n="cookie_types_title">ypes of Cookies</h4>
             <ul id="cookieTypesList">
               <li id="cookieType1" data-i18n="cookie_type_essential">Essential: Required for site functionality</li>
               <li id="cookieType2" data-i18n="cookie_type_analytics">Analytics: Help us understand how you use our site</li>
@@ -595,8 +595,8 @@
               <li id="cookieType4" data-i18n="cookie_type_preference">Preference: Remember your settings and choices</li>
             </ul>
             
-            <h4 id="cookieRightsTitle" data-i18n="cookie_rights_title">👤 Your Rights</h4>
-            <p id="cookieRightsText" data-i18n="cookie_rights_text">You have the right to access, modify, or delete your data at any time. You can also control cookie preferences through your browser settings. For detailed information, please review our <a href="#privacy" class="cookie-link">Privacy Policy</a>.</p>
+            <h4 id="cookieRightsTitle" data-i18n="cookie_rights_title">Your Rights</h4>
+            <p id="cookieRightsText" data-i18n="cookie_rights_text">You have the right to access, modify, or delete your data at any time.For detailed information, please review our <a href="#privacy" class="cookie-link">Privacy Policy</a>.</p>
           </div>
         </div>
       </div>
