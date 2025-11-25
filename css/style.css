@@ -344,6 +344,17 @@ a:hover {
     order: 2;
     flex-shrink: 0;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+
+  .language-toggle {
+    width: 85px;
+    height: 32px;
+  }
+
+  .toggle-label-text {
+    font-size: 0.75rem;
   }
 
   .navbar-toggler {
@@ -505,24 +516,7 @@ a:hover {
     background: rgba(96,165,250,0.25);
     transform: scale(0.98);
   }
-
-  .language-toggle-container {
-    width: auto;
-    border: none;
-    margin: 0 0.5rem;
-    padding: 0;
-    justify-content: center;
-    order: 2;
-    height: 100%;
-  }
-
-  .language-toggle {
-    width: 90px;
-    height: 34px;
-  }
 }
-
-[dir="rtl"] .nav-link::after { left: auto; right: 0; }
 
 .dropdown-menu {
   background: var(--card-bg) !important;
