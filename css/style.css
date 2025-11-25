@@ -301,7 +301,7 @@ a:hover {
 .toggle-label-text {
   display: block;
   position: absolute;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 800;
   top: 50%;
   transform: translateY(-50%);
