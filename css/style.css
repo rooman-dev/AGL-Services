@@ -158,12 +158,12 @@ a:hover {
 .nav-item {
   display: flex;
   align-items: center;
-  height: 50%;
+  height: 100%;
 }
 
 .nav-link {
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--text-light) !important;
   margin-left: 1.5rem;
   position: relative;
@@ -172,7 +172,7 @@ a:hover {
   letter-spacing: 0.3px;
   display: flex;
   align-items: center;
-  height: 50%;
+  height: 100%;
   will-change: color;
 }
 
