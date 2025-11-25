@@ -6,10 +6,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <meta name="description" content="Learn modern SEO strategies for 2025 focused on EEAT, user experience, technical excellence, and sustainable organic growth.">
-  <meta name="keywords" content="SEO 2025, search engine optimization, EEAT, technical SEO, semantic search">
+  <meta name="description" content="Discover how social media has become a crucial growth channel for building brand visibility and engagement.">
+  <meta name="keywords" content="social media marketing, business growth, social strategy">
   <meta name="author" content="AdsGeniusLab">
-  <title>SEO in 2025 — Strategies That Deliver Real, Sustainable Growth - AdsGeniusLab Blog</title>
+  <title>The Role of Social Media Marketing in Modern Business Growth - AdsGeniusLab Blog</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -68,9 +68,8 @@
         adsGeniuslab.
       </a>
 
-      <!-- Language Toggle in Header (not in menu) -->
-      <!-- Language Toggle in Header (not in menu) -->
-      <div class="language-toggle-container me-3 d-none d-lg-block">
+      <!-- Language Toggle (Always Visible) -->
+      <div class="language-toggle-container me-3">
         <label class="language-toggle">
           <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
           <span class="toggle-slider">
@@ -80,24 +79,16 @@
         </label>
       </div>
 
-      <!-- Mobile Language Toggle -->
-      <div class="language-toggle-container me-3 d-lg-none">
-        <span class="language-label">EN | العربیہ</span>
-        <label class="language-toggle">
-          <input type="checkbox" id="languageToggleMobile" onchange="toggleLanguage()">
-          <span class="toggle-slider">
-            <span class="toggle-label-text toggle-label-en">EN</span>
-            <span class="toggle-label-text toggle-label-ar">العربیہ</span>
-          </span>
-        </label>
-      </div>
-
+      <!-- Navbar Toggler Button -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+    </div>
 
-      <div class="collapse navbar-collapse" id="mainNav">
+    <!-- Navigation Menu (Collapsible) - Outside container -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <div class="container">
         <!-- Navigation Pages -->
         <ul class="navbar-nav ms-4">
           <li class="nav-item">
@@ -110,7 +101,7 @@
             <a class="nav-link" href="services.html">What We Do</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
+            <a class="nav-link active" href="blog.html">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="consultation.html">Consultation</a>
@@ -133,11 +124,11 @@
       </div>
 
       <article class="article-header">
-        <h1 class="article-title">SEO in 2025 — Strategies That Deliver Real, Sustainable Growth</h1>
+        <h1 class="article-title fade-in-up" data-i18n="blog_post_2_title">The Role of Social Media Marketing in Modern Business Growth</h1>
         <div class="article-meta">
-          <span><i class="fas fa-calendar"></i> November 19, 2025</span>
-          <span><i class="fas fa-clock"></i> 10 min read</span>
-          <span><i class="fas fa-user"></i> AdsGeniusLab</span>
+          <span><i class="fas fa-calendar"></i> <span data-i18n="blog_post_2_date">November 19, 2025</span></span>
+          <span><i class="fas fa-clock"></i> <span data-i18n="blog_read_time">10 min read</span></span>
+          <span><i class="fas fa-user"></i> <span data-i18n="company_name">AdsGeniusLab</span></span>
         </div>
       </article>
 
@@ -445,11 +436,128 @@
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn" title="Contact us on WhatsApp">
+  <a href="https://wa.me/923181292628?text=Hi%20AdsGeniusLab%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn animate" title="Contact us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+  <!-- Language Switching Script -->
+  <script>
+    const pageTranslations = {
+      en: {
+        'nav_home': 'Home',
+        'nav_about': 'About',
+        'nav_services': 'What We Do',
+        'nav_blog': 'Blog',
+        'nav_consultation': 'Consultation',
+        'nav_contact': 'Contact',
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
+        'footer_quick_links': 'Quick Links',
+        'footer_what_we_do': 'What We Do',
+        'footer_contact_info': 'Contact Info',
+        'footer_home': 'Home',
+        'footer_about': 'About Us',
+        'footer_services': 'What We Do',
+        'footer_consultation': 'Consultation',
+        'footer_contact': 'Contact',
+        'footer_seo': 'SEO Optimization',
+        'footer_social': 'Social Media Marketing',
+        'footer_content': 'Content Strategy',
+        'footer_ppc': 'PPC Advertising',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'WhatsApp Us',
+        'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
+        'footer_privacy': 'Privacy Policy',
+        'footer_terms': 'Terms of Service',
+        'blog_post_2_title': 'The Role of Social Media Marketing in Modern Business Growth',
+        'blog_post_2_date': 'November 19, 2025',
+        'blog_read_time': '10 min read',
+        'company_name': 'AdsGeniusLab'
+      },
+      ar: {
+        'nav_home': 'الرئيسية',
+        'nav_about': 'عننا',
+        'nav_services': 'ما نفعله',
+        'nav_blog': 'المدونة',
+        'nav_consultation': 'استشارة',
+        'nav_contact': 'تواصل معنا',
+        'footer_company_name': 'AdsGeniusLab',
+        'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
+        'footer_quick_links': 'الروابط السريعة',
+        'footer_what_we_do': 'ما نفعله',
+        'footer_contact_info': 'معلومات التواصل',
+        'footer_home': 'الرئيسية',
+        'footer_about': 'عننا',
+        'footer_services': 'ما نفعله',
+        'footer_consultation': 'استشارة',
+        'footer_contact': 'تواصل معنا',
+        'footer_seo': 'تحسين محركات البحث',
+        'footer_social': 'التسويق عبر وسائل التواصل الاجتماعي',
+        'footer_content': 'استراتيجية المحتوى',
+        'footer_ppc': 'إعلانات الدفع مقابل النقر',
+        'footer_email': 'adsgeniuslab@gmail.com',
+        'footer_phone': '+92 318 1292628',
+        'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
+        'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
+        'footer_privacy': 'سياسة الخصوصية',
+        'footer_terms': 'شروط الخدمة',
+        'blog_post_2_title': 'دور التسويق عبر وسائل التواصل الاجتماعي في نمو الأعمال الحديثة',
+        'blog_post_2_date': 'نوفمبر 19، 2025',
+        'blog_read_time': '10 دقائق قراءة',
+        'company_name': 'AdsGeniusLab'
+      }
+    };
+
+    let currentLanguage = localStorage.getItem('siteLanguage') || 'ar';
+
+    function initLanguage() {
+      const desktopToggle = document.getElementById('languageToggle');
+      const isChecked = currentLanguage === 'ar';
+      if (desktopToggle) {
+        desktopToggle.checked = isChecked;
+      }
+      applyLanguage(currentLanguage);
+    }
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+      localStorage.setItem('siteLanguage', currentLanguage);
+      const desktopToggle = document.getElementById('languageToggle');
+      const isChecked = currentLanguage === 'ar';
+      if (desktopToggle) desktopToggle.checked = isChecked;
+      applyLanguage(currentLanguage);
+    }
+
+    function applyLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+      updateAllText(lang);
+    }
+
+    function updateAllText(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (pageTranslations[lang][key]) {
+          if (element.tagName === 'INPUT' && element.type === 'submit') {
+            element.value = pageTranslations[lang][key];
+          } else {
+            element.textContent = pageTranslations[lang][key];
+          }
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initLanguage);
+    window.addEventListener('pageshow', () => {
+      const savedLang = localStorage.getItem('siteLanguage') || 'ar';
+      if (savedLang !== currentLanguage) {
+        currentLanguage = savedLang;
+        initLanguage();
+      }
+    });
+  </script>
