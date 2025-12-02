@@ -403,7 +403,6 @@ function animateCounter(element, target, duration = 2000) {
 }
 
 /* ============================================
-/* ============================================
    Cookie Consent Management
    ============================================ */
 function initializeCookieConsent() {

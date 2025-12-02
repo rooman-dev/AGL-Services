@@ -66,13 +66,13 @@
         <!-- Navigation Pages -->
         <ul class="navbar-nav ms-4">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="services.html">What We Do</a>
+            <a class="nav-link" href="services.html">What We Do</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="blog.html">Blog</a>
@@ -94,7 +94,7 @@
     <div class="container">
       <div class="hero-content">
         <div class="subheading fade-in-up" data-i18n="hero_subheading">افضل شركات التسويق في الرياض</div>
-        <h1 class="fade-in-up" data-text="الشركات التسويقية في الرياض التي يمكن أن تضاعف نمو عملك 100% ">الشركات التسويقية في الرياضh <span class="highlight">التي يمكن</span>أن تضاعف <span class="highlight"> نمو عملك </span>  100% </h1>
+        <h1 class="fade-in-up" data-text="الشركات التسويقية في الرياض التي يمكن أن تضاعف نمو عملك 100%">الشركات التسويقية في الرياض <span class="highlight">التي يمكن</span> أن تضاعف <span class="highlight">نمو عملك</span> 100%</h1>
         <p class="fade-in-up" style="animation-delay: 1s;" data-i18n="hero_description">تبحث الشركات عن أفضل شركات التسويق في الرياض لزيادة مبيعاتها</p>
         <div style="display: flex; flex-direction: row; gap: 2rem; margin-top: 3rem; flex-wrap: wrap;">
           <a href="consultation.html" class="btn-primary-custom fade-in-up" style="animation-delay: 1.5s; display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; border-radius: 15px; text-decoration: none; min-height: auto; flex: 0 0 auto; font-size: 0.95rem;">
@@ -282,7 +282,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
+        <p><span data-i18n="footer_copyright">&copy; 2025 AdsGeniusLab. All rights reserved.</span> | <a href="privacy-policy.html" style="color: rgba(255,255,255,0.7);" data-i18n="footer_privacy">Privacy Policy</a> | <a href="terms-of-service.html" style="color: rgba(255,255,255,0.7);" data-i18n="footer_terms">Terms of Service</a></p>
       </div>
     </div>
   </footer>
@@ -290,239 +290,16 @@
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Centralized Translations -->
+  <script src="js/translations.js?v=20251202"></script>
+
   <!-- Custom JS -->
-  <script src="js/script.js?v=20251101"></script>
+  <script src="js/script.js?v=20251202"></script>
 
-  <!-- Language Switching Script -->
+  <!-- Page-Specific Language Handling -->
   <script>
-    // Comprehensive translations for entire page
-    const pageTranslations = {
-      en: {
-        // Navigation
-        'nav_home': 'Home',
-        'nav_about': 'About',
-        'nav_services': 'What We Do',
-        'nav_blog': 'Blog',
-        'nav_consultation': 'Consultation',
-        'nav_contact': 'Contact',
-        
-        // Hero Section
-        'hero_subheading': 'Growth Marketing for Clear-Cut Impact',
-        'hero_title_part1': 'We deliver growth through',
-        'hero_title_part2': 'Traffic Generation',
-        'hero_title_part3': ', Conversion Rate, and',
-        'hero_title_part4': 'Lifetime Value',
-        'hero_title_part5': 'Optimization',
-        'hero_description': 'Data-driven strategies, AI-powered optimization, and deep technical expertise to generate direct, measurable growth for ambitious businesses.',
-        'btn_talk_growth': "Let's Talk Growth",
-        'btn_what_we_do': 'What We Do',
-        
-        // Feature Cards
-        'feature_growth': 'Strategic Growth',
-        'feature_growth_desc': 'Data-driven strategies designed to maximize your ROI and market presence.',
-        'feature_team': 'Expert Team',
-        'feature_team_desc': 'Dedicated professionals with years of experience in digital marketing excellence.',
-        'feature_results': 'Proven Results',
-        'feature_results_desc': 'Delivering measurable results and continuous optimization for sustained success.',
-        
-        // CTA
-        'cta_ready': 'Ready to Elevate Your Brand?',
-        'cta_description': 'Join hundreds of successful businesses that have transformed their digital presence with AdsGeniusLab.',
-        'btn_consultation': 'Schedule Your Free Consultation',
-        
-        // Trusted Section
-        'trusted_heading': 'Trusted by Leading Brands',
-        'trusted_description': 'We work with innovative companies across multiple industries',
-        
-        // Stats Section
-        'stat_campaigns': 'Successful Campaigns',
-        'stat_satisfaction': 'Client Satisfaction',
-        'stat_experience': 'Years Experience',
-        'stat_industries': 'Industries Served',
-        
-        // Industries Text
-        'industries_text': '50+ companies across 15+ industries have achieved their growth goals with AdsGeniusLab',
-        
-        // Footer
-        'footer_company_name': 'AdsGeniusLab',
-        'footer_company_desc': 'Transforming businesses through innovative digital marketing solutions worldwide.',
-        'footer_quick_links': 'Quick Links',
-        'footer_what_we_do': 'What We Do',
-        'footer_contact_info': 'Contact Info',
-        'footer_home': 'Home',
-        'footer_about': 'About Us',
-        'footer_services': 'What We Do',
-        'footer_consultation': 'Consultation',
-        'footer_contact': 'Contact',
-        'footer_seo': 'SEO Optimization',
-        'footer_social': 'Social Media Marketing',
-        'footer_content': 'Content Strategy',
-        'footer_ppc': 'PPC Advertising',
-        'footer_email': 'adsgeniuslab@gmail.com',
-        'footer_phone': '+92 318 1292628',
-        'footer_whatsapp': 'WhatsApp Us',
-        'footer_copyright': '© 2025 AdsGeniusLab. All rights reserved.',
-        'footer_privacy': 'Privacy Policy',
-        'footer_terms': 'Terms of Service',
-        
-        // Cookie Consent
-        'cookie_title': 'We Use Cookies',
-        'cookie_message': 'We use cookies and similar tracking technologies to enhance your browsing experience, personalize content and advertisements, analyze website traffic, and understand user behavior. Your privacy is important to us.',
-        'cookie_security_title': 'Data Security',
-        'cookie_security_text': 'All data collected through cookies is encrypted and transmitted securely using SSL/TLS protocols. We do not sell your personal data to third parties.',
-        'cookie_types_title': 'Types of Cookies',
-        'cookie_type_essential': 'Essential: Required for site functionality',
-        'cookie_type_analytics': 'Analytics: Help us understand how you use our site',
-        'cookie_type_marketing': 'Marketing: Used for targeted advertising',
-        'cookie_type_preference': 'Preference: Remember your settings and choices',
-        'cookie_rights_title': 'Your Rights',
-        'cookie_rights_text': 'You have the right to access, modify, or delete your data at any time. You can also control cookie preferences through your browser settings. For detailed information, please review our Privacy Policy.',
-        'cookie_accept': 'Accept All',
-        'cookie_reject': 'Reject Non-Essential'
-      },
-      ar: {
-        // Navigation
-        'nav_home': 'الرئيسية',
-        'nav_about': 'عننا',
-        'nav_services': 'ما نفعله',
-        'nav_blog': 'المدونة',
-        'nav_consultation': 'استشارة',
-        'nav_contact': 'تواصل معنا',
-        
-        // Hero Section
-        'hero_subheading': 'تبحث الشركات عن أفضل شركات التسويق في الرياض لزيادة مبيعاتها',
-        'hero_title_part1': 'نحن نقدم النمو من خلال',
-        'hero_title_part2': 'توليد حركة المرور',
-        'hero_title_part3': '، معدل التحويل، و',
-        'hero_title_part4': 'قيمة العمر',
-        'hero_title_part5': 'التحسين',
-        'hero_description': 'استراتيجيات مدفوعة بالبيانات، وتحسين مدعوم بالذكاء الاصطناعي، وخبرة تقنية عميقة لتوليد نمو مباشر وقابل للقياس للشركات الطموحة.',
-        'btn_talk_growth': 'دعونا نتحدث عن النمو',
-        'btn_what_we_do': 'ما نفعله',
-        
-        // Feature Cards
-        'feature_growth': 'النمو الاستراتيجي',
-        'feature_growth_desc': 'استراتيجيات مدفوعة بالبيانات مصممة لتعظيم عائد الاستثمار وحضورك في السوق.',
-        'feature_team': 'فريق خبير',
-        'feature_team_desc': 'محترفون مكرسون مع سنوات من الخبرة في التميز في التسويق الرقمي.',
-        'feature_results': 'نتائج مثبتة',
-        'feature_results_desc': 'تقديم نتائج قابلة للقياس والتحسين المستمر لتحقيق النجاح المستدام.',
-        
-        // CTA
-        'cta_ready': 'هل أنت مستعد لرفع مستوى علامتك التجارية؟',
-        'cta_description': 'انضم إلى مئات الشركات الناجحة التي حولت حضورها الرقمي مع AdsGeniusLab.',
-        'btn_consultation': 'احجز استشارتك المجانية',
-        
-        // Trusted Section
-        'trusted_heading': 'موثوق به من قبل العلامات التجارية الرائدة',
-        'trusted_description': 'نعمل مع شركات مبتكرة عبر صناعات متعددة',
-        
-        // Stats Section
-        'stat_campaigns': 'حملات ناجحة',
-        'stat_satisfaction': 'رضا العملاء',
-        'stat_experience': 'سنوات الخبرة',
-        'stat_industries': 'الصناعات المخدومة',
-        
-        // Industries Text
-        'industries_text': 'حققت أكثر من 50 شركة عبر 15+ صناعة أهدافها في النمو مع AdsGeniusLab',
-        
-        // Footer
-        'footer_company_name': 'AdsGeniusLab',
-        'footer_company_desc': 'تحويل الأعمال من خلال حلول التسويق الرقمي المبتكرة في جميع أنحاء العالم.',
-        'footer_quick_links': 'الروابط السريعة',
-        'footer_what_we_do': 'ما نفعله',
-        'footer_contact_info': 'معلومات التواصل',
-        'footer_home': 'الرئيسية',
-        'footer_about': 'عننا',
-        'footer_services': 'ما نفعله',
-        'footer_consultation': 'استشارة',
-        'footer_contact': 'تواصل معنا',
-        'footer_seo': 'تحسين محركات البحث',
-        'footer_social': 'التسويق عبر وسائل التواصل الاجتماعي',
-        'footer_content': 'استراتيجية المحتوى',
-        'footer_ppc': 'إعلانات الدفع مقابل النقر',
-        'footer_email': 'adsgeniuslab@gmail.com',
-        'footer_phone': '+92 318 1292628',
-        'footer_whatsapp': 'تواصل معنا عبر WhatsApp',
-        'footer_copyright': '© 2025 AdsGeniusLab. جميع الحقوق محفوظة.',
-        'footer_privacy': 'سياسة الخصوصية',
-        'footer_terms': 'شروط الخدمة',
-        
-        // Cookie Consent
-        'cookie_title': 'نستخدم ملفات تعريف الارتباط',
-        'cookie_message': 'نستخدم ملفات تعريف الارتباط وتقنيات التتبع المماثلة لتحسين تجربة التصفح الخاصة بك وتخصيص المحتوى والإعلانات وتحليل حركة مرور الموقع وفهم سلوك المستخدم. خصوصيتك مهمة لنا.',
-        'cookie_security_title': ' أمان البيانات',
-        'cookie_security_text': 'جميع البيانات التي يتم جمعها من خلال ملفات تعريف الارتباط مشفرة وتُرسل بشكل آمن باستخدام بروتوكولات SSL/TLS. نحن لا نبيع بيانات الملكية الخاصة بك لأطراف ثالثة.',
-
-        'cookie_rights_title': ' حقوقك',
-        'cookie_rights_text': 'لديك الحق في الوصول أو تعديل أو حذف بيانات الخاص بك في أي وقت. يمكنك أيضًا التحكم في تفضيلات ملفات تعريف الارتباط من خلال إعدادات متصفحك. للحصول على معلومات تفصيلية، يرجى مراجعة سياسة الخصوصية الخاصة بنا.',
-        'cookie_accept': 'قبول الكل',
-        'cookie_reject': 'رفض غير الأساسي'
-      }
-    };
-
-    let currentLanguage = localStorage.getItem('siteLanguage') || 'ar';
-
-    function initLanguage() {
-      const desktopToggle = document.getElementById('languageToggle');
-      const mobileToggle = document.getElementById('languageToggleMobile');
-      const isChecked = currentLanguage === 'ar';
-      
-      if (desktopToggle) {
-        desktopToggle.checked = isChecked;
-      }
-      if (mobileToggle) {
-        mobileToggle.checked = isChecked;
-      }
-      applyLanguage(currentLanguage);
-    }
-
-    function toggleLanguage() {
-      currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
-      localStorage.setItem('siteLanguage', currentLanguage);
-      
-      // Sync both language toggle checkboxes
-      const desktopToggle = document.getElementById('languageToggle');
-      const mobileToggle = document.getElementById('languageToggleMobile');
-      
-      const isChecked = currentLanguage === 'ar';
-      if (desktopToggle) desktopToggle.checked = isChecked;
-      if (mobileToggle) mobileToggle.checked = isChecked;
-      
-      applyLanguage(currentLanguage);
-    }
-
-    function applyLanguage(lang) {
-      // Update page direction
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
-
-      // Update all translatable elements
-      updateAllText(lang);
-      
-      // Update navigation links
-      updateNavigation(lang);
-    }
-
-    function updateAllText(lang) {
-      // Update all elements with data-i18n attribute
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (pageTranslations[lang][key]) {
-          if (element.tagName === 'INPUT' && element.type === 'submit') {
-            element.value = pageTranslations[lang][key];
-          } else {
-            element.textContent = pageTranslations[lang][key];
-            // For typing-text elements, also update the data-text attribute
-            if (element.classList.contains('typing-text')) {
-              element.setAttribute('data-text', pageTranslations[lang][key]);
-            }
-          }
-        }
-      });
-      
-      // Update hero h1 heading with special handling for highlighted spans
+    // Hero H1 special handling for highlighted spans
+    function updateHeroText(lang) {
       const heroH1 = document.querySelector('.hero h1');
       if (heroH1) {
         if (lang === 'ar') {
@@ -533,25 +310,12 @@
       }
     }
 
-    function updateNavigation(lang) {
-      const navItems = document.querySelectorAll('.navbar-nav .nav-item:not(.language-toggle-container) .nav-link');
-      const translationKeys = ['nav_home', 'nav_about', 'nav_services', 'nav_blog', 'nav_consultation', 'nav_contact'];
-
-      navItems.forEach((link, index) => {
-        if (translationKeys[index] && pageTranslations[lang][translationKeys[index]]) {
-          link.textContent = pageTranslations[lang][translationKeys[index]];
-        }
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', initLanguage);
-    window.addEventListener('pageshow', () => {
-      const savedLang = localStorage.getItem('siteLanguage') || 'ar';
-      if (savedLang !== currentLanguage) {
-        currentLanguage = savedLang;
-        initLanguage();
-      }
-    });
+    // Override applyLanguage to include hero text update
+    const originalApplyLanguage = applyLanguage;
+    applyLanguage = function(lang) {
+      originalApplyLanguage(lang);
+      updateHeroText(lang);
+    };
   </script>
 
   <!-- Floating WhatsApp Button -->
